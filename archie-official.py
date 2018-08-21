@@ -22,7 +22,7 @@ async def on_message(message):
         msg = 'Do you now de wae? Trap remix'.format(message)
         await ctx.send("https://www.youtube.com/watch?v=hLTgQ5SC-PU")
 
-    if message.content.startswith('!lol'):
+    if message.content.startswith('!lal'):
         msg = 'Are you joking?'.format(message)
         await client.send_message(message.channel, msg)
 
