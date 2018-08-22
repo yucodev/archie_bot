@@ -6,6 +6,4 @@ Archie will be programmed in python because it's easier than C++ and more effect
 ### Which file sould be use?
 archie-official.py
 ### Tips
-Never show the token in GitHub. Hide it using an external config.py file that contains the token, and hide it with a .gitignore file.
-
-
+Never show the token in GitHub. Use an external config.py file that contains the token, and hide it with a .gitignore file.
