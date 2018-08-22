@@ -17,11 +17,11 @@ async def on_message(message):
         return
     
     if message.content.startswith('!me'):
-        msg = 'The users name is: {}'.format(user.name))
-        msg = 'The users ID is: {}'.format(user.id))
-        msg = 'The users status is: {}'.format(user.status))
-        msg = 'The users highest role is: {}'.format(user.top_role))
-        msg = 'The user joined at: {}'.format(user.joined_at))
+        msg = 'The users name is: {}'.format(user.name)
+        msg = 'The users ID is: {}'.format(user.id)
+        msg = 'The users status is: {}'.format(user.status)
+        msg = 'The users highest role is: {}'.format(user.top_role)
+        msg = 'The user joined at: {}'.format(user.joined_at)
         await client.send_message(message.channel, msg)
     
     if message.content.startswith('!hello'):
