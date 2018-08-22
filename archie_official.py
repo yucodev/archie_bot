@@ -1,7 +1,9 @@
+import sys
 import discord
 import os
 import time
 import site
+sys.path.insert(0, r'~/discord')
 
 client = discord.Client()
 
