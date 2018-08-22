@@ -10,14 +10,13 @@ sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
-@client.event(pass_context=True, aliases=['user'])
+@client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
     
-    async def info(ctx, user: discord.Member):
-     try:
+    if message.content.startswith('!me')
         await client.say("`The user's name is: {}`".format(user.name))
         await client.say("`The user's ID is: {}`".format(user.id))
         await client.say("`The user's status is: {}`".format(user.status))
