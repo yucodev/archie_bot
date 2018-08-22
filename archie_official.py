@@ -11,20 +11,19 @@ sys.path.insert(0, '/home/dietpi/discord')
 client = discord.Client()
 
 @client.event(pass_context=True, aliases=['user'])
-async def info(ctx, user: discord.Member):
+async def on_message(message):
+    # we do not want the bot to reply to itself
+    if message.author == client.user:
+        return
+    
+    async def info(ctx, user: discord.Member):
     try:
         await client.say("`The user's name is: {}`".format(user.name))
         await client.say("`The user's ID is: {}`".format(user.id))
         await client.say("`The user's status is: {}`".format(user.status))
         await client.say("`The user's highest role is: {}`".format(user.top_role))
         await client.say("`The user joined at: {}`".format(user.joined_at))
-
-@client.event
-async def on_message(message):
-    # we do not want the bot to reply to itself
-    if message.author == client.user:
-        return
-
+    
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
