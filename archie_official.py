@@ -100,11 +100,24 @@ async def on_message(message):
   #      async def add(ctx, a: int, b: int):
   #      await client.send(a+b)
 
-
   #  Leave !help always the last one. Please update any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
+
+
+@client.event
+async def on_message(message):
+    if message.content.lower().startswith('?test'):
+        await client.send_message(message.channel, "Test bestanden")
+ 
+    if message.content.lower().startswith('?coin'): #Coinflip 50/50% chance kopf oder zahl
+        choice = random.randint(1,2)
+        if choice == 1:
+            await client.add_reaction(message, '🌑')
+        if choice == 2:
+            await client.add_reaction(message, '🌕')
+
 
 @client.event
 async def on_ready():
