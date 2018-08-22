@@ -25,9 +25,26 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!joke'):
-        msg = 'Why can\'t cats work with a computer? Answer: because they get too distracted chasing the mouse around, haha!'.format(message)
+        msg = 'Why cant cats work with a computer? Answer: because they get too distracted chasing the mouse around, haha!'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!update'):
+        msg = 'Wait a few seconds...'.format(message)
+        await client.send_message(message.channel, msg)
+        msg = 'Updating Archie'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(5)
+        command 'pkill python3'
+        time.sleep(5)
+        command 'sudo rm -r ~/archie-bot'
+        time.sleep(2)
+        command 'git clone  https://github.com/cibathleticsdev/archie-bot.git'
+        time.sleep(10)
+        command 'python3 ~/archie-bot/archie-official.py'
+        time.sleep(2)
+        msg = 'Archie has been updated'.format(message)
+        await client.send_message(message.channel, msg)
+        
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
         await client.send_message(message.channel, msg)
