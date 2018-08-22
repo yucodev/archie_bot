@@ -17,7 +17,7 @@ async def on_message(message):
         return
     
     async def info(ctx, user: discord.Member):
-    try:
+     try:
         await client.say("`The user's name is: {}`".format(user.name))
         await client.say("`The user's ID is: {}`".format(user.id))
         await client.say("`The user's status is: {}`".format(user.status))
