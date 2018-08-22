@@ -1,4 +1,5 @@
 import discord
+from discord.ext import commands
 import os
 import time
 import site
@@ -91,6 +92,10 @@ async def on_message(message):
         msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !lal \n !lel \n !lil \n !lol \n !lul \n !joke \n !areureal \n !howru \n !whereru \n !letswork \n !whoru \n !update (to update any changes)'.format(message)
         await client.send_message(message.channel, msg)
 
+@bot.command()
+async def multiply(ctx, a: int, b: int):
+    await ctx.send(a*b)        
+        
 @client.event
 async def on_ready():
     print('Logged in as')
