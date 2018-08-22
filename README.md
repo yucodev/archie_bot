@@ -24,6 +24,7 @@ Never show the token in GitHub. Use an external config.py file that contains the
    - !lul
    - !lil
    - !lal
+   - !lel
    - !ping
    
 #### Music
