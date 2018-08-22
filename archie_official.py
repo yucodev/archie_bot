@@ -10,6 +10,15 @@ sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
+@client.command(pass_context=True, aliases=['user'])
+async def info(ctx, user: discord.Member):
+    try:
+        await client.say("`The user's name is: {}`".format(user.name))
+        await client.say("`The user's ID is: {}`".format(user.id))
+        await client.say("`The user's status is: {}`".format(user.status))
+        await client.say("`The user's highest role is: {}`".format(user.top_role))
+        await client.say("`The user joined at: {}`".format(user.joined_at))
+
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -102,14 +111,6 @@ async def on_ready():
     await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
     
-@client.command(pass_context=True, aliases=['user'])
-async def info(ctx, user: discord.Member):
-    try:
-        await client.say("`The user's name is: {}`".format(user.name))
-        await client.say("`The user's ID is: {}`".format(user.id))
-        await client.say("`The user's status is: {}`".format(user.status))
-        await client.say("`The user's highest role is: {}`".format(user.top_role))
-        await client.say("`The user joined at: {}`".format(user.joined_at))
 
 if __name__ == '__main__':
     import config
