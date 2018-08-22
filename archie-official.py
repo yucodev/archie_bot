@@ -22,7 +22,7 @@ async def on_message(message):
         msg = 'My recommendation for {0.author.mention}: https://www.youtube.com/watch?v=hLTgQ5SC-PU'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!lel'):
+    if message.content.startswith('!lol'):
         msg = 'Are you joking?'.format(message)
         await client.send_message(message.channel, msg)
 
