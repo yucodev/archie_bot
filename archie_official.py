@@ -22,6 +22,10 @@ async def on_message(message):
     if message.content.startswith('!myname'):
         msg = 'Your name is: {0.author.display_name}'.format(message)
         await client.send_message(message.channel, msg)
+        
+    if message.content.startswith('!my'):
+        msg = 'test is: {0.joined_at}'.format(message)
+        await client.send_message(message.channel, msg)
     
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
