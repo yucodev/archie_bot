@@ -3,7 +3,7 @@ import discord
 import os
 import time
 import site
-sys.path.insert(0, '~/discord')
+sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
