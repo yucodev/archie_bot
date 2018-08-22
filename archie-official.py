@@ -78,8 +78,8 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    msg = 'Archie is now online!'.format(message)
-    await client.send_message(message.channel, msg)
+    await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
+  
 
 
 if __name__ == '__main__':
