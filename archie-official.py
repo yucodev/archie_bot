@@ -54,7 +54,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         msg = 'Archie is now offline!'.format(message)
         await client.send_message(message.channel, msg)
-        os.system("python3 ~/update.py")
+        os.system("python3 ~/discord/update.py")
         time.sleep(5)
         exit()
 
