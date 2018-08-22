@@ -10,7 +10,7 @@ sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
-@client.command(pass_context=True, aliases=['user'])
+@client.event(pass_context=True, aliases=['user'])
 async def info(ctx, user: discord.Member):
     try:
         await client.say("`The user's name is: {}`".format(user.name))
