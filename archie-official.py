@@ -1,5 +1,7 @@
 import discord
 import os
+import time
+import site
 
 client = discord.Client()
 
@@ -26,7 +28,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!joke'):
-        msg = 'Why cant cats work with a computer? Because they get too distracted chasing the mouse around, haha!'.format(message)
+        msg = 'Why cant cats work with a computer? Answer: because they get too distracted chasing the mouse around, haha!'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!update'):
@@ -34,17 +36,11 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         msg = 'Updating Archie'.format(message)
         await client.send_message(message.channel, msg)
-        time.sleep(5)
-        os.system("pkill python3")
-        time.sleep(5)
-        os.system("sudo rm -r ~/archie-bot")
-        time.sleep(2)
-        os.system("git clone  https://github.com/cibathleticsdev/archie-bot.git")
-        time.sleep(10)
-        os.system("python3 ~/archie-bot/archie-official.py")
-        time.sleep(2)
-        msg = 'Archie has been updated'.format(message)
+        msg = 'Archie is now offline!'.format(message)
         await client.send_message(message.channel, msg)
+        os.system("python3 ~/update.py")
+        time.sleep(5)
+        exit()
         
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
@@ -82,6 +78,8 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
+    msg = 'Archie is now online!'.format(message)
+    await client.send_message(message.channel, msg)
 
 
 if __name__ == '__main__':
