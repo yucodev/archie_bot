@@ -1,8 +1,9 @@
-import sys
 import discord
 import os
 import time
 import site
+# esconder el config.py
+import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
