@@ -4,7 +4,7 @@ import asyncio
 import time
 import datetime
 import site
-# esconder el config.py
+# hide config.py
 import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
@@ -15,19 +15,19 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
-    
+
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
-    
+
     if message.content.startswith('!myname'):
         msg = 'Your name is: {0.author.display_name}'.format(message)
         await client.send_message(message.channel, msg)
-        
+
     if message.content.startswith('!datetime'):
         msg = 'Current date and time: {datetime.datetime}'.format(message)
         await client.send_message(message.channel, msg)
-    
+
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
@@ -100,11 +100,11 @@ async def on_message(message):
   #      await client.send(a+b)
 
 
-    #Leave !help always the last one. Please update any changes.
+  #  Leave !help always the last one. Please update any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !lal \n !lel \n !lil \n !lol \n !lul \n !joke \n !areureal \n !howru \n !whereru \n !letswork \n !whoru \n !update (to update any changes)'.format(message)
-        await client.send_message(message.channel, msg)        
-        
+        await client.send_message(message.channel, msg)
+
 @client.event
 async def on_ready():
     print('Logged in as')
@@ -113,7 +113,7 @@ async def on_ready():
     print('------')
     await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
-    
+
 
 if __name__ == '__main__':
     import config
