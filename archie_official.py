@@ -1,6 +1,5 @@
 import discord
 import os
-from discord.ext import commands
 import asyncio
 import time
 import site
@@ -19,9 +18,9 @@ async def on_message(message):
     if message.content.startswith('!me'):
         msg = 'The users name is: {0.author.mention}'.format(message)
         msg = 'The users ID is: {0.author.id}'.format(message)
-        msg = 'The users status is: {}'.format(message)
-        msg = 'The users highest role is: {}'.format(message)
-        msg = 'The user joined at: {}'.format(message)
+        #msg = 'The users status is: {}'.format(message)
+        #msg = 'The users highest role is: {}'.format(message)
+        #msg = 'The user joined at: {}'.format(message)
         await client.send_message(message.channel, msg)
     
     if message.content.startswith('!hello'):
