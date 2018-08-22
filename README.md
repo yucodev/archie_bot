@@ -1,12 +1,12 @@
 # Say hello to Archie!
 ### Who is Archie?
-Archie is our official and main CAD discord bot. It will be created using GitHub.
-### How it will be programmed?
-Archie will be programmed in python because it's easier than C++ and more effective than javascript.
+Archie is our official and main CAD discord bot. All content is published in GitHub
+### How it's programmed?
+Archie it's programmed in Python because it's easier than C++ and more effective than javascript.
 ### Which file sould be use?
-archie-official.py
+archie_official.py
 ### Tips
-Never show the token in GitHub. Use an external config.py file that contains the token, and hide it with a .gitignore file.
+   - Never show the token in GitHub. Use an external config.py file that contains the token, and hide it with a .gitignore file.
 
 
 ## Commands
@@ -14,26 +14,25 @@ Never show the token in GitHub. Use an external config.py file that contains the
    - !help
    - !myid
    - !myname
-   
-#### Update data:
+
+#### Action:
    - !update (to update any changes)
-   
+
 #### Jokes (absurd commands)
    - !joke
-   - !lol
-   - !lul
-   - !lil
    - !lal
    - !lel
+   - !lil
+   - !lol
+   - !lul
    - !ping
-   
+
 #### Music
    - !music
-   
+
 #### Interaction
    - !hello
    - !areureal
    - !letswork
    - !howru
    - !whereru
- 
