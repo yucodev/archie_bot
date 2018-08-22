@@ -2,6 +2,7 @@ import discord
 import os
 import asyncio
 import time
+import datetime
 import site
 # esconder el config.py
 import sys
@@ -23,8 +24,8 @@ async def on_message(message):
         msg = 'Your name is: {0.author.display_name}'.format(message)
         await client.send_message(message.channel, msg)
         
-    if message.content.startswith('!my'):
-        msg = 'test is: {0.joined_at}'.format(message)
+        if message.content.startswith('!datetime'):
+        msg = 'Current date and time: {datetime.datetime.now}'.format(message)
         await client.send_message(message.channel, msg)
     
     if message.content.startswith('!hello'):
