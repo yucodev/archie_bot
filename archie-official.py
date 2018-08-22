@@ -1,4 +1,5 @@
 import discord
+import os
 
 client = discord.Client()
 
@@ -34,13 +35,13 @@ async def on_message(message):
         msg = 'Updating Archie'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(5)
-        command 'pkill python3'
+        os.system("pkill python3")
         time.sleep(5)
-        command 'sudo rm -r ~/archie-bot'
+        os.system("sudo rm -r ~/archie-bot")
         time.sleep(2)
-        command 'git clone  https://github.com/cibathleticsdev/archie-bot.git'
+        os.system("git clone  https://github.com/cibathleticsdev/archie-bot.git")
         time.sleep(10)
-        command 'python3 ~/archie-bot/archie-official.py'
+        os.system("python3 ~/archie-bot/archie-official.py")
         time.sleep(2)
         msg = 'Archie has been updated'.format(message)
         await client.send_message(message.channel, msg)
