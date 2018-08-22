@@ -68,7 +68,7 @@ async def on_message(message):
 
 #    if message.content.startswith('!add'):
 #        async def add(ctx, a: int, b: int):
-#        await ctx.send(a+b)
+#        await client.send(a+b)
 
 
     #Leave !help always the last one. Please update any changes.
