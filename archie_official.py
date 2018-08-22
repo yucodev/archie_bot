@@ -1,5 +1,6 @@
 import discord
 import os
+import asyncio
 import time
 import site
 # esconder el config.py
@@ -89,7 +90,16 @@ async def on_message(message):
     #Leave !help always the last one. Please update any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !lal \n !lel \n !lil \n !lol \n !lul \n !joke \n !areureal \n !howru \n !whereru \n !letswork \n !whoru \n !update (to update any changes)'.format(message)
-        await client.send_message(message.channel, msg)       
+        await client.send_message(message.channel, msg)
+        
+@client.command(pass_context=True, aliases=['user'])
+async def info(ctx, user: discord.Member):
+    try:
+        await client.say("`The user's name is: {}`".format(user.name))
+        await client.say("`The user's ID is: {}`".format(user.id))
+        await client.say("`The user's status is: {}`".format(user.status))
+        await client.say("`The user's highest role is: {}`".format(user.top_role))
+        await client.say("`The user joined at: {}`".format(user.joined_at))        
         
 @client.event
 async def on_ready():
