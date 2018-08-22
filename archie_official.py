@@ -98,7 +98,7 @@ async def on_ready():
     print(client.user.id)
     print('------')
     await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
-
+    await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
 
 
 if __name__ == '__main__':
