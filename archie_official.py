@@ -91,16 +91,7 @@ async def on_message(message):
     #Leave !help always the last one. Please update any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !lal \n !lel \n !lil \n !lol \n !lul \n !joke \n !areureal \n !howru \n !whereru \n !letswork \n !whoru \n !update (to update any changes)'.format(message)
-        await client.send_message(message.channel, msg)
-        
-@client.command(pass_context=True, aliases=['user'])
-async def info(ctx, user: discord.Member):
-    try:
-        await client.say("`The user's name is: {}`".format(user.name))
-        await client.say("`The user's ID is: {}`".format(user.id))
-        await client.say("`The user's status is: {}`".format(user.status))
-        await client.say("`The user's highest role is: {}`".format(user.top_role))
-        await client.say("`The user joined at: {}`".format(user.joined_at))        
+        await client.send_message(message.channel, msg)        
         
 @client.event
 async def on_ready():
@@ -110,7 +101,15 @@ async def on_ready():
     print('------')
     await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
-
+    
+@client.command(pass_context=True, aliases=['user'])
+async def info(ctx, user: discord.Member):
+    try:
+        await client.say("`The user's name is: {}`".format(user.name))
+        await client.say("`The user's ID is: {}`".format(user.id))
+        await client.say("`The user's status is: {}`".format(user.status))
+        await client.say("`The user's highest role is: {}`".format(user.top_role))
+        await client.say("`The user joined at: {}`".format(user.joined_at))
 
 if __name__ == '__main__':
     import config
