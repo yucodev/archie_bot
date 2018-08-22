@@ -24,7 +24,23 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!lal'):
+        msg = 'Are you jaking?'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!lel'):
+        msg = 'Are you jeking?'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!lil'):
+        msg = 'Are you jiking?'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!lol'):
         msg = 'Are you joking?'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!lul'):
+        msg = 'Are you juking?'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!joke'):
@@ -41,7 +57,7 @@ async def on_message(message):
         os.system("python3 ~/update.py")
         time.sleep(5)
         exit()
-        
+
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
         await client.send_message(message.channel, msg)
@@ -79,7 +95,7 @@ async def on_ready():
     print(client.user.id)
     print('------')
     await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
-  
+
 
 
 if __name__ == '__main__':
