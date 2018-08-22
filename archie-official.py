@@ -26,7 +26,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!joke'):
-        msg = 'Why cant cats work with a computer? Answer: because they get too distracted chasing the mouse around, haha!'.format(message)
+        msg = 'Why cant cats work with a computer? Because they get too distracted chasing the mouse around, haha!'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!update'):
