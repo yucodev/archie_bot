@@ -90,11 +90,7 @@ async def on_message(message):
     #Leave !help always the last one. Please update any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! This are the commands you can use with me so far:\n !help \n !hello \n !ping \n !lal \n !lel \n !lil \n !lol \n !lul \n !joke \n !areureal \n !howru \n !whereru \n !letswork \n !whoru \n !update (to update any changes)'.format(message)
-        await client.send_message(message.channel, msg)
-
-@bot.command()
-async def multiply(ctx, a: int, b: int):
-    await ctx.send(a*b)        
+        await client.send_message(message.channel, msg)       
         
 @client.event
 async def on_ready():
