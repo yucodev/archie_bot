@@ -15,14 +15,17 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if message.content.startswith('!me'):
-        msg = 'The users name is: {0.author.mention}'.format(message)
-        time.sleep(2)
-        msg = 'The users ID is: {0.author.id}'.format(message)
+    if message.content.startswith('!myid'):
+        #msg = 'The users name is: {0.author.mention}'.format(message)
+        msg = 'Your user ID is: {0.author.id}'.format(message)
         time.sleep(2)
         #msg = 'The users status is: {0.author.staus}'.format(message)
         #msg = 'The users highest role is: {}'.format(message)
         #msg = 'The user joined at: {}'.format(message)
+        await client.send_message(message.channel, msg)
+    
+    if message.content.startswith('!myname'):
+        msg = 'Your name is: {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
     
     if message.content.startswith('!hello'):
