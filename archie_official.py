@@ -17,11 +17,12 @@ async def on_message(message):
         return
     
     if message.content.startswith('!me'):
-        await client.say("`The user's name is: {}`".format(user.name))
-        await client.say("`The user's ID is: {}`".format(user.id))
-        await client.say("`The user's status is: {}`".format(user.status))
-        await client.say("`The user's highest role is: {}`".format(user.top_role))
-        await client.say("`The user joined at: {}`".format(user.joined_at))
+        msg = 'The user's name is: {}'.format(user.name))
+        msg = 'The user's ID is: {}'.format(user.id))
+        msg = 'The user's status is: {}'.format(user.status))
+        msg = 'The user's highest role is: {}'.format(user.top_role))
+        msg = 'The user joined at: {}'.format(user.joined_at))
+        await client.send_message(message.channel, msg)
     
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
