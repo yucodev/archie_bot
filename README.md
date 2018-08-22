@@ -1,6 +1,6 @@
 # Say hello to Archie!
 ### Who is Archie?
-Archie is our official and main CAD discord bot. All content is published in GitHub
+Archie is our official and main CAD discord bot. All content is published in GitHub.
 ### How it's programmed?
 Archie it's programmed in Python because it's easier than C++ and more effective than javascript.
 ### Which file sould be use?
@@ -31,8 +31,8 @@ archie_official.py
    - !music
 
 #### Interaction
-   - !hello
    - !areureal
-   - !letswork
+   - !hello
    - !howru
+   - !letswork
    - !whereru
