@@ -20,7 +20,7 @@ async def on_message(message):
         time.sleep(2)
         msg = 'The users ID is: {0.author.id}'.format(message)
         time.sleep(2)
-        msg = 'The users status is: {0.author.staus}'.format(message)
+        #msg = 'The users status is: {0.author.staus}'.format(message)
         #msg = 'The users highest role is: {}'.format(message)
         #msg = 'The user joined at: {}'.format(message)
         await client.send_message(message.channel, msg)
