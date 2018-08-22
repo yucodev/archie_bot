@@ -101,5 +101,5 @@ async def on_ready():
 
 
 if __name__ == '__main__':
-    from .archie_bot import config
+    import config
     client.run(config.token)
