@@ -21,7 +21,7 @@ async def on_message(message):
         msg = 'Pong haha'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!musica'):
+    if message.content.startswith('!music'):
         msg = 'My recommendation for {0.author.mention}: https://www.youtube.com/watch?v=hLTgQ5SC-PU'.format(message)
         await client.send_message(message.channel, msg)
 
