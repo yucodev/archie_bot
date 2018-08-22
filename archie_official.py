@@ -16,7 +16,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if message.content.startswith('!me')
+    if message.content.startswith('!me'):
         await client.say("`The user's name is: {}`".format(user.name))
         await client.say("`The user's ID is: {}`".format(user.id))
         await client.say("`The user's status is: {}`".format(user.status))
