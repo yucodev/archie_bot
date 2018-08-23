@@ -18,14 +18,14 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
-    
+
 #async def randommessage():
  #   if message.content.startswith('!jokes'):
   #      response = random.choice(["one", "two", "three"])
    #     await bot.say(response)
     #    await asyncio.sleep(120)
-    
-    
+
+
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
@@ -40,7 +40,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        msg = 'Current date and time: {datetime.datetime}'.format(message)
+        msg = 'Current date and time: {datetime.datetime.now}'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!hello'):
@@ -48,7 +48,9 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!ping'):
-        msg = 'Pong haha'.format(message)
+        author = ctx.message.author.name
+        server = ctx.message.server.name
+        msg = 'Pong for {} from {}!'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!music'):
@@ -128,8 +130,8 @@ async def on_ready():
     print('------')
     await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online!')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
-    
-    
+
+
 #GPIO.setmode(GPIO.BCM)
 
 #GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
@@ -143,7 +145,7 @@ async def on_ready():
     #await client.send_message(message.channel, msg)
    # time.sleep(1)
    # os.system("sudo reboot")
-   # time.sleep(0.2)    
+   # time.sleep(0.2)
 
 if __name__ == '__main__':
     import config
