@@ -50,8 +50,8 @@ async def on_message(message):
     if message.content.startswith('!ping'):
         author = ctx.message.author.name
         server = ctx.message.server.name
-        msg = 'Pong for {} from {}!'.format(message)
-        await client.send_message(message.channel, msg)
+        await bot.say('Pong for {} from {}!'.format(author, server))
+
 
     if message.content.startswith('!music'):
         msg = 'My recommendation for {0.author.mention}: https://www.youtube.com/watch?v=hLTgQ5SC-PU'.format(message)
