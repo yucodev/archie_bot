@@ -119,8 +119,9 @@ async def on_message(message):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
 
-@client.event
+@bot.command(pass_context=True)
 async def ping(ctx):
+    '''Returns pong when called'''
     author = ctx.message.author.name
     server = ctx.message.server.name
     await bot.say('Pong for {} from {}!'.format(author, server))
