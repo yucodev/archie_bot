@@ -2,7 +2,7 @@ import discord
 import os
 import asyncio
 import time
-import RPi.GPIO as GPIO
+#import RPi.GPIO as GPIO
 import datetime
 import random
 import site
@@ -130,20 +130,20 @@ async def on_ready():
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
     
     
-GPIO.setmode(GPIO.BCM)
+#GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+#GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
-while True:
-   input_state = GPIO.input(18)
-   if input_state == False:
+#while True:
+ #  input_state = GPIO.input(18)
+  # if input_state == False:
     #msg = 'Archie is now rebooting'.format(message)
     #await client.send_message(message.channel, msg)
     #msg = 'Status: disconected'.format(message)
     #await client.send_message(message.channel, msg)
-    time.sleep(1)
-    os.system("sudo reboot")
-    time.sleep(0.2)    
+   # time.sleep(1)
+   # os.system("sudo reboot")
+   # time.sleep(0.2)    
 
 if __name__ == '__main__':
     import config
