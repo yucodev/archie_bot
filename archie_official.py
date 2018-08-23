@@ -10,12 +10,21 @@ import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
+client.loop.create_task(background_loop())
 
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
+    
+async def background_loop():
+    await client.wait_until_ready()
+    while not client.is_closed:
+        channel = client.get_channel("channel id here")
+        messages = ["Hello!", "How are you?", "What are you doing now?"]
+        await client.send_message(channel, random.choice(messages))
+        await asyncio.sleep(120)    
 
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
