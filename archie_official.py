@@ -10,7 +10,6 @@ import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
-client.loop.create_task(background_loop())
 
 @client.event
 async def on_message(message):
@@ -24,7 +23,9 @@ async def background_loop():
         channel = client.get_channel("channel id here")
         messages = ["Hello!", "How are you?", "What are you doing now?"]
         await client.send_message(channel, random.choice(messages))
-        await asyncio.sleep(120)    
+        await asyncio.sleep(120) 
+       
+ client.loop.create_task(background_loop())
 
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
