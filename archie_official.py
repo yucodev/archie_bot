@@ -3,6 +3,7 @@ import os
 import asyncio
 import time
 import datetime
+import random
 import site
 # hide config.py
 import sys
@@ -16,10 +17,15 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!myida'):
+    if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!randomnum'):
+        for x in range(10):
+        msg = random.randint(1,101).format(message)
+        await client.send_message(message.channel, msg)
+        
     if message.content.startswith('!myname'):
         msg = 'Your name is: {0.author.display_name}'.format(message)
         await client.send_message(message.channel, msg)
