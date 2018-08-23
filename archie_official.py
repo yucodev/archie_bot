@@ -16,7 +16,13 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
-
+    
+   if message.content.startswith('!jokes'):
+        async def randommessage():
+        response = random.choice(["one", "two", "three"])
+        await bot.say(response)
+        await asyncio.sleep(120)
+    
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
