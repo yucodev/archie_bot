@@ -31,10 +31,10 @@ async def on_message(message):
 while True:
     input_state = GPIO.input(18)
     if input_state == False:
-        msg = 'Archie is now rebooting'.format(message)
+        #msg = 'Archie is now rebooting'.format(message)
         #await client.send_message(message.channel, msg)
         #msg = 'Status: disconected'.format(message)
-        await client.send_message(message.channel, msg)
+        #await client.send_message(message.channel, msg)
         time.sleep(2)
         os.system("sudo reboot")
         time.sleep(0.2)
