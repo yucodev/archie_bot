@@ -124,7 +124,6 @@ async def on_message(message):
 
 @bot.command(pass_context=True)
 async def ping(ctx):
-    '''Returns pong when called'''
     author = ctx.message.author.name
     server = ctx.message.server.name
     await bot.say('Pong for {} from {}!'.format(author, server))
