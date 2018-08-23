@@ -1,13 +1,11 @@
 import discord
-# import os
-# import asyncio
-# import time
+from discord.ext import commands
+from discord.ext.commands import Bot
+import asyncio
+import time
 import datetime
 import random
-# import site
 # hide config.py
-# import sys
-sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
