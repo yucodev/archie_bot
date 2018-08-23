@@ -1,6 +1,9 @@
 import discord
+from discord.ext import commands
 import os
+from os import getenv
 import asyncio
+import ctx
 import time
 #import RPi.GPIO as GPIO
 import datetime
@@ -46,12 +49,6 @@ async def on_message(message):
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-
-    if message.content.startswith('!ping'):
-        author = ctx.message.author.name
-        server = ctx.message.server.name
-        await bot.say('Pong for {} from {}!'.format(author, server))
-
 
     if message.content.startswith('!music'):
         msg = 'My recommendation for {0.author.mention}: https://www.youtube.com/watch?v=hLTgQ5SC-PU'.format(message)
@@ -117,10 +114,15 @@ async def on_message(message):
   #      await client.send(a+b)
 
 
-  #  Leave !help always the last one. Please update any changes.
+  #  Leave !help always the second last one. Please update in GitHub any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
+
+    async def ping(ctx):
+        author = ctx.message.author.name
+        server = ctx.message.server.name
+        await bot.say('Pong for {} from {}!'.format(author, server))
 
 @client.event
 async def on_ready():
