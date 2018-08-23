@@ -1,6 +1,6 @@
 import discord
 # import os
-import asyncio
+# import asyncio
 # import time
 import datetime
 import random
@@ -110,7 +110,7 @@ async def on_message(message):
 async def on_message(message):
     if message.content.lower().startswith('?test'):
         await client.send_message(message.channel, "Test bestanden")
- 
+
     if message.content.lower().startswith('?coin'): #Coinflip 50/50% chance kopf oder zahl
         choice = random.randint(1,2)
         if choice == 1:
