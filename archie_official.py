@@ -13,6 +13,9 @@ import site
 import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
+description = 'A nice little event bot'
+bot = commands.Bot(command_prefix='!', description=description)
+
 client = discord.Client()
 
 
