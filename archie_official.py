@@ -17,11 +17,11 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-async def randommessage():
-    if message.content.startswith('!jokes'):
-        response = random.choice(["one", "two", "three"])
-        await bot.say(response)
-        await asyncio.sleep(120)
+#async def randommessage():
+ #   if message.content.startswith('!jokes'):
+  #      response = random.choice(["one", "two", "three"])
+   #     await bot.say(response)
+    #    await asyncio.sleep(120)
     
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
