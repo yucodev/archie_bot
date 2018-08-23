@@ -3,7 +3,7 @@ import os
 import asyncio
 import time
 import datetime
-import random2
+import random
 import site
 # hide config.py
 import sys
