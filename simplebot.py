@@ -56,17 +56,6 @@ async def on_message(message):
         msg = 'Why can\'t cats work with a computer? Because they get too distracted chasing the mouse around, haha!'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!update'):
-        msg = 'Wait a few seconds...'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Updating Archie'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Archie is now offline!'.format(message)
-        await client.send_message(message.channel, msg)
-        os.system("python3 ~/discord/update.py")
-        time.sleep(5)
-        exit()
-
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
         await client.send_message(message.channel, msg)
@@ -103,8 +92,6 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
-    await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
 
 
 if __name__ == '__main__':
