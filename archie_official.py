@@ -25,7 +25,7 @@ async def background_loop():
         await client.send_message(channel, random.choice(messages))
         await asyncio.sleep(120) 
        
- client.loop.create_task = background_loop
+ client.loop.create_task(background_loop())
 
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
