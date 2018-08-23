@@ -116,16 +116,7 @@ async def on_message(message):
   #  if message.content.startswith('!add'):
   #      async def add(ctx, a: int, b: int):
   #      await client.send(a+b)
-while True:
-    input_state = GPIO.input(18)
-    if input_state == False:
-        #msg = 'Archie is now rebooting'.format(message)
-        #await client.send_message(message.channel, msg)
-        #msg = 'Status: disconected'.format(message)
-        #await client.send_message(message.channel, msg)
-        time.sleep(2)
-        os.system("sudo reboot")
-        time.sleep(0.2)
+
 
   #  Leave !help always the last one. Please update any changes.
     if message.content.startswith('!help'):
@@ -140,7 +131,17 @@ async def on_ready():
     print('------')
     await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
-
+    
+while True:
+    input_state = GPIO.input(18)
+    if input_state == False:
+        #msg = 'Archie is now rebooting'.format(message)
+        #await client.send_message(message.channel, msg)
+        #msg = 'Status: disconected'.format(message)
+        #await client.send_message(message.channel, msg)
+        time.sleep(2)
+        os.system("sudo reboot")
+        time.sleep(0.2)    
 
 if __name__ == '__main__':
     import config
