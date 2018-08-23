@@ -17,16 +17,6 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-async def background_loop():
-    await client.wait_until_ready()
-    while not client.is_closed:
-        channel = client.get_channel("channel id here")
-        messages = ["Hello!", "How are you?", "What are you doing now?"]
-        await client.send_message(channel, random.choice(messages))
-        await asyncio.sleep(120) 
-       
- client.loop.create_task(background_loop()
-
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
