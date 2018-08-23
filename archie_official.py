@@ -119,10 +119,11 @@ async def on_message(message):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
 
-    async def ping(ctx):
-        author = ctx.message.author.name
-        server = ctx.message.server.name
-        await bot.say('Pong for {} from {}!'.format(author, server))
+@client.event
+async def ping(ctx):
+    author = ctx.message.author.name
+    server = ctx.message.server.name
+    await bot.say('Pong for {} from {}!'.format(author, server))
 
 @client.event
 async def on_ready():
