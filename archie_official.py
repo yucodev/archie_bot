@@ -16,7 +16,7 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
-    
+
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
@@ -25,7 +25,7 @@ async def on_message(message):
         for x in range(10):
          msg = random.randint(1,101).format(randformat)
          await client.send_message(message.channel, msg)
-        
+
     if message.content.startswith('!myname'):
         msg = 'Your name is: {0.author.display_name}'.format(message)
         await client.send_message(message.channel, msg)
