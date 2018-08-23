@@ -23,8 +23,8 @@ async def on_message(message):
 
     if message.content.startswith('!randomnum'):
         for x in range(10):
-        msg = random.randint(1,101).format(message)
-        await client.send_message(message.channel, msg)
+         msg = random.randint(1,101).format(message)
+         await client.send_message(message.channel, msg)
         
     if message.content.startswith('!myname'):
         msg = 'Your name is: {0.author.display_name}'.format(message)
