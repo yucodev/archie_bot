@@ -1,3 +1,5 @@
+import bot
+
 @Bot.command(pass_context=True)
 async def random1and10(ctx, number):
     try:
