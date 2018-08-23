@@ -2,6 +2,7 @@ import discord
 import os
 import asyncio
 import time
+import RPi.GPIO as GPIO
 import datetime
 import random
 import site
@@ -10,6 +11,10 @@ import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
+
+GPIO.setmode(GPIO.BCM)
+
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 @client.event
 async def on_message(message):
@@ -22,6 +27,17 @@ async def on_message(message):
   #      response = random.choice(["one", "two", "three"])
    #     await bot.say(response)
     #    await asyncio.sleep(120)
+    
+while True:
+    input_state = GPIO.input(18)
+    if input_state == False:
+        msg = 'Archie is now rebooting'.format(message)
+        await client.send_message(message.channel, msg)
+        msg = 'Status: disconected'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(2)
+        os.system("sudo reboot")
+        time.sleep(0.2)
     
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
