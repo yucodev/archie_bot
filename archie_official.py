@@ -12,9 +12,6 @@ sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
-GPIO.setmode(GPIO.BCM)
-
-GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
 
 @client.event
 async def on_message(message):
@@ -132,6 +129,11 @@ async def on_ready():
     await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
     
+    
+GPIO.setmode(GPIO.BCM)
+
+GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
 while True:
     input_state = GPIO.input(18)
     if input_state == False:
