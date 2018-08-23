@@ -13,8 +13,8 @@ import site
 import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
-description = 'A nice little event bot'
-bot = commands.Bot(command_prefix='!', description=description)
+# description = 'A nice little event bot'
+# bot = commands.Bot(command_prefix='!', description=description)
 
 client = discord.Client()
 
@@ -108,6 +108,12 @@ async def on_message(message):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!ping'):
+        author = ctx.msg.author.name
+        server = ctx.msg.server.name
+        msg = 'Pong for {} from {}!'.format(message, author, server)
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!whoru'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
@@ -121,12 +127,6 @@ async def on_message(message):
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
-
-@bot.command(pass_context=True)
-async def ping(ctx):
-    author = ctx.message.author.name
-    server = ctx.message.server.name
-    await bot.say('Pong for {} from {}!'.format(author, server))
 
 @client.event
 async def on_ready():
