@@ -1,10 +1,9 @@
 import discord
-from discord.ext import commands
-from discord.ext.commands import Bot
-import asyncio
-import time
+# from discord.ext import commands
+# import asyncio
+# import time
 import datetime
-import random
+# import random
 # hide config.py
 
 client = discord.Client()
