@@ -17,8 +17,8 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-   if message.content.startswith('!jokes'):
-      async def randommessage():
+async def randommessage():
+    if message.content.startswith('!jokes'):
         response = random.choice(["one", "two", "three"])
         await bot.say(response)
         await asyncio.sleep(120)
