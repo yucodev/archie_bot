@@ -38,3 +38,4 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !howru
    - !letswork
    - !whereru
+   - !ping (to obtain a custom answer)
