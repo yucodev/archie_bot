@@ -1,9 +1,9 @@
 import discord
-#from discord.ext import commands
+from discord.ext import commands
 import os
-#from os import getenv
+from os import getenv
 import asyncio
-#import ctx
+import ctx
 import time
 #import RPi.GPIO as GPIO
 import datetime
@@ -13,8 +13,8 @@ import site
 import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
-# description = 'A nice little event bot'
-# bot = commands.Bot(command_prefix='!', description=description)
+description = 'A nice little event bot'
+bot = commands.Bot(command_prefix='!', description=description)
 
 client = discord.Client()
 
@@ -108,19 +108,19 @@ async def on_message(message):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-<<<<<<< HEAD
-    if message.content.startswith('!ping'):
-        author = client.message.author.name
-        server = client.message.server.name
-        msg = 'Pong for {} from {}!'.format(message, author, server)
-        await client.send_message(message.channel, msg)
-=======
+# <<<<<<< HEAD
+#    if message.content.startswith('!ping'):
+#        author = client.message.author.name
+#        server = client.message.server.name
+#        msg = 'Pong for {} from {}!'.format(message, author, server)
+#        await client.send_message(message.channel, msg)
+# =======
     #if message.content.startswith('!ping'):
      #   author = ctx.msg.author.name
       #  server = ctx.msg.server.name
        # msg = 'Pong for {} from {}!'.format(message, author, server)
         #await client.send_message(message.channel, msg)
->>>>>>> d5c1a5268eb7ff3cef0b9dfa6de4be0119498161
+# >>>>>>> d5c1a5268eb7ff3cef0b9dfa6de4be0119498161
 
     if message.content.startswith('!whoru'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
@@ -145,6 +145,12 @@ async def on_ready():
     await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online!')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
 
+@bot.command(pass_context=True)
+async def ping(ctx):
+    '''Returns pong when called'''
+    author = ctx.message.author.name
+    server = ctx.message.server.name
+    await bot.say('Pong for {} from {}!'.format(author, server))
 
 #GPIO.setmode(GPIO.BCM)
 
