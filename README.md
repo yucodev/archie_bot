@@ -10,33 +10,31 @@ If you have any doubt, info, any question or something you have to tell us, don'
 ### Tips
    - Never show the token in GitHub. Use an external config.py file that contains the token, and hide it with a .gitignore file.
 
-
 ## Commands
+#### About Archie
+   - !areureal
+   - !hello
+   - !howru
+   - !whereru
+
+#### Action:
+   - !update (to update any changes)
+
 #### Info:
    - !help
    - !myid
    - !myname
 
-#### Action:
-   - !update (to update any changes)
-
-#### Jokes (absurd commands)
+#### Interaction
    - !joke
    - !lal
    - !lel
    - !lil
    - !lol
    - !lul
-   - !ping
-   - !randomjokes (BETA)
-
-#### Music
-   - !music
-
-#### Interaction
-   - !areureal
-   - !hello
-   - !howru
    - !letswork
-   - !whereru
-   - !ping (to obtain a custom answer)
+   - !ping
+   - !joke
+
+#### Multimedia
+   - !music
