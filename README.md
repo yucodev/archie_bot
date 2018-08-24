@@ -5,6 +5,8 @@ Archie is our official and main CAD discord bot. All content is published in Git
 Archie it's programmed in Python because it's easier than C++ and more effective than javascript.
 ### Which file sould be used?
 archie_official.py
+### Contact us
+If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. Our e-mail is cibathleticsdev@gmail.com
 ### Tips
    - Never show the token in GitHub. Use an external config.py file that contains the token, and hide it with a .gitignore file.
 
@@ -26,6 +28,7 @@ archie_official.py
    - !lol
    - !lul
    - !ping
+   - !randomjokes (BETA)
 
 #### Music
    - !music
@@ -36,3 +39,4 @@ archie_official.py
    - !howru
    - !letswork
    - !whereru
+   - !ping (to obtain a custom answer)

@@ -1,9 +1,14 @@
 import discord
 from discord.ext import commands
+import os
+from os import getenv
 import asyncio
-# import time
+import ctx
+import time
+#import RPi.GPIO as GPIO
 import datetime
-# import random
+import random
+import site
 # hide config.py
 
 client = discord.Client()
@@ -14,24 +19,36 @@ async def on_message(message):
     if message.author == client.user:
         return
 
+#async def randommessage():
+ #   if message.content.startswith('!jokes'):
+  #      response = random.choice(["one", "two", "three"])
+   #     await bot.say(response)
+    #    await asyncio.sleep(120)
+
+
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!randomjoke'):
+        msg = random.choice(["one", "two", "three"]).format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!randomnum'):
+        for x in range(10):
+         msg = random.randint(1,101).format(randformat)
+         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!myname'):
         msg = 'Your name is: {0.author.display_name}'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        msg = 'Current date and time: {datetime.datetime}'.format(message)
+        msg = 'Current date and time: {datetime.datetime.now}'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!hello'):
         msg = 'Hello {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('!ping'):
-        msg = 'Pong haha'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!music'):
@@ -74,6 +91,10 @@ async def on_message(message):
         msg = 'I\'m wherever you are, ready to help you.'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!ping'):
+        msg = 'Pong to {0.author.display_name} in {0.server}'.format(message)
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!letswork'):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
@@ -86,11 +107,10 @@ async def on_message(message):
   #      async def add(ctx, a: int, b: int):
   #      await client.send(a+b)
 
-  #  Leave !help always the last one. Please update any changes.
+  #  Leave !help always the second last one. Please update in GitHub any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
-
 
 # @client.event
 # async def on_message(message):
@@ -107,13 +127,27 @@ async def on_message(message):
 
 @client.event
 async def on_ready():
- print('Logged in as')
- print(client.user.name)
- print(client.user.id)
- print('------')
- await client.send_message(discord.Object(id='458378197478932492'), 'Archie is now online!')
- # await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
+    print('Logged in as')
+    print(client.user.name)
+    print(client.user.id)
+    print('------')
+    await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online!')
+    await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
 
+#GPIO.setmode(GPIO.BCM)
+
+#GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
+
+#while True:
+ #  input_state = GPIO.input(18)
+  # if input_state == False:
+    #msg = 'Archie is now rebooting'.format(message)
+    #await client.send_message(message.channel, msg)
+    #msg = 'Status: disconected'.format(message)
+    #await client.send_message(message.channel, msg)
+   # time.sleep(1)
+   # os.system("sudo reboot")
+   # time.sleep(0.2)
 
 if __name__ == '__main__':
     import config
