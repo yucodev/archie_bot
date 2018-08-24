@@ -1,9 +1,9 @@
 import discord
-from discord.ext import commands
+#from discord.ext import commands
 import os
-from os import getenv
+#from os import getenv
 import asyncio
-import ctx
+#import ctx
 import time
 #import RPi.GPIO as GPIO
 import datetime
