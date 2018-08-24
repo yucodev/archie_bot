@@ -13,8 +13,8 @@ import site
 import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
-description = 'A nice little event bot'
-bot = commands.Bot(command_prefix='!', description=description)
+author = ctx.message.author.name
+server = ctx.message.server.name
 
 client = discord.Client()
 
@@ -104,6 +104,10 @@ async def on_message(message):
         msg = 'I\'m wherever you are, ready to help you.'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!whereru'):
+        msg = 'Pong to {author} in {server}'.format(message)
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!letswork'):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
@@ -144,13 +148,6 @@ async def on_ready():
     print('------')
     await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online!')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
-
-@bot.command(pass_context=True)
-async def ping(ctx):
-    '''Returns pong when called'''
-    author = ctx.message.author.name
-    server = ctx.message.server.name
-    await bot.say('Pong for {} from {}!'.format(author, server))
 
 #GPIO.setmode(GPIO.BCM)
 
