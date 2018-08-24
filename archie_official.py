@@ -109,8 +109,8 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!ping'):
-        author = ctx.msg.author.name
-        server = ctx.msg.server.name
+        author = client.message.author.name
+        server = client.message.server.name
         msg = 'Pong for {} from {}!'.format(message, author, server)
         await client.send_message(message.channel, msg)
 
