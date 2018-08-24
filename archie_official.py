@@ -104,7 +104,7 @@ async def on_message(message):
         msg = 'I\'m wherever you are, ready to help you.'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!whereru'):
+    if message.content.startswith('!ping'):
         msg = 'Pong to {author} in {server}'.format(message)
         await client.send_message(message.channel, msg)
 
