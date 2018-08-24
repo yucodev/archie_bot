@@ -10,8 +10,6 @@ import datetime
 import random
 import site
 # hide config.py
-import sys
-sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
@@ -81,17 +79,6 @@ async def on_message(message):
         msg = 'Why can\'t cats work with a computer? Because they get too distracted chasing the mouse around, haha!'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!update'):
-        msg = 'Wait a few seconds...'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Updating Archie'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Archie is now offline!'.format(message)
-        await client.send_message(message.channel, msg)
-        os.system("python3 ~/discord/update.py")
-        time.sleep(5)
-        exit()
-
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
         await client.send_message(message.channel, msg)
@@ -124,6 +111,19 @@ async def on_message(message):
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
+
+# @client.event
+# async def on_message(message):
+#     if message.content.lower().startswith('?test'):
+#         await client.send_message(message.channel, "Test bestanden")
+#
+#     if message.content.lower().startswith('?coin'): #Coinflip 50/50% chance kopf oder zahl
+#         choice = random.randint(1,2)
+#         if choice == 1:
+#             await client.add_reaction(message, '🌑')
+#         if choice == 2:
+#             await client.add_reaction(message, '🌕')
+
 
 @client.event
 async def on_ready():
