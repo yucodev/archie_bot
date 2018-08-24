@@ -108,11 +108,11 @@ async def on_message(message):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!ping'):
-        author = ctx.msg.author.name
-        server = ctx.msg.server.name
-        msg = 'Pong for {} from {}!'.format(message, author, server)
-        await client.send_message(message.channel, msg)
+    #if message.content.startswith('!ping'):
+     #   author = ctx.msg.author.name
+      #  server = ctx.msg.server.name
+       # msg = 'Pong for {} from {}!'.format(message, author, server)
+        #await client.send_message(message.channel, msg)
 
     if message.content.startswith('!whoru'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
