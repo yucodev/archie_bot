@@ -30,8 +30,12 @@ async def on_message(message):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!randomjoke'):
-        msg = random.choice(["one", "two", "three"]).format(message)
+    if message.content.startswith('!joke'):
+        a = 'Can a kangaroo jump higher than a house? \n Of course, a house doesn’t jump at all.'
+        b = 'Anton, do you think I’m a bad mother? \n My name is Paul.'
+        c = 'Why can\'t cats work with a computer? \n Because they get too distracted chasing the mouse around, haha!'
+        d = 'My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.'
+        msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!randomnum'):
@@ -73,10 +77,6 @@ async def on_message(message):
 
     if message.content.startswith('!lul'):
         msg = 'Are you juking?'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('!joke'):
-        msg = 'Why can\'t cats work with a computer? Because they get too distracted chasing the mouse around, haha!'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!areureal'):
