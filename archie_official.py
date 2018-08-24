@@ -32,6 +32,10 @@ async def on_message(message):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!randomjoke'):
+        msg = random.choice(["one", "two", "three"]).format(message)
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!randomnum'):
         for x in range(10):
          msg = random.randint(1,101).format(randformat)

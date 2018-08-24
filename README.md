@@ -28,6 +28,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !lol
    - !lul
    - !ping
+   - !randomjokes (BETA)
 
 #### Music
    - !music
