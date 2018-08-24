@@ -15,15 +15,6 @@ sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
-description = 'A nice little event bot'
-bot = commands.Bot(command_prefix='!', description=description)
-
-@bot.command(pass_context=True)
-async def ping(ctx):
-    author = ctx.message.author.name
-    server = ctx.message.server.name
-
-
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -110,26 +101,12 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!ping'):
-        msg = 'Pong to {author} in {server}'.format(message)
+        msg = 'Pong to {0.author.display_name} in {0.server}'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!letswork'):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-
-# <<<<<<< HEAD
-#    if message.content.startswith('!ping'):
-#        author = client.message.author.name
-#        server = client.message.server.name
-#        msg = 'Pong for {} from {}!'.format(message, author, server)
-#        await client.send_message(message.channel, msg)
-# =======
-    #if message.content.startswith('!ping'):
-     #   author = ctx.msg.author.name
-      #  server = ctx.msg.server.name
-       # msg = 'Pong for {} from {}!'.format(message, author, server)
-        #await client.send_message(message.channel, msg)
-# >>>>>>> d5c1a5268eb7ff3cef0b9dfa6de4be0119498161
 
     if message.content.startswith('!whoru'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
@@ -138,7 +115,6 @@ async def on_message(message):
   #  if message.content.startswith('!add'):
   #      async def add(ctx, a: int, b: int):
   #      await client.send(a+b)
-
 
   #  Leave !help always the second last one. Please update in GitHub any changes.
     if message.content.startswith('!help'):
