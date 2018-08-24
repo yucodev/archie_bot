@@ -13,10 +13,15 @@ import site
 import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
-author = ctx.message.author.name
-server = ctx.message.server.name
-
 client = discord.Client()
+
+description = 'A nice little event bot'
+bot = commands.Bot(command_prefix='!', description=description)
+
+@bot.command(pass_context=True)
+async def ping(ctx):
+    author = ctx.message.author.name
+    server = ctx.message.server.name
 
 
 @client.event
