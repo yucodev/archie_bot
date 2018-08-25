@@ -2,9 +2,6 @@ import discord
 from discord.ext import commands
 import os
 from os import getenv
-import codecs
-import aiohttp
-from bs4 import BeautifulSoup
 import asyncio
 import ctx
 import time
