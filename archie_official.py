@@ -40,6 +40,13 @@ async def on_message(message):
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!flipcoin'):
+        a = 'Heads :fire:'
+        b = 'Tails :fire: :boom:'
+        msg = random.choice([a, b]).format(message)
+        await client.send_message(message.channel, msg)
+
+        
     if message.content.startswith('!5random'):
         msg = random.randint(1, int(5))
         await client.send_message(message.channel, msg)
@@ -120,6 +127,7 @@ async def on_message(message):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
+  # no quitar '!update' !!      
     if message.content.startswith('!update'):
         msg = 'Wait a few seconds...'.format(message)
         await client.send_message(message.channel, msg)
