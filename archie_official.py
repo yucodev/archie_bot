@@ -169,7 +169,7 @@ async def translate(self, ctx, to_language, *, msg):
         #[p]translate <new language> <words> - Translate words from one language to another. Full language names must be used.
         #The original language will be assumed automatically.
         await ctx.message.delete()
-     if to_language == "rot13":
+        if to_language == "rot13":
             embed = discord.Embed(color=discord.Color.blue())
             embed.add_field(name="Original", value=msg, inline=False)
             embed.add_field(name="ROT13", value=codecs.encode(msg, "rot_13"), inline=False)
@@ -179,7 +179,7 @@ async def translate(self, ctx, to_language, *, msg):
         real_language = False
         to_language = to_language.lower()
         for entry in lang_codes:
-     if to_language in lang_codes[entry]["name"].replace(";", "").replace(",", "").lower().split():
+            if to_language in lang_codes[entry]["name"].replace(";", "").replace(",", "").lower().split():
                 language = lang_codes[entry]["name"].replace(";", "").replace(",", "").split()[0]
                 to_language = entry
                 real_language = True
@@ -192,7 +192,7 @@ async def translate(self, ctx, to_language, *, msg):
             embed = discord.Embed(color=discord.Color.blue())
             embed.add_field(name="Original", value=msg, inline=False)
             embed.add_field(name=language, value=result.replace("&amp;", "&"), inline=False)
-     if result == msg:
+            if result == msg:
                 embed.add_field(name="Warning", value="This language may not be supported by Google Translate.")
             await ctx.send("", embed=embed)
         else:
