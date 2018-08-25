@@ -183,7 +183,7 @@ async def translate(self, ctx, to_language, *, msg):
                 language = lang_codes[entry]["name"].replace(";", "").replace(",", "").split()[0]
                 to_language = entry
                 real_language = True
-     if real_language:
+        if real_language:
             async with self.bot.session.get("https://translate.google.com/m",
                                         params={"hl": to_language, "sl": "auto", "q": msg}) as resp:
                 translate = await resp.text()
