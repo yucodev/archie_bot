@@ -42,10 +42,9 @@ async def on_message(message):
 
     if message.content.startswith('!flipcoin'):
         a = 'Heads :fire:'
-        b = 'Tails :fire: :boom:'
+        b = 'Tails :snowflake:'
         msg = random.choice([a, b]).format(message)
         await client.send_message(message.channel, msg)
-
         
     if message.content.startswith('!5random'):
         msg = random.randint(1, int(5))
