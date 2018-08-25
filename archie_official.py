@@ -40,7 +40,7 @@ async def on_message(message):
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!random1n5'):
+    if message.content.startswith('!5random'):
         msg = random.randint(1, int(5))
         await client.send_message(message.channel, msg)
 
@@ -48,11 +48,11 @@ async def on_message(message):
         msg = random.randint(1, int(10))
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!random1n100'):
+    if message.content.startswith('!100random'):
         msg = random.randint(1, int(100))
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!random1n1000'):
+    if message.content.startswith('!1000random'):
         msg = random.randint(1, int(1000))
         await client.send_message(message.channel, msg)
 
