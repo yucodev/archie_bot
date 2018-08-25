@@ -74,7 +74,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        msg = 'Current date and time: ' + str(datetime.datetime.now())
+        msg = 'Current date and time: ' + str(datetime.time.now())
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!hello'):
@@ -145,7 +145,7 @@ async def on_message(message):
   #      async def add(ctx, a: int, b: int):
   #      await client.send(a+b)
 
-  #  Leave !help always the second last one. Please update in GitHub any changes.
+  #  Leave !help always the last one. Please update in GitHub any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
