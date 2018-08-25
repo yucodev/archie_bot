@@ -169,7 +169,7 @@ async def translate(self, ctx, to_language, *, msg):
         #[p]translate <new language> <words> - Translate words from one language to another. Full language names must be used.
         #The original language will be assumed automatically.
         await ctx.message.delete()
-    if to_language == "rot13":  # little easter egg
+    if to_language == "rot13":
             embed = discord.Embed(color=discord.Color.blue())
             embed.add_field(name="Original", value=msg, inline=False)
             embed.add_field(name="ROT13", value=codecs.encode(msg, "rot_13"), inline=False)
