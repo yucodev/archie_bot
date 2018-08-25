@@ -38,9 +38,25 @@ async def on_message(message):
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!random1n5'):
+        msg = random.randint(1, int(5))
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!randomnum'):
-         msg = random.choice([1 % 10]).format(message)
-         await client.send_message(message.channel, msg)
+        msg = random.randint(1, int(10))
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!random1n100'):
+        msg = random.randint(1, int(100))
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!random1n1000'):
+        msg = random.randint(1, int(1000))
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!lottery'):
+        msg = random.randint(0, int(99999))
+        await client.send_message(message.channel, msg)
 
     if message.content.startswith('!myname'):
         msg = 'Your name is: {0.author.display_name}'.format(message)
