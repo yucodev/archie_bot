@@ -71,8 +71,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        # dt = datetime.datetime.now()
-        msg = 'Current date and time: ' + str(datetime.datetime.now())
+        msg = 'Current date and time: ' + str(datetime.second.now())
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!hello'):
@@ -127,7 +126,7 @@ async def on_message(message):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
-  # no quitar '!update' !!
+  # do not remove '!update' !!
     if message.content.startswith('!update'):
         msg = 'Wait a few seconds...'.format(message)
         await client.send_message(message.channel, msg)
