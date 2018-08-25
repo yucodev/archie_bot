@@ -71,7 +71,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        msg = 'Current date and time: ' + str(datetime.time.now())
+        msg = 'Current date and time: ' + str(datetime.datetime.now())
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!hello'):
@@ -79,7 +79,11 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!music'):
-        msg = 'My recommendation for {0.author.mention}: https://www.youtube.com/watch?v=hLTgQ5SC-PU'.format(message)
+        a = 'https://youtu.be/hLTgQ5SC-PU' # Do you know the way
+        b = 'https://youtu.be/kJQP7kiw5Fk' # Luis Fonsi - Despacito
+        c = 'https://youtu.be/FTQbiNvZqaY' # Toto - Africa
+        d = 'https://youtu.be/tK601BjwRbk' # Million Dollar Weekends - Addicted To Your Love
+        msg = 'My recommendation for {0.author.mention}: ' + random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!lal'):
