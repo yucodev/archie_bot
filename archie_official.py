@@ -174,8 +174,8 @@ async def translate(self, ctx, to_language, *, msg):
             embed.add_field(name="Original", value=msg, inline=False)
             embed.add_field(name="ROT13", value=codecs.encode(msg, "rot_13"), inline=False)
             return await ctx.send("", embed=embed)
-            async with self.bot.session.get("https://gist.githubusercontent.com/astronautlevel2/93a19379bd52b351dbc6eef269efa0bc/raw/18d55123bc85e2ef8f54e09007489ceff9b3ba51/langs.json") as resp:
-          lang_codes = await resp.json(content_type='text/plain')
+        async with self.bot.session.get("https://gist.githubusercontent.com/astronautlevel2/93a19379bd52b351dbc6eef269efa0bc/raw/18d55123bc85e2ef8f54e09007489ceff9b3ba51/langs.json") as resp:
+            lang_codes = await resp.json(content_type='text/plain')
         real_language = False
         to_language = to_language.lower()
         for entry in lang_codes:
