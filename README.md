@@ -38,6 +38,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !letswork
    - !ping
    - !joke
+   - !flipcoin
 
 #### Multimedia
    - !music
