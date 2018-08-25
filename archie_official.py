@@ -71,7 +71,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        msg = 'Current date and time: ' + str(datetime.second.now())
+        msg = 'Current date and time: ' + str(datetime.datetime.now())
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!hello'):
