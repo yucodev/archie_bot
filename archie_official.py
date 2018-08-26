@@ -74,7 +74,15 @@ async def on_message(message):
     if ('hello archie') in message.content:
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
+        time.sleep(1)
         msg = 'How are you today?'.format(message)
+        await client.send_message(message.channel, msg)
+        
+    if ('good night archie') in message.content:
+        msg = 'Good night {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(1)
+        msg = 'see you tomorrow'.format(message)
         await client.send_message(message.channel, msg)
         
     if ('fine thanks archie') in message.content:
@@ -83,7 +91,7 @@ async def on_message(message):
         time.sleep(2)
         msg = 'I\'m fine too :laughing:'.format(message)
         await client.send_message(message.channel, msg)
-        time.sleep(5)
+        time.sleep(3)
         msg = 'Can you change my profile picture? I don\'t like it very much'.format(message)
         await client.send_message(message.channel, msg)
         
