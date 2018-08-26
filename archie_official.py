@@ -95,6 +95,10 @@ async def on_message(message):
         msg = 'Can you change my profile picture? I don\'t like it very much'.format(message)
         await client.send_message(message.channel, msg)
         
+    if ('not fine archie') in message.content:
+        msg = 'well, ok {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        
     if message.content.startswith('!music'):
         a = 'https://youtu.be/hLTgQ5SC-PU' # Do you know the way
         b = 'https://youtu.be/kJQP7kiw5Fk' # Luis Fonsi - Despacito
