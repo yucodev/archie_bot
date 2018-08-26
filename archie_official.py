@@ -21,9 +21,9 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if ('archie') in message.content:
-        msg = 'What do you want?'.format(message)
-        await client.send_message(message.channel, msg)
+    #if ('archie') in message.content:
+     #   msg = 'What do you want?'.format(message)
+     #   await client.send_message(message.channel, msg)
        
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
@@ -74,7 +74,13 @@ async def on_message(message):
     if ('hello archie') in message.content:
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-
+        msg = 'How are you today?'.format(message)
+        await client.send_message(message.channel, msg)
+        
+    if ('fine thanks archie') in message.content:
+        msg = 'Cool, {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg) 
+        
     if message.content.startswith('!music'):
         a = 'https://youtu.be/hLTgQ5SC-PU' # Do you know the way
         b = 'https://youtu.be/kJQP7kiw5Fk' # Luis Fonsi - Despacito
