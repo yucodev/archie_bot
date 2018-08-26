@@ -80,7 +80,11 @@ async def on_message(message):
     if ('fine thanks archie') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
+        time.sleep(2)
         msg = 'I\'m fine too :laughing:'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(5)
+        msg = 'Can you change my profile picture? I don\'t like it very much'.format(message)
         await client.send_message(message.channel, msg)
         
     if message.content.startswith('!music'):
