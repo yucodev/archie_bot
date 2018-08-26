@@ -41,7 +41,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !joke
    - !flipcoin
    - hello archie
-   - not fine
+   - not fine archie
    - fine thanks archie
    - good night archie
 
