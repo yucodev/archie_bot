@@ -20,6 +20,12 @@ If you have any doubt, info, any question or something you have to tell us, don'
 #### Action (Server)
    - !update (to update any changes)
 
+#### Conversation
+   - hello archie
+   - not fine archie
+   - fine thanks archie
+   - good night archie
+
 #### Info:
    - !help
    - !myid
@@ -40,10 +46,6 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !ping
    - !joke (random joke)
    - !flipcoin
-   - hello archie
-   - not fine archie
-   - fine thanks archie
-   - good night archie
 
 #### Multimedia
    - !music (random music)

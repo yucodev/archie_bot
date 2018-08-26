@@ -24,7 +24,7 @@ async def on_message(message):
     #if ('archie') in message.content:
      #   msg = 'What do you want?'.format(message)
      #   await client.send_message(message.channel, msg)
-       
+
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
@@ -77,14 +77,14 @@ async def on_message(message):
         time.sleep(1)
         msg = 'How are you today?'.format(message)
         await client.send_message(message.channel, msg)
-        
+
     if ('good night archie') in message.content:
         msg = 'Good night {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(1)
         msg = 'see you tomorrow'.format(message)
         await client.send_message(message.channel, msg)
-        
+
     if ('fine thanks archie') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
@@ -94,11 +94,11 @@ async def on_message(message):
         time.sleep(3)
         msg = 'Can you change my profile picture? I don\'t like it very much'.format(message)
         await client.send_message(message.channel, msg)
-        
+
     if ('not fine archie') in message.content:
         msg = 'well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-        
+
     if message.content.startswith('!music'):
         a = 'https://youtu.be/hLTgQ5SC-PU' # Do you know the way
         b = 'https://youtu.be/kJQP7kiw5Fk' # Luis Fonsi - Despacito
