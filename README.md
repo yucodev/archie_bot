@@ -38,7 +38,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !lul
    - !letswork
    - !ping
-   - !joke
+   - !joke (random joke)
    - !flipcoin
    - hello archie
    - not fine archie
