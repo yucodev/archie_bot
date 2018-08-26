@@ -14,7 +14,6 @@ If you have any doubt, info, any question or something you have to tell us, don'
 ## Commands
 #### About Archie
    - !areureal
-   - !hello
    - !howru
    - !whereru
 
@@ -41,6 +40,10 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !ping
    - !joke
    - !flipcoin
+   - hello archie
+   - not fine
+   - fine thanks archie
+   - good night archie
 
 #### Multimedia
    - !music (random music)
