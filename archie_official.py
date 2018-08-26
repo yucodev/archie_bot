@@ -71,7 +71,7 @@ async def on_message(message):
         msg = 'Current date and time: ' + str(datetime.datetime.now())
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!hello'):
+    if ('hello archie') in message.content:
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
