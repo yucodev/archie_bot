@@ -79,7 +79,9 @@ async def on_message(message):
         
     if ('fine thanks archie') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg) 
+        await client.send_message(message.channel, msg)
+        msg = 'I\'m fine too :laughing:'.format(message)
+        await client.send_message(message.channel, msg)
         
     if message.content.startswith('!music'):
         a = 'https://youtu.be/hLTgQ5SC-PU' # Do you know the way
