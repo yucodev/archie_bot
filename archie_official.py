@@ -84,7 +84,7 @@ async def on_message(message):
         c = 'https://youtu.be/FTQbiNvZqaY' # Toto - Africa
         d = 'https://youtu.be/tK601BjwRbk' # Million Dollar Weekends - Addicted To Your Love
         # ISSUE with {0.author.mention}.
-        msg = 'My recommendation for {0.author.mention}: ' + random.choice([a, b, c, d])
+        msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d])
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!lal'):
