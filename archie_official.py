@@ -21,7 +21,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if if ('archie') in message.content:
+    if ('archie') in message.content:
         msg = 'What do you want?'.format(message)
         await client.send_message(message.channel, msg)
        
