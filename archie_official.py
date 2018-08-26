@@ -27,7 +27,10 @@ async def on_message(message):
    #     await bot.say(response)
     #    await asyncio.sleep(120)
 
-
+    if message.content.startwith('archie')
+        msg = 'What do you want?'.format(message)
+        await client.send_message(message.channel. msg)
+        
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
