@@ -149,7 +149,7 @@ async def on_message(message):
 
   # message.content
 
-  	if ('hello archie') in message.content:
+    if ('hello archie') in message.content:
         msg = 'Hello {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(1)
