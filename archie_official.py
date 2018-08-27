@@ -24,7 +24,7 @@ async def on_message(message):
     #if ('archie') in message.content:
      #   msg = 'What do you want?'.format(message)
      #   await client.send_message(message.channel, msg)
-
+	
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
@@ -192,6 +192,10 @@ async def on_message(message):
 #             await client.add_reaction(message, '🌑')
 #         if choice == 2:
 #             await client.add_reaction(message, '🌕')
+
+@client.event
+async def multiply(ctx, a: int, b: int):
+    await ctx.send(a*b)
 
 
 @client.event
