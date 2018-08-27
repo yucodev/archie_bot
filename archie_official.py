@@ -193,7 +193,7 @@ async def on_message(message):
 #         if choice == 2:
 #             await client.add_reaction(message, '🌕')
 
-@client.event
+@bot.command
 async def multiply(ctx, a: int, b: int):
     await ctx.send(a*b)
 
