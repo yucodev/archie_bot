@@ -71,34 +71,6 @@ async def on_message(message):
         msg = 'Current date and time: ' + str(datetime.datetime.now())
         await client.send_message(message.channel, msg)
 
-    if ('hello archie') in message.content:
-        msg = 'Hello {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-        time.sleep(1)
-        msg = 'How are you today?'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if ('good night archie') in message.content:
-        msg = 'Good night {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-        time.sleep(1)
-        msg = 'see you tomorrow'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if ('fine thanks archie') in message.content:
-        msg = 'Cool, {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-        time.sleep(2)
-        msg = 'I\'m fine too :laughing:'.format(message)
-        await client.send_message(message.channel, msg)
-        time.sleep(3)
-        msg = 'Can you change my profile picture? I don\'t like it very much'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if ('not fine archie') in message.content:
-        msg = 'well, ok {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-
     if message.content.startswith('!music'):
         a = 'https://youtu.be/hLTgQ5SC-PU' # Do you know the way
         b = 'https://youtu.be/kJQP7kiw5Fk' # Luis Fonsi - Despacito
@@ -173,6 +145,40 @@ async def on_message(message):
   #  Leave !help always the last one. Please update in GitHub any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
+        await client.send_message(message.channel, msg)
+
+  # message.content
+
+  	if ('hello archie') in message.content:
+        msg = 'Hello {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(1)
+        msg = 'How are you today?'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if ('good night archie') in message.content:
+        msg = 'Good night {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(1)
+        msg = 'see you tomorrow'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if ('fine thanks archie') in message.content:
+        msg = 'Cool, {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(2)
+        msg = 'I\'m fine too :laughing:'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(3)
+        msg = 'Can you change my profile picture? I don\'t like it very much'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if ('not fine archie') in message.content:
+        msg = 'well, ok {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+
+	if ('emergency') in message.content:
+        msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * medical\n * fire\n * police.'.format(message)
         await client.send_message(message.channel, msg)
 
 # @client.event
