@@ -183,15 +183,15 @@ async def on_message(message):
 	
     if message.content.startswith('*fire'):
         msg = 'call 080 (Fire Department Spain emergencias)'
-	await client.send_message(message.channel, msg)
+        await client.send_message(message.channel, msg)
 	
     if message.content.startswith('*medical'):
         msg = 'call 985 18 50 04 (Hospital de Cabueñes) \nor 985 32 00 50 (Hospital Jove)'
-	await client.send_message(message.channel, msg)
+        await client.send_message(message.channel, msg)
 
     if message.content.startswith('*police'):
         msg = 'call 062 (Guardia Civil emergencias) \nor 091 (Policía Nacional emergencias)'
-	await client.send_message(message.channel, msg)
+        await client.send_message(message.channel, msg)
 
 # @client.event
 # async def on_message(message):
