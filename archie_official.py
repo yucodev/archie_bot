@@ -177,7 +177,7 @@ async def on_message(message):
         msg = 'well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-	if ('emergency') in message.content:
+    if ('emergency') in message.content:
         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * medical\n * fire\n * police.'.format(message)
         await client.send_message(message.channel, msg)
 
