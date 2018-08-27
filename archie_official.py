@@ -195,7 +195,8 @@ async def on_message(message):
 
 @client.event
 async def multiply(ctx, a: int, b: int):
-    await ctx.send(a*b)
+    if message.content.startswith('!multiply'):
+        await ctx.send(a*b)
 
 
 @client.event
