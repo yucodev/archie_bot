@@ -181,15 +181,15 @@ async def on_message(message):
         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * medical\n * fire\n * police.'.format(message)
         await client.send_message(message.channel, msg)
 	
-    if message.content.startswith('*fire')
+    if message.content.startswith('*fire'):
         msg = 'call 080 (Fire Department Spain emergencias)
 	await client.send_message(message.channel, msg)
 	
-    if message.content.startswith('*medical')
-        msg = 'call 985 18 50 04 (Hospital de Cabueñes) or 985 32 00 50 (Hospital Jove)
+    if message.content.startswith('*medical'):
+        msg = 'call 985 18 50 04 (Hospital de Cabueñes) \nor 985 32 00 50 (Hospital Jove)
 	await client.send_message(message.channel, msg)
 
-    if message.content.startswith('*police')
+    if message.content.startswith('*police'):
         msg = 'call 062 (Guardia Civil emergencias) \nor 091 (Policía Nacional emergencias)
 	await client.send_message(message.channel, msg)
 
