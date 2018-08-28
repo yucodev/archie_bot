@@ -33,8 +33,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
      - medical
      - fire
 
-
-#### Info:
+#### Info
    - !help
    - !myid
    - !myname
@@ -43,6 +42,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
 #### Interaction
    - !randomnum
    - !5random
+   - !10random
    - !100random
    - !1000random
    - !lal
