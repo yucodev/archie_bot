@@ -29,9 +29,9 @@ If you have any doubt, info, any question or something you have to tell us, don'
 
 #### Human help
    - emergency
-   * police
-   * medical
-   * fire
+     - police
+     - medical
+     - fire
 
 
 #### Info:
