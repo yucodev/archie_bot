@@ -5,7 +5,6 @@ from os import getenv
 import asyncio
 import ctx
 import time
-#import RPi.GPIO as GPIO
 import datetime
 import random
 import site
@@ -47,7 +46,7 @@ async def on_message(message):
         msg = random.randint(1, int(5))
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!randomnum'):
+    if message.content.startswith('!randomnum', '!10random'):
         msg = random.randint(1, int(10))
         await client.send_message(message.channel, msg)
 
