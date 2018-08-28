@@ -47,7 +47,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!randomnum'):
-        msg = random.randint(1, int(100000000000000))
+        msg = random.randint(1, int(1000))
         await client.send_message(message.channel, msg)
 	
     if message.content.startswith(!'10random'):
