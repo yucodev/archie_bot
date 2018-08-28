@@ -198,19 +198,7 @@ async def on_message(message):
     if message.content.startswith('police'):
         msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). You can also call 062 for Guardia Civil. :telephone_receiver: 112 for general emergencies.'
         await client.send_message(message.channel, msg)
-
-
-# @client.event
-# async def on_message(message):
-#     if message.content.lower().startswith('?test'):
-#         await client.send_message(message.channel, "Test bestanden")
-#
-#     if message.content.lower().startswith('?coin'): #Coinflip 50/50% chance kopf oder zahl
-#         choice = random.randint(1,2)
-#         if choice == 1:
-#             await client.add_reaction(message, '🌑')
-#         if choice == 2:
-#             await client.add_reaction(message, '🌕')
+		
 
 @client.event
 async def multiply(ctx, a: int, b: int):
