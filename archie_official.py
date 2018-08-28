@@ -181,6 +181,19 @@ async def on_message(message):
         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * medical\n * fire\n * police.'.format(message)
         await client.send_message(message.channel, msg)
 
+	if ('medical') in message.content:
+		msg = '061 to call an ambulance in Spain. 112 for general emergency.'.format(message)
+		await client.send_message(message.channel, msg)
+
+	if ('fire') in message.content:
+		msg = '080 to call firemen in Spain. 112 for general emergency.'.format(message)
+		await client.send_message(message.channel, msg)
+
+	if ('police') in message.content:
+		msg = '091 to call National Police in Spain (092 to Local Police) You can also call 062 for Guardia Civil. 112 for general emergency.'.format(message)
+		await client.send_message(message.channel, msg)
+
+
 # @client.event
 # async def on_message(message):
 #     if message.content.lower().startswith('?test'):
