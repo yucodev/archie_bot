@@ -166,7 +166,7 @@ async def on_message(message):
         msg = 'see you tomorrow'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('fine thanks archie') in message.content:
+    if ('fine') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(2)
@@ -176,9 +176,12 @@ async def on_message(message):
         msg = 'Can you change my profile picture? I don\'t like it very much'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('not fine archie') in message.content:
-        msg = 'well, ok {0.author.mention}'.format(message)
+    if ('not fine') in message.content:
+        msg = 'Well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
+		time.sleep(2)
+		msg = 'Maybe I can help you ;-)'
+		await client.send_message(message.channel, msg)
 
     if ('emergency') in message.content:
         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * :hospital: medical \n * :fire: fire \n * :police_car: police.'.format(message)
