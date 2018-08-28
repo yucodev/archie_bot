@@ -23,7 +23,7 @@ async def on_message(message):
     #if ('archie') in message.content:
      #   msg = 'What do you want?'.format(message)
      #   await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
@@ -47,9 +47,9 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!randomnum'):
-        msg = random.randint(1, int(100000000000000))
+        msg = random.randint(1, int(10))
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('!10random'):
         msg = random.randint(1, int(10))
         await client.send_message(message.channel, msg)
@@ -80,15 +80,15 @@ async def on_message(message):
         g = 'https://youtu.be/v2AC41dglnM' # AC/DC - Thunderstruck (Official Video)
         msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d, e, f, g])
         await client.send_message(message.channel, msg)
-       
+
     if message.content.startswith('pepe'):
         a = 'El que te la mete hasta por el retrete!'
-        b = 'El que te mete el Nepe!'
+        b = 'El que te mete el nepe!'
         c = 'El que te la saca y te la mete!'
         d = 'El que hasta los huevos me mete'
-        msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d])
+        msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('!lal'):
         msg = 'Are you jaking?'.format(message)
         await client.send_message(message.channel, msg)
@@ -162,11 +162,11 @@ async def on_message(message):
         time.sleep(1)
         msg = 'How are you today?'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if ('hola') in message.content:
         msg = 'Pa ti mi cola {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-       
+
     if ('good night archie') in message.content:
         msg = 'Good night {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
@@ -187,31 +187,31 @@ async def on_message(message):
     if ('not fine archie') in message.content:
         msg = 'well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if ('enrique') in message.content:
         msg = 'El que te la mete detrás del tabique!'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if ('yolanda') in message.content:
         msg = 'La que folla mas que anda!'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if ('fernando') in message.content:
         msg = 'El de los huevos colgando y la picha arrastrando!'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if ('arturo') in message.content:
         msg = 'El del ciruelo duro!'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if ('emergency') in message.content:
         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * medical\n * fire\n * police.'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('*fire'):
         msg = 'call 080 (Fire Department Spain emergencias)'
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('*medical'):
         msg = 'call 985 18 50 04 (Hospital de Cabueñes) \nor 985 32 00 50 (Hospital Jove)'
         await client.send_message(message.channel, msg)
