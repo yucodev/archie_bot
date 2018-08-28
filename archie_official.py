@@ -198,7 +198,7 @@ async def on_message(message):
     if message.content.startswith('police'):
         msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). You can also call 062 for Guardia Civil. :telephone_receiver: 112 for general emergencies.'
         await client.send_message(message.channel, msg)
-		
+
 
 @client.event
 async def multiply(ctx, a: int, b: int):
