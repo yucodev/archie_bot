@@ -17,14 +17,22 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !howru
    - !whereru
 
-#### Action (Server)
+#### Action (server)
    - !update (to update any changes)
 
-#### Conversation
+#### Conversation (without symbol)
    - hello archie
    - not fine archie
    - fine thanks archie
    - good night archie
+   - hola
+
+#### Human help
+   - emergency
+   * police
+   * medical
+   * fire
+
 
 #### Info:
    - !help
