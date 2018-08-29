@@ -154,6 +154,9 @@ async def on_message(message):
     if ('hola') in message.content:
         msg = 'Pa ti mi cola {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
+	time.sleep(1)
+	msg = 'y tu nariz en mis bolas'.format(message)
+	await client.send_message(message.channel, msg)
 
     if ('who am i talking with') in message.content:
         msg = 'I think... Archie? You can see the list of commands or more info in !help.'.format(message)
@@ -164,6 +167,12 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         msg = 'see you tomorrow'.format(message)
+        await client.send_message(message.channel, msg)
+	
+    if ('arturo') in message.content:
+	a = 'El del ciruelo duro'
+	b = 'El de mi polla con cianuro'
+	msg = 'Arturo, '.format(message) + random.choice([a, b])
         await client.send_message(message.channel, msg)
 
     if ('fine') in message.content:
@@ -198,7 +207,7 @@ async def on_message(message):
     if message.content.startswith('police'):
         msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
         await client.send_message(message.channel, msg)
-
+	
     if message.content.startswith('no'):
         msg = 'Well...'.format(message)
         await client.send_message(message.channel, msg)
