@@ -86,7 +86,7 @@ async def on_message(message):
         b = 'El que te mete el Nepe!'
         c = 'El que te la saca y te la mete!'
         d = 'El que hasta los huevos me mete'
-        msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d])
+        msg = 'Pepe, '.format(message) + random.choice([a, b, c, d])
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!lal'):
