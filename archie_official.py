@@ -210,11 +210,13 @@ async def on_message(message):
         msg = ':yum:'.format(message)
         await client.send_message(message.channel, msg)
 
-
-    if ('archie') in message.content:
-        msg = 'What do you want?'.format(message)
+    if message.content.startswith('hi'):
+        msg = 'Hallo! That\'s hello in german!'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('archie'):
+        msg = 'What do you want?'.format(message)
+        await client.send_message(message.channel, msg)
 
 @client.event
 async def multiply(ctx, a: int, b: int):
