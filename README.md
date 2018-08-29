@@ -26,6 +26,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - fine thanks archie
    - good night archie
    - hola
+   - who am i talking with
 
 #### Human help
    - emergency
