@@ -173,6 +173,22 @@ async def on_message(message):
         time.sleep(1)
         msg = 'see you tomorrow'.format(message)
         await client.send_message(message.channel, msg)
+	
+    if ('enrique') in message.content:
+        msg = 'El que te la mete detrás del tabique!'.format(message)
+        await client.send_message(message.channel, msg)
+	
+    if ('yolanda') in message.content:
+        msg = 'La que folla mas que anda!'.format(message)
+        await client.send_message(message.channel, msg)
+	
+    if ('fernando') in message.content:
+        msg = 'El de los huevos colgando y la picha arrastrando!'.format(message)
+        await client.send_message(message.channel, msg)
+	
+    if ('arturo') in message.content:
+        msg = 'El del ciruelo duro!'.format(message)
+        await client.send_message(message.channel, msg)
 
     if ('fine') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
