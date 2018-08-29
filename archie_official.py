@@ -20,10 +20,6 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    #if ('archie') in message.content:
-     #   msg = 'What do you want?'.format(message)
-     #   await client.send_message(message.channel, msg)
-
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
@@ -212,6 +208,11 @@ async def on_message(message):
 
 	if message.content.startswith('yes'):
         msg = ':yum:'.format(message)
+        await client.send_message(message.channel, msg)
+
+
+    if ('archie') in message.content:
+        msg = 'What do you want?'.format(message)
         await client.send_message(message.channel, msg)
 
 
