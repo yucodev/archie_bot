@@ -80,6 +80,14 @@ async def on_message(message):
         g = 'https://youtu.be/v2AC41dglnM' # AC/DC - Thunderstruck (Official Video)
         msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d, e, f, g])
         await client.send_message(message.channel, msg)
+	
+	    if message.content.startswith('pepe'):
+        a = 'El que te la mete hasta por el retrete!'
+        b = 'El que te mete el Nepe!'
+        c = 'El que te la saca y te la mete!'
+        d = 'El que hasta los huevos me mete'
+        msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d])
+        await client.send_message(message.channel, msg)
 
     if message.content.startswith('!lal'):
         msg = 'Are you jaking?'.format(message)
