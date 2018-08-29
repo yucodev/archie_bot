@@ -109,10 +109,6 @@ async def on_message(message):
         msg = 'Are you juking?'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('¿Con quien hablo?'):
-        msg = 'Conmigo'.format(message)
-        await client.send_message(message.channel, msg)
-
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
         await client.send_message(message.channel, msg)
@@ -169,6 +165,10 @@ async def on_message(message):
 
     if ('hola') in message.content:
         msg = 'Pa ti mi cola {0.author.mention}'.format(message)
+        await client.send_message(message.channel, msg)
+
+	if ('who am i talking with') in message.content:
+        msg = 'I think... Archie? You can see the list of commands or more info in !help.'.format(message)
         await client.send_message(message.channel, msg)
 
     if ('good night archie') in message.content:
