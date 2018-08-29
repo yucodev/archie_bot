@@ -191,14 +191,6 @@ async def on_message(message):
         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * :hospital: medical \n * :fire: fire \n * :police_car: police.'.format(message)
         await client.send_message(message.channel, msg)
 	
-    if ('pepe') in message.content:
-        a = 'El que te la mete hasta por el retrete!'
-        b = 'El que te mete el Nepe!'
-        c = 'El que te la saca y te la mete!'
-        d = 'El que hasta los huevos me mete'
-        msg = 'Pepe, '.format(message) + random.choice([a, b, c, d])
-        await client.send_message(message.channel, msg
-
     if message.content.startswith('fire'):
         msg = ':fire: Call 080 (Fire Department Spain). \n:telephone_receiver: 112 for general emergencies.'
         await client.send_message(message.channel, msg)
