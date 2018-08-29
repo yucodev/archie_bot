@@ -211,7 +211,9 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('hi'):
-        msg = 'Hallo! That\'s hello in german!'.format(message)
+        de = 'Hallo! That\'s hello in German!'
+        es = '¡Hola! That\'s hello in Spanish!'
+        msg = random.choice([de, es]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('archie'):
