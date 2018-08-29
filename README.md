@@ -5,6 +5,8 @@ Archie is our official and main CAD discord bot. All content is published in Git
 Archie is programmed in Python because it's easier than C++ and more effective than javascript.
 ### Which file sould be used?
 archie_official.py
+### Is Archie public?
+Well... currently is in development, but in a future we hope Archie can help a lot of people ;-).
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. Our e-mail is cibathleticsdev@gmail.com
 ### Tips
@@ -27,6 +29,8 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - good night archie
    - hola
    - who am i talking with
+   - yes
+   - no
 
 #### Human help (without symbol)
    - emergency

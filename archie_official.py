@@ -190,7 +190,7 @@ async def on_message(message):
     if ('emergency') in message.content:
         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * :hospital: medical \n * :fire: fire \n * :police_car: police.'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('fire'):
         msg = ':fire: Call 080 (Fire Department Spain). \n:telephone_receiver: 112 for general emergencies.'
         await client.send_message(message.channel, msg)
@@ -198,9 +198,20 @@ async def on_message(message):
     if message.content.startswith('medic'):
         msg = ':ambulance: 061 to call an ambulance in Spain. \n:telephone_receiver: 112 for general emergencies. \nNear hospitals telephones:\n  985 18 50 04 (Hospital de Cabueñes)\n  985 32 00 50 (Hospital Jove)'
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('police'):
         msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
+        await client.send_message(message.channel, msg)
+
+	if message.content.startswith('no'):
+        msg = 'Well...'.format(message)
+        await client.send_message(message.channel, msg)
+		time.sleep(2)
+		msg = 'Ok.'.format(message)
+		await client.send_message(message.channelm, msg)
+
+	if message.content.startswith('yes'):
+        msg = ':yum:'.format(message)
         await client.send_message(message.channel, msg)
 
 
