@@ -81,7 +81,7 @@ async def on_message(message):
         msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d, e, f, g])
         await client.send_message(message.channel, msg)
 	
-    if message.content.startswith('pepe'):
+    if message.content('pepe'):
         a = 'El que te la mete hasta por el retrete!'
         b = 'El que te mete el Nepe!'
         c = 'El que te la saca y te la mete!'
@@ -179,19 +179,19 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 	
     if ('enrique') in message.content:
-        msg = 'El que te la mete detrás del tabique!'.format(message)
+        msg = 'Enrique, el que te la mete detrás del tabique!'.format(message)
         await client.send_message(message.channel, msg)
 	
     if ('yolanda') in message.content:
-        msg = 'La que folla mas que anda!'.format(message)
+        msg = 'Yolanda, la que folla mas que anda!'.format(message)
         await client.send_message(message.channel, msg)
 	
     if ('fernando') in message.content:
-        msg = 'El de los huevos colgando y la picha arrastrando!'.format(message)
+        msg = 'Fernando, el de los huevos colgando y la picha arrastrando!'.format(message)
         await client.send_message(message.channel, msg)
 	
     if ('arturo') in message.content:
-        msg = 'El del ciruelo duro!'.format(message)
+        msg = 'Arturo, el del ciruelo duro!'.format(message)
         await client.send_message(message.channel, msg)
 
     if ('fine') in message.content:
