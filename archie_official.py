@@ -109,7 +109,7 @@ async def on_message(message):
         msg = 'Are you juking?'.format(message)
         await client.send_message(message.channel, msg)
 	
-    if message.content.startwith('¿Con quien hablo?')
+    if message.content.startwith('¿Con quien hablo?'):
         msg = 'Conmigo'.format(message)
         await client.send_message(message.channel, msg)
 	
