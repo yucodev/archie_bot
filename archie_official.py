@@ -203,14 +203,14 @@ async def on_message(message):
         msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
         await client.send_message(message.channel, msg)
 
-	if message.content.startswith('no'):
+    if message.content.startswith('no'):
         msg = 'Well...'.format(message)
         await client.send_message(message.channel, msg)
-		time.sleep(2)
-		msg = 'Ok.'.format(message)
-		await client.send_message(message.channelm, msg)
+        time.sleep(2)
+        msg = 'Ok'.format(message)
+        await client.send_message(message.channelm, msg)
 
-	if message.content.startswith('yes'):
+    if message.content.startswith('yes'):
         msg = ':yum:'.format(message)
         await client.send_message(message.channel, msg)
 
