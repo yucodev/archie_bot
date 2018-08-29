@@ -179,24 +179,24 @@ async def on_message(message):
     if ('not fine') in message.content:
         msg = 'Well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
-	time.sleep(2)
+        time.sleep(2)
 	msg = 'Maybe I can help you =)'
-	await client.send_message(message.channel, msg)
+        await client.send_message(message.channel, msg)
 
     if ('emergency') in message.content:
         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * :hospital: medical \n * :fire: fire \n * :police_car: police.'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('fire'):
-        msg = ':fire: Call 080 (Fire Department Spain). :telephone_receiver: 112 for general emergencies.'
+        msg = ':fire: Call 080 (Fire Department Spain). \n:telephone_receiver: 112 for general emergencies.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('medic'):
-        msg = ':ambulance: 061 to call an ambulance in Spain. :telephone_receiver: 112 for general emergencies. Near hospitals telephones:\n  985 18 50 04 (Hospital de Cabueñes)\n  985 32 00 50 (Hospital Jove)'
+        msg = ':ambulance: 061 to call an ambulance in Spain. \n:telephone_receiver: 112 for general emergencies. \nNear hospitals telephones:\n  985 18 50 04 (Hospital de Cabueñes)\n  985 32 00 50 (Hospital Jove)'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('police'):
-        msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). You can also call 062 for Guardia Civil. :telephone_receiver: 112 for general emergencies.'
+        msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. :telephone_receiver: 112 for general emergencies.'
         await client.send_message(message.channel, msg)
 
 
