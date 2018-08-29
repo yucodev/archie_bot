@@ -12,6 +12,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
 ### Tips
    - Never show the token in GitHub. Use an external config.py file that contains the token, and hide it with a .gitignore file.
    - Please, use always English language if possible.
+   - Update from git
 
 ## Commands
 #### About Archie
@@ -62,6 +63,3 @@ If you have any doubt, info, any question or something you have to tell us, don'
 
 #### Multimedia
    - !music (random music)
-
-
-   <!-- Prueba desde git -->
