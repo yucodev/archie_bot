@@ -108,7 +108,11 @@ async def on_message(message):
     if message.content.startswith('!lul'):
         msg = 'Are you juking?'.format(message)
         await client.send_message(message.channel, msg)
-
+	
+    if message.content.startwith('¿Con quien hablo?')
+        msg = 'Conmigo'.format(message)
+        await client.send_message(message.channel, msg)
+	
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
         await client.send_message(message.channel, msg)
