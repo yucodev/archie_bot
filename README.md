@@ -28,7 +28,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - hola
    - who am i talking with
 
-#### Human help
+#### Human help (without symbol)
    - emergency
      - police
      - medical
