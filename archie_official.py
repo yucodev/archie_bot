@@ -80,7 +80,7 @@ async def on_message(message):
         g = 'https://youtu.be/v2AC41dglnM' # AC/DC - Thunderstruck (Official Video)
         msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d, e, f, g])
         await client.send_message(message.channel, msg)
-	
+
     if message.content('pepe'):
         a = 'El que te la mete hasta por el retrete!'
         b = 'El que te mete el Nepe!'
@@ -108,11 +108,11 @@ async def on_message(message):
     if message.content.startswith('!lul'):
         msg = 'Are you juking?'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('¿Con quien hablo?'):
         msg = 'Conmigo'.format(message)
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('!areureal'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
         await client.send_message(message.channel, msg)
@@ -176,22 +176,6 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         msg = 'see you tomorrow'.format(message)
-        await client.send_message(message.channel, msg)
-	
-    if ('enrique') in message.content:
-        msg = 'Enrique, el que te la mete detrás del tabique!'.format(message)
-        await client.send_message(message.channel, msg)
-	
-    if ('yolanda') in message.content:
-        msg = 'Yolanda, la que folla mas que anda!'.format(message)
-        await client.send_message(message.channel, msg)
-	
-    if ('fernando') in message.content:
-        msg = 'Fernando, el de los huevos colgando y la picha arrastrando!'.format(message)
-        await client.send_message(message.channel, msg)
-	
-    if ('arturo') in message.content:
-        msg = 'Arturo, el del ciruelo duro!'.format(message)
         await client.send_message(message.channel, msg)
 
     if ('fine') in message.content:
