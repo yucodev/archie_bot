@@ -12,7 +12,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
 ### Tips
    - Never show the token in GitHub. Use an external config.py file that contains the token, and hide it with a .gitignore file.
    - Please, use always English language if possible.
-   
+
 ## Commands
 #### About Archie
    - !areureal
@@ -31,6 +31,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - who am i talking with
    - yes
    - no
+   - archie
 
 #### Human help (without symbol)
    - emergency
