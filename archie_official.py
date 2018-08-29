@@ -159,7 +159,7 @@ async def on_message(message):
         msg = 'Pa ti mi cola {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-	if ('who am i talking with') in message.content:
+    if ('who am i talking with') in message.content:
         msg = 'I think... Archie? You can see the list of commands or more info in !help.'.format(message)
         await client.send_message(message.channel, msg)
 
