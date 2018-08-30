@@ -7,6 +7,8 @@ Archie is programmed in Python because it's easier than C++ and more effective t
 archie_official.py
 ### Is Archie public?
 Well... currently is in development, but in a future we hope Archie can help a lot of people ;-).
+### About us
+You can see some info about us and the bot in our website https://cibathleticsdev.blogspot.com/.
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. Our e-mail is cibathleticsdev@gmail.com
 ### Rules and tips
