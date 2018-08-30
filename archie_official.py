@@ -220,6 +220,10 @@ async def on_message(message):
         msg = 'What do you want?'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('mia'):
+        msg = 'Khalifa'.format(message)
+        await client.send_message(message.channel, msg)
+
 @client.event
 async def multiply(ctx, a: int, b: int):
     if message.content.startswith('!multiply'):
