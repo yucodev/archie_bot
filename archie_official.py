@@ -20,12 +20,12 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    #if ('archie') in message.content:
-     #   msg = 'What do you want?'.format(message)
-     #   await client.send_message(message.channel, msg)
-
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('archie'):
+        msg = 'What do you want?'.format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!joke'):
@@ -137,16 +137,12 @@ async def on_message(message):
         time.sleep(5)
         exit()
 
-  #  if message.content.startswith('!add'):
-  #      async def add(ctx, a: int, b: int):
-  #      await client.send(a+b)
-
   #  Leave !help always the last one. Please update in GitHub any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
 
-  # message.content
+  # MESSAGE.CONTENT
 
     if ('hello archie') in message.content:
         msg = 'Hello {0.author.mention}'.format(message)
@@ -180,72 +176,23 @@ async def on_message(message):
         msg = 'well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('pepe') in message.content:
-        a = 'El que te la mete hasta por el retrete!'
-        b = 'El que te mete el nepe!'
-        c = 'El que te la saca y te la mete!'
-        d = 'El que hasta los huevos me mete'
-        msg = 'Pepe, '.format(message) + random.choice([a, b, c, d])
-        await client.send_message(message.channel, msg)
-
-    if ('enrique') in message.content:
-        msg = 'El que te la mete detrás del tabique!'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if ('yolanda') in message.content:
-        msg = 'La que folla mas que anda!'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if ('fernando') in message.content:
-        msg = 'El de los huevos colgando y la picha arrastrando!'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if ('arturo') in message.content:
-	a = 'El del ciruelo duro'
-	b = 'El de mi polla con cianuro'
-	msg = 'Arturo, '.format(message) + random.choice([a, b])
-        await client.send_message(message.channel, msg)
+# EMERGENCY
 
     if ('emergency') in message.content:
-        msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * medical\n * fire\n * police.'.format(message)
-        await client.send_message(message.channel, msg)
+         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * :hospital: medical \n * :fire: fire \n * :police_car: police.'.format(message)
+         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('*fire'):
-        msg = 'call 080 (Fire Department Spain emergencias)'
-        await client.send_message(message.channel, msg)
+     if message.content.startswith('fire'):
+         msg = ':fire: Call 080 (Fire Department Spain). \n:telephone_receiver: 112 for general emergencies.'
+         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('*medical'):
-        msg = 'call 985 18 50 04 (Hospital de Cabueñes) \nor 985 32 00 50 (Hospital Jove)'
-        await client.send_message(message.channel, msg)
+     if message.content.startswith('medic'):
+         msg = ':ambulance: 061 to call an ambulance in Spain. \n:telephone_receiver: 112 for general emergencies. \nNear hospitals telephones:\n  985 18 50 04 (Hospital de Cabueñes)\n  985 32 00 50 (Hospital Jove)'
+         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('*police'):
-        msg = 'call 062 (Guardia Civil emergencias) \nor 091 (Policía Nacional emergencias)'
-        await client.send_message(message.channel, msg)
-
-    if ('medical') in message.content:
-	msg = '061 to call an ambulance in Spain. 112 for general emergency.'.format(message)
-	await client.send_message(message.channel, msg)
-
-    if ('fire') in message.content:
-	msg = '080 to call firemen in Spain. 112 for general emergency.'.format(message)
-	await client.send_message(message.channel, msg)
-
-    if ('police') in message.content:
-	msg = '091 to call National Police in Spain (092 to Local Police) You can also call 062 for Guardia Civil. 112 for general emergency.'.format(message)
-	await client.send_message(message.channel, msg)
-
-
-# @client.event
-# async def on_message(message):
-#     if message.content.lower().startswith('?test'):
-#         await client.send_message(message.channel, "Test bestanden")
-#
-#     if message.content.lower().startswith('?coin'): #Coinflip 50/50% chance kopf oder zahl
-#         choice = random.randint(1,2)
-#         if choice == 1:
-#             await client.add_reaction(message, '🌑')
-#         if choice == 2:
-#             await client.add_reaction(message, '🌕')
+     if message.content.startswith('police'):
+         msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
+         await client.send_message(message.channel, msg)
 
 @client.event
 async def multiply(ctx, a: int, b: int):
