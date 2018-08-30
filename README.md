@@ -8,7 +8,7 @@ archie_official.py
 ### Is Archie public?
 Well... currently is in development, but in a future we hope Archie can help a lot of people ;-).
 ### About us
-You can see some info about us and the bot in our website https://cibathleticsdev.blogspot.com/.
+You can see some info about us and the bot in our website https://cadevelopers.ml.
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail or website. Our e-mail is cibathleticsdev@gmail.com.
 ### Rules and tips
