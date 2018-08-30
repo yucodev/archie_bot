@@ -154,6 +154,7 @@ async def on_message(message):
     if ('hola') in message.content:
         msg = 'Pa ti mi cola {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
+	time.sleep(0.5)
 	msg = '{0.author.mention} y tu nariz conta mis pelotas'.format(message)
 	await client.send_message(message.channel, msg)
 
