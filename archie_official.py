@@ -121,7 +121,7 @@ async def on_message(message):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('who are you'):
+    if message.content.startswith('!whoru'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
@@ -165,14 +165,14 @@ async def on_message(message):
         msg = 'See you tomorrow'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('fine thanks archie') in message.content:
+    if ('fine thanks') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(2)
         msg = 'I\'m fine too :laughing:'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('not fine archie') in message.content:
+    if ('not fine') in message.content:
         msg = 'well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
