@@ -180,7 +180,7 @@ async def on_message(message):
         msg = 'Well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(2)
-        msg = 'Maybe I can help you ;-).'
+        msg = 'Maybe I can help you ;-)'
         await client.send_message(message.channel, msg)
 
     if ('emergency') in message.content:
