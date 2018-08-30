@@ -176,6 +176,10 @@ async def on_message(message):
         msg = 'well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('mia'):
+        msg = 'Khalifa'.format(message)
+        await client.send_message(message.channel, msg)
+
 # EMERGENCY
 
     if ('emergency') in message.content:
@@ -193,10 +197,6 @@ async def on_message(message):
      if message.content.startswith('police'):
          msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
          await client.send_message(message.channel, msg)
-
-    if message.content.startswith('mia'):
-        msg = 'Khalifa'.format(message)
-        await client.send_message(message.channel, msg)
 
 @client.event
 async def multiply(ctx, a: int, b: int):
