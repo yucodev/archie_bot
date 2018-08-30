@@ -24,6 +24,10 @@ async def on_message(message):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('archie'):
+        msg = 'What do you want?'.format(message)
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!joke'):
         a = 'Can a kangaroo jump higher than a house?\nOf course, a house doesn’t jump at all.'
         b = 'Anton, do you think I’m a bad mother?\nMy name is Paul.'
@@ -117,7 +121,7 @@ async def on_message(message):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!whoru'):
+    if message.content.startswith('who are you'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
@@ -133,16 +137,12 @@ async def on_message(message):
         time.sleep(5)
         exit()
 
-  #  if message.content.startswith('!add'):
-  #      async def add(ctx, a: int, b: int):
-  #      await client.send(a+b)
-
   #  Leave !help always the last one. Please update in GitHub any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
         await client.send_message(message.channel, msg)
 
-  # message.content
+  # MESSAGE.CONTENT
 
     if ('hello archie') in message.content:
         msg = 'Hello {0.author.mention}'.format(message)
@@ -154,71 +154,45 @@ async def on_message(message):
     if ('hola') in message.content:
         msg = 'Pa ti mi cola {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
+        time.sleep(1)
+        msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
+        await client.send_message(message.channel, msg
 
-    if ('who am i talking with') in message.content:
-        msg = 'I think... Archie? You can see the list of commands or more info in !help.'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if ('good night archie') in message.content:
+    if ('good night') in message.content:
         msg = 'Good night {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(1)
-        msg = 'see you tomorrow'.format(message)
+        msg = 'See you tomorrow'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('fine') in message.content:
+    if ('fine thanks archie') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(2)
         msg = 'I\'m fine too :laughing:'.format(message)
         await client.send_message(message.channel, msg)
-        time.sleep(3)
-        msg = 'Can you change my profile picture? I don\'t like it very much'.format(message)
+
+    if ('not fine archie') in message.content:
+        msg = 'well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('not fine') in message.content:
-        msg = 'Well, ok {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-        time.sleep(2)
-        msg = 'Maybe I can help you ;-)'
-        await client.send_message(message.channel, msg)
+# EMERGENCY
 
     if ('emergency') in message.content:
-        msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * :hospital: medical \n * :fire: fire \n * :police_car: police.'.format(message)
-        await client.send_message(message.channel, msg)
+         msg = 'You can call 112 in the EU or 911 in the USA. I may can help you, which service do you require?\n * :hospital: medical \n * :fire: fire \n * :police_car: police.'.format(message)
+         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('fire'):
-        msg = ':fire: Call 080 (Fire Department Spain). \n:telephone_receiver: 112 for general emergencies.'
-        await client.send_message(message.channel, msg)
+     if message.content.startswith('fire'):
+         msg = ':fire: Call 080 (Fire Department Spain). \n:telephone_receiver: 112 for general emergencies.'
+         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('medic'):
-        msg = ':ambulance: 061 to call an ambulance in Spain. \n:telephone_receiver: 112 for general emergencies. \nNear hospitals telephones:\n  985 18 50 04 (Hospital de Cabueñes)\n  985 32 00 50 (Hospital Jove)'
-        await client.send_message(message.channel, msg)
+     if message.content.startswith('medic'):
+         msg = ':ambulance: 061 to call an ambulance in Spain. \n:telephone_receiver: 112 for general emergencies. \nNear hospitals telephones:\n  985 18 50 04 (Hospital de Cabueñes)\n  985 32 00 50 (Hospital Jove)'
+         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('police'):
-        msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('no'):
-        msg = 'Well...'.format(message)
-        await client.send_message(message.channel, msg)
-        time.sleep(2)
-        msg = 'Ok'.format(message)
-        await client.send_message(message.channelm, msg)
-
-    if message.content.startswith('yes'):
-        msg = ':yum:'.format(message)
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('hi'):
-        de = 'Hallo! That\'s hello in German!'
-        es = '¡Hola! That\'s hello in Spanish!'
-        msg = random.choice([de, es]).format(message)
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('archie'):
-        msg = 'What do you want?'.format(message)
-        await client.send_message(message.channel, msg)
+     if message.content.startswith('police'):
+         msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
+         await client.send_message(message.channel, msg)
 
     if message.content.startswith('mia'):
         msg = 'Khalifa'.format(message)
