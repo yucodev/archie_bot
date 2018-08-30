@@ -10,7 +10,7 @@ Well... currently is in development, but in a future we hope Archie can help a l
 ### About us
 You can see some info about us and the bot in our website https://cibathleticsdev.blogspot.com/.
 ### Contact us
-If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. Our e-mail is cibathleticsdev@gmail.com
+If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail or website. Our e-mail is cibathleticsdev@gmail.com.
 ### Rules and tips
    - RESPECT
    - Never show the token in GitHub. Use an external config.py file that contains the token, and hide it with a .gitignore file.
