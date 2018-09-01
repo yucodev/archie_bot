@@ -176,7 +176,7 @@ async def on_message(message):
         msg = 'well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('mia'):
+    if ('mia') in message.content:
         msg = 'Khalifa'.format(message)
         await client.send_message(message.channel, msg)
 
