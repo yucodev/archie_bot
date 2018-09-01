@@ -5,6 +5,7 @@ from os import getenv
 import asyncio
 import ctx
 import time
+import logging
 import datetime
 import random
 import site
@@ -12,12 +13,14 @@ import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
+logging.basicConfig(level=logging.CRITICAL)
+
 client = discord.Client()
 
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
-    if message.author == client.user:
+     if message.author == client.user:
         return
 
     if message.content.startswith('!myid'):
