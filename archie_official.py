@@ -13,7 +13,7 @@ import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
-logging.basicConfig(filename='app.log',level=logging.INFO)
+logging.basicConfig(filename='app.log',level=logging.CRITICAL)
 
 client = discord.Client()
 
