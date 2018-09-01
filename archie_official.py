@@ -13,7 +13,7 @@ import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
-logging.basicConfig(filename='/home/dietpi/discord/app.log',level=logging.INFO)
+logging.basicConfig(filename='app.log',level=logging.INFO)
 
 client = discord.Client()
 
@@ -23,14 +23,6 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    try:
-        logging.info('Trying to open the file')
-        filePointer = open('appFile','r')
-        try:
-            logging.info('Trying to read the file content')
-            content = filePointer.readline()
-        finally:
-            filePointer.close()
     except IOError as e:
         logging.error('Error occurred ' + str(e))
 
