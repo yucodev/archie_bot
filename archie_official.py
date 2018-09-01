@@ -23,8 +23,6 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    except IOError as e:
-        logging.error('Error occurred ' + str(e))
 
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
