@@ -158,7 +158,7 @@ async def on_message(message):
         msg = '{0.author.mention} y tu nariz conta mis bolas'.format(message)
         await client.send_message(message.channel, msg
 
-    if ('good night') in message.content:
+    if message.content.startswith('good night'):
         msg = 'Good night {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(1)
