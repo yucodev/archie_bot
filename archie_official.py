@@ -50,7 +50,7 @@ async def on_message(message):
             await client.send_message(message.channel, msg)
                 
     if message.content.startswith('!join'):
-        channel = Client.get_channel('id')
+        channel = client.get_channel('427417193593044999')
         await Client.join_voice_channel(channel)
         print('Bot joined the channel.')
 		
