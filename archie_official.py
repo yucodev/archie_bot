@@ -41,9 +41,9 @@ async def on_message(message):
     if message.content.startswith('!quiz'):
         msg = 'Can cats fly?'
         await client.send_message(message.channel, msg)
-        if message.content.startswith('no'):
-            msg = 'noooooo'
-            await client.send_message(message.channel, msg)
+         if message.content.startswith('no'):
+             msg = 'noooooo'
+             await client.send_message(message.channel, msg)
                 
     if message.content.startswith('!rolldice'):
         a = ':one:'
