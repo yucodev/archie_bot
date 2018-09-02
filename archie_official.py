@@ -56,32 +56,10 @@ async def on_message(message):
         channel = client.get_channel('485833536889290752')
         await client.join_voice_channel(channel)
 		
-    elif message.content.startswith('!play'):
-            if message.author.voice_channel != None:
-                if client.is_voice_connected(message.server) == True:
-                    try:
-                        player = await voice.create_ytdl_player(youtubeLink.getYoutubeLink(message.content))
-                        if player.is_playing() == False:
-                            print('not playing')
-                            player = await voice.create_ytdl_player(youtubeLink.getYoutubeLink(message.content))
-                            player.start()
-                            await client.send_message(message.channel, ':musical_note: Currently Playing: ' + player.title)
-
-                        else:
-                            print('is playing')
-
-                    except NameError:
-                        print('name error')
-                        player = await voice.create_ytdl_player(youtubeLink.getYoutubeLink(message.content))
-                        player.start()
-                        await client.send_message(message.channel, ':musical_note: Currently Playing: ' + player.title)
-
-                else:
-                    await client.send_message(message.channel, 'I am not connected to a voice channel. Use !join to make me join')
-
-            else:
-                await client.send_message(message.channel, 'You are not connected to a voice channel. Enter a voice channel and use !join first.')
-                
+    elif message.content.startswith('!play'): 
+        p = vlc.MediaPlayer("file:///path/to/track.mp3")
+        p.play()
+        
     if message.content.startswith('!rolldice'):
         a = ':one:'
         b = ':two:'
