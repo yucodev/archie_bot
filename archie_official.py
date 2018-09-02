@@ -38,6 +38,33 @@ async def on_message(message):
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!rolldice'):
+        a = ':one:'
+        b = ':two:'
+        c = ':three:'
+        d = ':four:'
+        e = ':five:'
+        f = ':six:' 
+        msg = random.choice([a, b, c, d, e, f]).format(message)
+        await client.send_message(message.channel, msg)
+	
+    if message.content.startswith('!randomcolor'):
+        a = 'red'
+        b = 'blue'
+        c = 'green'
+        d = 'lime'
+        e = 'white'
+        f = 'black'
+        g = 'yellow'
+        h = 'gray'
+        i = 'orange'
+        msg = random.choice([a, b, c, d, e, f, g, h, i]).format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!botinfo'):
+        msg = 'Archie Bot (version 1.1) ©2018 \nA funny Discord Bot with a lot of features!'
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!flipcoin'):
         a = 'Heads :fire:'
         b = 'Tails :snowflake:'
