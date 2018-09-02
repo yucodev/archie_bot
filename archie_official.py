@@ -49,6 +49,11 @@ async def on_message(message):
             msg = 'noooooo'
             await client.send_message(message.channel, msg)
                 
+    if message.content.startswith('!join'):
+        channel = Client.get_channel('id')
+        await Client.join_voice_channel(channel)
+        print('Bot joined the channel.')
+		
     elif message.content.startswith('!play'):
             if message.author.voice_channel != None:
                 if client.is_voice_connected(message.server) == True:
