@@ -30,7 +30,7 @@ async def on_message(message):
         finally:
             filePointer.close()
     except IOError as e:
-        logging.exception(str(e))
+        logging.exception(str(datetime.datetime.now()) + str(e))
 
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
