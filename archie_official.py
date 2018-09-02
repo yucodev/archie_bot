@@ -12,6 +12,7 @@ import random
 import site
 import youtube_dl
 import requests
+import PyNaCl
 import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
