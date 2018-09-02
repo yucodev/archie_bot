@@ -43,7 +43,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         if message.content.startswith('no'):
             msg = 'noooooo'
- 	    await client.send_message(message.channel, msg)
+            await client.send_message(message.channel, msg)
                 
     if message.content.startswith('!rolldice'):
         a = ':one:'
