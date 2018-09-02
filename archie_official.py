@@ -37,7 +37,14 @@ async def on_message(message):
         d = 'My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.'
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
-
+ 
+    if message.content.startswith('!quiz'):
+        msg = 'Can cats fly?'
+        await client.send_message(message.channel, msg)
+        if message.content.startswith('no'):
+            msg = 'noooooo'
+ 	    await client.send_message(message.channel, msg)
+                
     if message.content.startswith('!rolldice'):
         a = ':one:'
         b = ':two:'
