@@ -60,6 +60,7 @@ async def on_message(message):
             if message.author.voice_channel != None:
                 if client.is_voice_connected(message.server) == True:
                     try:
+                        player = await voice.create_ytdl_player(youtubeLink.getYoutubeLink(message.content))
                         if player.is_playing() == False:
                             print('not playing')
                             player = await voice.create_ytdl_player(youtubeLink.getYoutubeLink(message.content))
