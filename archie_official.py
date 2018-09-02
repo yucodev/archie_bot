@@ -22,15 +22,6 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
- 
-    try:
-        filePointer = open('appFile','r')
-        try:
-            content = filePointer.readline()
-        finally:
-            filePointer.close()
-    except IOError as e:
-        logging.exception(str(datetime.datetime.now()) + str(e))
 
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
@@ -40,7 +31,7 @@ async def on_message(message):
         msg = 'What do you want?'.format(message)
         await client.send_message(message.channel, msg)
 
-  if message.content.startswith('!joke'):
+    if message.content.startswith('!joke'):
         a = 'Can a kangaroo jump higher than a house?\nOf course, a house doesn’t jump at all.'
         b = 'Anton, do you think I’m a bad mother?\nMy name is Paul.'
         c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
