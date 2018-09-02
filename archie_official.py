@@ -11,7 +11,7 @@ hdlr = logging.FileHandler('/home/dietpi/archie.log')
 formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
 hdlr.setFormatter(formatter)
 logger.addHandler(hdlr) 
-logger.setLevel(logging.CRITICAL)
+logger.setLevel(logging.INFO)
 import datetime
 import random
 import site
