@@ -52,8 +52,8 @@ async def on_message(message):
             await client.send_message(message.channel, msg)
                 
     if message.content.startswith('!join'):
-        channel = client.get_channel('12324234183172')
-        await bot.join_voice_channel(channel)
+        channel = client.get_channel('485833536889290752')
+        await client.join_voice_channel(channel)
 		
     elif message.content.startswith('!play'):
             if message.author.voice_channel != None:
