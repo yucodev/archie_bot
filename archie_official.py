@@ -27,7 +27,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!myid'):
+  if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
 
