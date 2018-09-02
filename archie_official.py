@@ -6,12 +6,10 @@ import asyncio
 import ctx
 import time
 import logging
-logger = logging.getLogger('archie')
-hdlr = logging.FileHandler('/home/dietpi/archie.log')
-formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
-hdlr.setFormatter(formatter)
-logger.addHandler(hdlr) 
-logger.setLevel(logging.INFO)
+try:
+    1/0
+except ZeroDivisionError as e:
+    logging.exception("message")
 import datetime
 import random
 import site
@@ -29,8 +27,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-
-  if message.content.startswith('!myid'):
+    if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
 
