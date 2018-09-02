@@ -8,10 +8,14 @@ import time
 import datetime
 import random
 import site
+import youtube_dl
+import requests
 import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
+from features import *
+from settings import *
 
 
 client = discord.Client()
@@ -41,9 +45,34 @@ async def on_message(message):
     if message.content.startswith('!quiz'):
         msg = 'Can cats fly?'
         await client.send_message(message.channel, msg)
-         if message.content.startswith('no'):
-             msg = 'noooooo'
-             await client.send_message(message.channel, msg)
+        if message.content.startswith('no'):
+            msg = 'noooooo'
+            await client.send_message(message.channel, msg)
+                
+    elif message.content.startswith('!play'):
+            if message.author.voice_channel != None:
+                if client.is_voice_connected(message.server) == True:
+                    try:
+                        if player.is_playing() == False:
+                            print('not playing')
+                            player = await voice.create_ytdl_player(youtubeLink.getYoutubeLink(message.content))
+                            player.start()
+                            await client.send_message(message.channel, ':musical_note: Currently Playing: ' + player.title)
+
+                        else:
+                            print('is playing')
+
+                    except NameError:
+                        print('name error')
+                        player = await voice.create_ytdl_player(youtubeLink.getYoutubeLink(message.content))
+                        player.start()
+                        await client.send_message(message.channel, ':musical_note: Currently Playing: ' + player.title)
+
+                else:
+                    await client.send_message(message.channel, 'I am not connected to a voice channel. Use !join to make me join')
+
+            else:
+                await client.send_message(message.channel, 'You are not connected to a voice channel. Enter a voice channel and use !join first.')
                 
     if message.content.startswith('!rolldice'):
         a = ':one:'
