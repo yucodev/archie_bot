@@ -6,6 +6,12 @@ import asyncio
 import ctx
 import time
 import logging
+logger = logging.getLogger('archie')
+hdlr = logging.FileHandler('/home/dietpi/archie.log')
+formatter = logging.Formatter('%(asctime)s %(levelname)s %(message)s')
+hdlr.setFormatter(formatter)
+logger.addHandler(hdlr) 
+logger.setLevel(logging.WARNING)
 import datetime
 import random
 import site
@@ -13,7 +19,7 @@ import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
-logging.basicConfig(filename='app.log',level=logging.DEBUG)
+
 
 client = discord.Client()
 
@@ -22,6 +28,7 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
+
 
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
