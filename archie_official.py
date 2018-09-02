@@ -40,7 +40,7 @@ async def on_message(message):
         msg = 'What do you want?'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!joke'):
+  if message.content.startswith('!joke'):
         a = 'Can a kangaroo jump higher than a house?\nOf course, a house doesn’t jump at all.'
         b = 'Anton, do you think I’m a bad mother?\nMy name is Paul.'
         c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
