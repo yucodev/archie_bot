@@ -5,17 +5,6 @@ from os import getenv
 import asyncio
 import ctx
 import time
-import logging
-
-logger = logging.getLogger('your_logger_here')
-
-def log_app_error(e: BaseException, level=logging.ERROR) -> None:
-    e_traceback = traceback.format_exception(e.__class__, e, e.__traceback__)
-    traceback_lines = []
-    for line in [line.rstrip('\n') for line in e_traceback]:
-        traceback_lines.extend(line.splitlines())
-    logger.log(level, traceback_lines.__str__())
-
 import datetime
 import random
 import site
