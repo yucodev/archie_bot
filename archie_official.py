@@ -18,7 +18,7 @@ import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
 from features import *
-from simple_settings import *
+#from simple_settings import *
 
 
 client = discord.Client()
