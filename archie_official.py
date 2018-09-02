@@ -1,5 +1,7 @@
 import discord
 from discord.ext import commands
+from discord.ext.commands import Bot
+from discord.voice_client import VoiceClient
 import os
 from os import getenv
 import asyncio
@@ -50,8 +52,9 @@ async def on_message(message):
             await client.send_message(message.channel, msg)
                 
     if message.content.startswith('!join'):
-        await client.join_voice_channel('485833536889290752')
-        print('Bot joined the channel.')
+        author = ctx.message.author
+        channel = author.voice_channel
+        await bot.join_voice_channel(channel)
 		
     elif message.content.startswith('!play'):
             if message.author.voice_channel != None:
