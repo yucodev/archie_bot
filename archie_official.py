@@ -56,8 +56,8 @@ async def on_message(message):
         await client.join_voice_channel(channel)
 		
     elif message.content.startswith('!play'): 
-        p = vlc.MediaPlayer("file:///home/dietpi/bigcalm.mp3")
-        p.play()
+        player = vlc.MediaPlayer("/home/dietpi/bigcalm.mp3")
+        player.play()
         
     if message.content.startswith('!rolldice'):
         a = ':one:'
