@@ -175,7 +175,7 @@ async def on_message(message):
         msg = 'Pong to {0.author.display_name} in {0.server}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('let\'s wor):
+    if message.content.startswith('let\'s work'):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
