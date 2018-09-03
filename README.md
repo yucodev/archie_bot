@@ -44,7 +44,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !lil
    - !lol
    - !lul
-   - !multiply (BETA) 
+   - !multiply (BETA)
    - !ping
    - !quiz (BETA)
 
@@ -56,9 +56,9 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !lottery
    - !randomcolor
    - !randomnum
-   	- !5random
-   	- !10random
-   	- !100random
-   	- !1000random
+	- !5random
+	- !10random
+	- !100random
+	- !1000random
    - !randommember
    - !rolldice
