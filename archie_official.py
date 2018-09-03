@@ -29,7 +29,11 @@ async def on_message(message):
         return
 
     if message.content.startswith('!randommember'):
-        msg = random.choice(server.members).mention
+        a = '@pupspulver05'
+        b = '@viktaur'
+        c = '@TheAlx1Boy'
+        d = '@manersat'
+        msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
    
     if message.content.startswith('!myid'):
