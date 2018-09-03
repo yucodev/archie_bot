@@ -35,7 +35,7 @@ async def on_message(message):
         d = '@manersat'
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
-   
+
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
@@ -51,32 +51,32 @@ async def on_message(message):
         d = 'My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.'
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
- 
+
     if message.content.startswith('!quiz'):
         msg = 'Can cats fly?'
         await client.send_message(message.channel, msg)
         if message.content.startswith('no'):
             msg = 'noooooo'
             await client.send_message(message.channel, msg)
-                
+
     #if message.content.startswith('!join'):
         #channel = client.get_channel('485833536889290752')
         #await client.join_voice_channel(channel)
-		
-    #elif message.content.startswith('!play'): 
+
+    #elif message.content.startswith('!play'):
         #player = vlc.MediaPlayer("/home/dietpi/bigcalm.mp3")
         #player.play()
-        
+
     if message.content.startswith('!rolldice'):
         a = ':one:'
         b = ':two:'
         c = ':three:'
         d = ':four:'
         e = ':five:'
-        f = ':six:' 
+        f = ':six:'
         msg = random.choice([a, b, c, d, e, f]).format(message)
         await client.send_message(message.channel, msg)
-	
+
     if message.content.startswith('!randomcolor'):
         a = 'red'
         b = 'blue'
@@ -159,15 +159,15 @@ async def on_message(message):
         msg = 'Are you juking?'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!areureal'):
+    if message.content.startswith('are you real'):
         msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!howru'):
+    if message.content.startswith('how are you'):
         msg = 'I\'m fine! Thanks for asking.'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!whereru'):
+    if message.content.startswith('where are you'):
         msg = 'I\'m wherever you are, ready to help you.'.format(message)
         await client.send_message(message.channel, msg)
 
@@ -175,11 +175,11 @@ async def on_message(message):
         msg = 'Pong to {0.author.display_name} in {0.server}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!letswork'):
+    if message.content.startswith('let\'s wor):
         msg = 'Time to work! {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!whoru'):
+    if message.content.startswith('who are you'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 

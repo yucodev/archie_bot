@@ -18,25 +18,11 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - Use other branches to make tests or not allowed content in origin. Any denied content in master (main) branch will be deleted immediately and it may have consequences to the author.
 
 ## Commands
-#### About Archie
-   - !areureal
-   - !howru
-   - !whereru
-
 #### Action (server)
    - !update (to update any changes)
 
 #### Conversation (without symbol)
-   - hello archie
-   - hi
-   - not fine archie
-   - fine thanks archie
-   - good night archie
-   - hola
-   - who am i talking with
-   - yes
-   - no
-   - archie
+  We are developing some conversation commands without symbol. Try to discover them yourself!
 
 #### Human help (without symbol)
    - emergency
@@ -45,26 +31,34 @@ If you have any doubt, info, any question or something you have to tell us, don'
      - fire
 
 #### Info
+   - !botinfo
+   - !datetime
    - !help
    - !myid
    - !myname
-   - !datetime
 
 #### Interaction
-   - !randomnum
-   - !5random
-   - !10random
-   - !100random
-   - !1000random
+   - !joke
    - !lal
    - !lel
    - !lil
    - !lol
    - !lul
-   - !letswork
+   - !multiply (BETA) 
    - !ping
-   - !joke (random joke)
-   - !flipcoin
+   - !quiz (BETA)
 
 #### Multimedia
-   - !music (random music)
+   - !music (BETA)
+
+#### Random
+   - !flipcoin
+   - !lottery
+   - !randomcolor
+   - !randomnum
+   	- !5random
+   	- !10random
+   	- !100random
+   	- !1000random
+   - !randommember
+   - !rolldice
