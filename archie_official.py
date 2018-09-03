@@ -10,8 +10,6 @@ import time
 import datetime
 import random
 import site
-import nacl.utils
-import vlc
 import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
