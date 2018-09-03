@@ -51,13 +51,13 @@ async def on_message(message):
             msg = 'noooooo'
             await client.send_message(message.channel, msg)
                 
-    if message.content.startswith('!join'):
-        channel = client.get_channel('485833536889290752')
-        await client.join_voice_channel(channel)
+    #if message.content.startswith('!join'):
+        #channel = client.get_channel('485833536889290752')
+        #await client.join_voice_channel(channel)
 		
-    elif message.content.startswith('!play'): 
-        player = vlc.MediaPlayer("/home/dietpi/bigcalm.mp3")
-        player.play()
+    #elif message.content.startswith('!play'): 
+        #player = vlc.MediaPlayer("/home/dietpi/bigcalm.mp3")
+        #player.play()
         
     if message.content.startswith('!rolldice'):
         a = ':one:'
