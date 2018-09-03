@@ -10,9 +10,8 @@ import time
 import datetime
 import random
 import site
-import youtube_dl
-import requests
 import nacl.utils
+import vlc
 import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
@@ -57,7 +56,7 @@ async def on_message(message):
         await client.join_voice_channel(channel)
 		
     elif message.content.startswith('!play'): 
-        p = vlc.MediaPlayer("file:///path/to/track.mp3")
+        p = vlc.MediaPlayer("file:///home/dietpi/bigcalm.mp3")
         p.play()
         
     if message.content.startswith('!rolldice'):
