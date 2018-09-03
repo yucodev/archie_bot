@@ -14,10 +14,6 @@ import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
-from features import *
-#from simple_settings import *
-
-
 client = discord.Client()
 
 @client.event
