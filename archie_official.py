@@ -23,10 +23,12 @@ async def on_message(message):
         return
 
     if message.content.startswith('!randommember'):
-        a = '@manersat'
-        b = '@viktaur'
-        c = '@pupspulver05'
-        d = '@TheAlx1Boy'
+        a = '<@427204692234469387>' # @pupspulver05
+        b = '<@334252448036159488>' # @viktaur
+        c = '<@367958242980003850>' # @manersat
+        d = '<@340143776557170690>' # @TheAlx1Boy
+        e = '<@443842331926331392>' # @turivm
+        # decide to add or not bots
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
@@ -119,8 +121,8 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-	now = datetime.now()
-        msg = 'Current date and time: %04d-%02d-%02d %02d:%02d:%02d' % (now.year, now.month, now.day, now.hour, now.minute, now.second).format(message)
+        now = datetime.now()
+        msg = 'Current date and time: %04d-%02d-%02d %02d:%02d:%02d' % (now.year, now.month, now.day, now.hour, now.minute, now.second)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!music'):
@@ -252,7 +254,7 @@ async def on_message(message):
 async def multiply(ctx, a: int, b: int):
     if message.content.startswith('!multiply'):
         print('hello')
-	#await ctx.send(a*b)
+    #await ctx.send(a*b)
 
 
 @client.event
