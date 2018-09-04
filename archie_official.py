@@ -120,7 +120,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        msg = 'Current date and time: %04d/%02d/%02d %02d:%02d:%02d' % (now.month, now.day, now.year, now.hour, now.minute, now.second).format(message)
+        msg = 'Current date and time: %04d-%02d-%02d %02d:%02d:%02d' % (now.year, now.month, now.day, now.hour, now.minute, now.second).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!music'):
