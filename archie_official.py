@@ -23,10 +23,10 @@ async def on_message(message):
         return
 
     if message.content.startswith('!randommember'):
-        a = '@427215919341633546'
-        b = '@334252448036159488'
-        c = '@340155742587977728'
-        d = '@427414654994612224'
+        a = '<@427215919341633546>'
+        b = '<@334252448036159488>'
+        c = '<@340155742587977728>'
+        d = '<@427414654994612224>'
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
