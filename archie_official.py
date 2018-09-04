@@ -15,7 +15,6 @@ import sys
 sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
-now = datetime.now()
 
 @client.event
 async def on_message(message):
@@ -120,6 +119,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
+	now = datetime.now()
         msg = 'Current date and time: %04d-%02d-%02d %02d:%02d:%02d' % (now.year, now.month, now.day, now.hour, now.minute, now.second).format(message)
         await client.send_message(message.channel, msg)
 
