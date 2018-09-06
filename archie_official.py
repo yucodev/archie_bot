@@ -1,4 +1,4 @@
-import discord
+import discord #pip install discord.py
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
@@ -7,7 +7,7 @@ from os import getenv
 import asyncio
 import ctx
 #import weather
-from weather import Weather, Unit
+from weather import Weather, Unit #pip install weather-api
 import time
 from datetime import datetime
 import random
@@ -23,7 +23,7 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
-        
+
     if message.content.startswith('!forecast'):
         weather = Weather(unit=Unit.CELSIUS)
         location = weather.lookup_by_location('gijon')
@@ -37,7 +37,7 @@ async def on_message(message):
             await client.send_message(discord.Object(id='487278680478056450'), ' :low_brightness: ' + forecast.text)
             await client.send_message(discord.Object(id='487278680478056450'), ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(discord.Object(id='487278680478056450'), ' :small_blue_diamond: Min temp. ' + forecast.low)
-    
+
     if message.content.startswith('!randommember'):
         a = '<@427204692234469387>' # @pupspulver05
         b = '<@334252448036159488>' # @viktaur
