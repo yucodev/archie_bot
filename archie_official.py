@@ -234,11 +234,11 @@ async def on_message(message):
         msg = 'See you tomorrow'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('fine thanks') in message.content:
+    if ('fine') in message.content:
         msg = 'Cool, {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(2)
-        msg = 'I\'m fine too :laughing:'.format(message)
+        msg = 'I\'m fine too :yum:'.format(message)
         await client.send_message(message.channel, msg)
 
     if ('not fine') in message.content:
