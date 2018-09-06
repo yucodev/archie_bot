@@ -31,7 +31,7 @@ async def on_message(message):
         msg = condition.text.format(message)
         await client.send_message(message.channel, msg)
         
-    if message.content.startswith('!weatherto'):
+    if message.content.startswith('!forecast'):
         weather = Weather(unit=Unit.CELSIUS)
         location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
