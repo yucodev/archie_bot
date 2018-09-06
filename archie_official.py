@@ -24,7 +24,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!forecast'):
+    if message.content.startswith('!weather'):
         weather = Weather(unit=Unit.CELSIUS)
         location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
@@ -37,7 +37,7 @@ async def on_message(message):
             await client.send_message(discord.Object(id='487278680478056450'), ' :low_brightness: ' + forecast.text)
             await client.send_message(discord.Object(id='487278680478056450'), ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(discord.Object(id='487278680478056450'), ' :small_blue_diamond: Min temp. ' + forecast.low)
-            await client.send_message(discord.Object(id='487278680478056450'), ' --------------------- ' + forecast.low)
+            await client.send_message(discord.Object(id='487278680478056450'), ' --------------------- ')
 
     if message.content.startswith('!randommember'):
         a = '<@427204692234469387>' # @pupspulver05
