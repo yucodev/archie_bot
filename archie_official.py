@@ -36,13 +36,13 @@ async def on_message(message):
         location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
         for forecast in forecasts:
-            msg = forecast.text.format(message)
+            msg = 'On + forecast.date'.format(message)
             await client.send_message(message.channel, msg)
-            msg = forecast.date.format(message)
+            msg = forecast.txt.format(message)
             await client.send_message(message.channel, msg)
-            msg = forecast.high.format(message)
+            msg = 'Max temp. + forecast.high'.format(message)
             await client.send_message(message.channel, msg)
-            msg = forecast.low.format(message)
+            msg = 'Min temp. + forecast.low'.format(message)
             await client.send_message(message.channel, msg)
     
     if message.content.startswith('!randommember'):
