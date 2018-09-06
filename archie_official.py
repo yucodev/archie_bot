@@ -36,7 +36,8 @@ async def on_message(message):
         location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
         for forecast in forecasts:
-            msg = 'WEATHER FORECAST GIJON'
+            msg = 'WEATHER FORECAST GIJON'.format(message)
+            await client.send_message(message.channel, msg)
             time.sleep(1)
             msg = 'On ' + forecast.date.format(message)
             await client.send_message(message.channel, msg)
