@@ -6,6 +6,8 @@ import os
 from os import getenv
 import asyncio
 import ctx
+import weather
+from weather import Weather, Unit
 import time
 from datetime import datetime
 import random
@@ -21,7 +23,14 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
-
+    
+    if message.content.startswith('!weather'):
+        weather = Weather(unit=Unit.CELSIUS)
+        location = weather.lookup_by_location('dublin')
+        condition = location.condition
+        msg = condition.text.format(message)
+        await client.send_message(message.channel, msg)
+    
     if message.content.startswith('!randommember'):
         a = '<@427204692234469387>' # @pupspulver05
         b = '<@334252448036159488>' # @viktaur
