@@ -28,7 +28,7 @@ async def on_message(message):
         weather = Weather(unit=Unit.CELSIUS)
         location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
-        await client.send_message(discord.Object(id='487278680478056450'), '**WEATHER FORECAST GIJON**')
+        await client.send_message(discord.Object(id='487278680478056450'), '**_WEATHER FORECAST GIJON_**')
         msg = 'see forecast at <#487278680478056450> channel'
         await client.send_message(message.channel, msg)
         time.sleep(1)
