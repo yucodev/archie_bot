@@ -44,7 +44,7 @@ async def on_message(message):
         msg = 'WEATHER FORECAST GIJON'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(1)
-        for forecast in forecasts:
+        #for forecast in forecasts:
             msg = 'On ' + forecast.date.format(message)
             await client.send_message(message.channel, msg)
             msg = '- ' + forecast.text.format(message)
