@@ -7,7 +7,7 @@ from os import getenv
 import asyncio
 import ctx
 #import weather
-from weather import Weather, Unit
+from weather_api import Weather, Unit
 import time
 from datetime import datetime
 import random
