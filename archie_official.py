@@ -38,11 +38,11 @@ async def on_message(message):
         for forecast in forecasts:
             msg = 'On ' + forecast.date.format(message)
             await client.send_message(message.channel, msg)
-            msg = forecast.text.format(message)
+            msg = '- ' + forecast.text.format(message)
             await client.send_message(message.channel, msg)
-            msg = 'Max temp. ' + forecast.high.format(message)
+            msg = '- Max temp. ' + forecast.high.format(message)
             await client.send_message(message.channel, msg)
-            msg = 'Min temp. ' + forecast.low.format(message)
+            msg = '- Min temp. ' + forecast.low.format(message)
             await client.send_message(message.channel, msg)
     
     if message.content.startswith('!randommember'):
