@@ -33,11 +33,11 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
-            await client.send_message(client.get_user_info(id), '**On ' + forecast.date + '**')
-            await client.send_message(client.get_user_info(id), ' :low_brightness: ' + forecast.text)
-            await client.send_message(client.get_user_info(id), ' :small_orange_diamond: Max temp. ' + forecast.high)
-            await client.send_message(client.get_user_info(id), ' :small_blue_diamond: Min temp. ' + forecast.low)
-            await client.send_message(client.get_user_info(id), ' --------------------- ')
+            await client.send_message(client.start_private_message(author), '**On ' + forecast.date + '**')
+            await client.send_message(client.start_private_message(author), ' :low_brightness: ' + forecast.text)
+            await client.send_message(client.start_private_message(author), ' :small_orange_diamond: Max temp. ' + forecast.high)
+            await client.send_message(client.start_private_message(author), ' :small_blue_diamond: Min temp. ' + forecast.low)
+            await client.send_message(client.start_private_message(author), ' --------------------- ')
 
     if message.content.startswith('!randommember'):
         a = '<@427204692234469387>' # @pupspulver05
