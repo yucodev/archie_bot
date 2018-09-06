@@ -5,7 +5,6 @@ from discord.voice_client import VoiceClient
 import os
 from os import getenv
 import asyncio
-import async
 import ctx
 import time
 from datetime import datetime
