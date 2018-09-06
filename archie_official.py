@@ -30,6 +30,20 @@ async def on_message(message):
         condition = location.condition
         msg = condition.text.format(message)
         await client.send_message(message.channel, msg)
+        
+    if message.content.startswith('!weatherto'):
+        weather = Weather(unit=Unit.CELSIUS)
+        location = weather.lookup_by_location('dublin')
+        forecasts = location.forecast
+        for forecast in forecasts:
+        msg = forecast.text.format(message)
+        await client.send_message(message.channel, msg)
+        msg = forecast.date.format(message)
+        await client.send_message(message.channel, msg)
+        msg = forecast.high.format(message)
+        await client.send_message(message.channel, msg)
+        msg = forecast.low.format(message)
+        await client.send_message(message.channel, msg)
     
     if message.content.startswith('!randommember'):
         a = '<@427204692234469387>' # @pupspulver05
