@@ -36,6 +36,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !help
    - !myid
    - !myname
+   - !forecast
 
 #### Interaction
    - !joke
