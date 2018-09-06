@@ -6,7 +6,7 @@ import os
 from os import getenv
 import asyncio
 import ctx
-import weather
+#import weather
 from weather import Weather, Unit
 import time
 from datetime import datetime
