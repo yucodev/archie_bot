@@ -33,7 +33,7 @@ async def on_message(message):
         
     if message.content.startswith('!weatherto'):
         weather = Weather(unit=Unit.CELSIUS)
-        location = weather.lookup_by_location('dublin')
+        location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
         for forecast in forecasts:
             msg = forecast.text.format(message)
