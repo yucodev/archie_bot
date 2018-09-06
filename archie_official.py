@@ -32,14 +32,10 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
-            msg = 'On ' + forecast.date.format(message)
-            await client.send_message(message.channel, msg)
-            msg = ' :low_brightness: ' + forecast.text.format(message)
-            await client.send_message(message.channel, msg)
-            msg = ' :small_orange_diamond: Max temp. ' + forecast.high.format(message)
-            await client.send_message(message.channel, msg)
-            msg = ' :small_blue_diamond: Min temp. ' + forecast.low.format(message)
-            await client.send_message(message.channel, msg)
+            await client.send_message(discord.Object(id='487278680478056450'), 'On ' + forecast.date)
+            await client.send_message(discord.Object(id='487278680478056450'), ' :low_brightness: ' + forecast.text)
+            await client.send_message(discord.Object(id='487278680478056450'), ' :small_orange_diamond: Max temp. ' + forecast.high)
+            await client.send_message(discord.Object(id='487278680478056450'), ' :small_blue_diamond: Min temp. ' + forecast.low)
     
     if message.content.startswith('!randommember'):
         a = '<@427204692234469387>' # @pupspulver05
