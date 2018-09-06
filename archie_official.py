@@ -6,7 +6,6 @@ import os
 from os import getenv
 import asyncio
 import ctx
-#import weather
 from weather import Weather, Unit #pip install weather-api
 import time
 from datetime import datetime
@@ -18,6 +17,21 @@ sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
+class color:
+   PURPLE = '\033[95m'
+   CYAN = '\033[96m'
+   DARKCYAN = '\033[36m'
+   BLUE = '\033[94m'
+   GREEN = '\033[92m'
+   YELLOW = '\033[93m'
+   RED = '\033[91m'
+   BOLD = '\033[1m'
+   UNDERLINE = '\033[4m'
+   END = '\033[0m'
+
+  # color.BOLD + 'Hello World !' + color.END
+
+
 @client.event
 async def on_message(message):
     # we do not want the bot to reply to itself
@@ -28,7 +42,7 @@ async def on_message(message):
         weather = Weather(unit=Unit.CELSIUS)
         location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
-        await client.send_message(discord.Object(id='487278680478056450'), 'WEATHER FORECAST GIJON')
+        await client.send_message(discord.Object(id='487278680478056450'), color.BOLD + 'WEATHER FORECAST GIJON' + color.END)
         msg = 'see forecast at #weather_forecast channel'
         await client.send_message(message.channel, msg)
         time.sleep(1)
