@@ -28,16 +28,16 @@ async def on_message(message):
         weather = Weather(unit=Unit.CELSIUS)
         location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
-        await client.send_message(discord.Object(id='334252448036159488'), '**_WEATHER FORECAST GIJON_**')
+        await client.send_message(discord.Object(id='487278680478056450'), '**_WEATHER FORECAST GIJON_**')
         msg = 'see forecast at <#487278680478056450> channel'
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
-            await client.send_message(discord.Object(id='334252448036159488'), '**On ' + forecast.date + '**')
-            await client.send_message(discord.Object(id='334252448036159488'), ' :low_brightness: ' + forecast.text)
-            await client.send_message(discord.Object(id='334252448036159488'), ' :small_orange_diamond: Max temp. ' + forecast.high)
-            await client.send_message(discord.Object(id='334252448036159488'), ' :small_blue_diamond: Min temp. ' + forecast.low)
-            await client.send_message(discord.Object(id='334252448036159488'), ' --------------------- ')
+            await client.send_message(discord.Object(id='487278680478056450'), '**On ' + forecast.date + '**')
+            await client.send_message(discord.Object(id='487278680478056450'), ' :low_brightness: ' + forecast.text)
+            await client.send_message(discord.Object(id='487278680478056450'), ' :small_orange_diamond: Max temp. ' + forecast.high)
+            await client.send_message(discord.Object(id='487278680478056450'), ' :small_blue_diamond: Min temp. ' + forecast.low)
+            await client.send_message(discord.Object(id='487278680478056450'), ' --------------------- ')
 
     if message.content.startswith('!randommember'):
         a = '<@427204692234469387>' # @pupspulver05
