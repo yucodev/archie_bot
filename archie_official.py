@@ -1,17 +1,19 @@
-import discord #pip install discord.py
+#please run this script only with Python3
+
+import discord #pip install discord.py / pip3 install discord.py
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 import os
 from os import getenv
-import asyncio
+import asyncio #pip install asyncio / pip3 install asyncio
 import ctx
-from weather import Weather, Unit #pip install weather-api
-import time
+from weather import Weather, Unit #pip install weather-api / pip3 install weather-api
+import time #pip install time / pip3 install time
 from datetime import datetime
 import random
 import site
-import sys
+import sys #pip install sys / pip3 install sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
@@ -33,6 +35,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
+
             await client.send_message(ctx.message.author, '**On ' + forecast.date + '**')
             await client.send_message(ctx.message.author, ' :low_brightness: ' + forecast.text)
             await client.send_message(ctx.message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
@@ -280,7 +283,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online!')
+    await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online! Enjoy! \nAll info and commands in our README.md file: https://github.com/cibathleticsdev/archie_bot/blob/master/README.md')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
 
 #GPIO.setmode(GPIO.BCM)
