@@ -33,7 +33,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
-            await client.send_message(discord.Object(id='487278680478056450'), '**On ' + forecast.date**)
+            await client.send_message(discord.Object(id='487278680478056450'), chr(27)+'[1' + '**On ' + forecast.date)
             await client.send_message(discord.Object(id='487278680478056450'), ' :low_brightness: ' + forecast.text)
             await client.send_message(discord.Object(id='487278680478056450'), ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(discord.Object(id='487278680478056450'), ' :small_blue_diamond: Min temp. ' + forecast.low)
