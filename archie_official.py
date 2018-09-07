@@ -1,17 +1,19 @@
-import discord #pip install discord.py
+#please run this script only with Python 3
+
+import discord #pip3 install discord.py
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 import os
 from os import getenv
-import asyncio
+import asyncio #pip3 install asyncio
 import ctx
-from weather import Weather, Unit #pip install weather-api
-import time
+from weather import Weather, Unit #pip3 install weather-api
+import time #pip3 install time
 from datetime import datetime
 import random
 import site
-import sys
+import sys #pip3 install sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
