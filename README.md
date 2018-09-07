@@ -6,7 +6,7 @@ Archie is programmed in Python because it's easier than C++ and more effective t
 ### Which file sould be used?
 archie_official.py
 ### Is Archie public?
-Well... currently is in development, but in a future we hope Archie can help a lot of people ;-).
+Well... it's currently in development, but in a future we hope Archie can help a lot of people ;-).
 ### About us
 You can see some info about us and the bot in our website https://cadevelopers.ml.
 ### Contact us
