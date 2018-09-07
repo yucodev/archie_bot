@@ -31,7 +31,7 @@ async def on_message(message):
         location = weather.lookup_by_location('gijon')
         forecasts = location.forecast
         await client.send_message(message.author, '**_WEATHER FORECAST GIJON_**')
-        msg = 'Forecast sent by DM'
+        msg = 'Forecast sent per DM'
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
