@@ -35,7 +35,6 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
-
             await client.send_message(ctx.message.author, '**On ' + forecast.date + '**')
             await client.send_message(ctx.message.author, ' :low_brightness: ' + forecast.text)
             await client.send_message(ctx.message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
