@@ -79,14 +79,14 @@ async def on_message(message):
 
     if message.content.startswith('!quiz'):
         split = message.content.split(" ")
-        response = (" ".join(split[1:]))
+        response = ("yes".join(split[1:]))
         msg = 'Can cats fly? (yes/no)'
         await client.send_message(message.channel, msg)
         #elif response == 'no'
          #   await client.send_message(message.channel, 'Noooooo')
           #  time.sleep(2)
            # await client.send_message(message.channel, 'But they should... :heart_eyes_cat:')
-        if response == ("yes")
+        if split == response
             print("lol")
             await client.send_message(message.channel, 'Of course they can!')
             time.sleep(2)
