@@ -36,9 +36,10 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !help
    - !myid
    - !myname
-   - !weather (BETA)
+   - !weather [city]
 
 #### Interaction
+   - !echo [message]
    - !joke
    - !lal
    - !lel
@@ -48,6 +49,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !multiply (BETA)
    - !ping
    - !quiz (BETA)
+   - !sendme [message]
 
 #### Multimedia
    - !music (BETA)

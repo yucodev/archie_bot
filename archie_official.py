@@ -43,6 +43,14 @@ async def on_message(message):
             await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
             await client.send_message(message.author, ' --------------------- ')
 
+    if message.content.startswith('!echo'):
+        echo = message.content.split(" ")
+        await client.send_message(message.channel, '%s' % (" ".join(echo[1:])))
+
+    if message.content.startswith('!sendme'):
+        sendme = message.content.split(" ")
+        await client.send_message(message.author, '%s' % (" ".join(sendme[1:])))
+
     if message.content.startswith('!randommember'):
         a = '<@427204692234469387>' # @pupspulver05
         b = '<@334252448036159488>' # @viktaur
@@ -108,7 +116,11 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
-        msg = 'Archie Bot (version 1.1) ©2018 \nA funny Discord Bot with a lot of features! For more info visit http://cadevelopers.ml/'
+        msg = 'Archie Bot (version 1.1) ©2018 \nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('!credits'):
+        msg = 'PyJavaPulver (https://github.com/PyJavaPulver)\nviktaur (https://github.com/viktaur)\nTheAlx1Boy (https://github.com/TheAlx1Boy)\n\nCibernetic Athletics Developers ©2018 (http://cadevelopers.ml/, https://github.com/cibathleticsdev)\nAll rights reserved.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!flipcoin'):
@@ -199,6 +211,10 @@ async def on_message(message):
 
     if message.content.startswith('who are you'):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
+        await client.send_message(message.channel, msg)
+
+    if message.content.startswith('haha'):
+        msg = 'You laugh... :joy:'.format(message)
         await client.send_message(message.channel, msg)
 
   # do not remove '!update' !!
