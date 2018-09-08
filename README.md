@@ -58,7 +58,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !flipcoin
    - !lottery
    - !randomcolor
-   - !randomnum
+   - !randomnum [num1] [num2] (BETA)
      - !5random
      - !10random
      - !100random

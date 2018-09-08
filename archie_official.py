@@ -134,12 +134,15 @@ async def on_message(message):
         msg = random.choice([a, b]).format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!5random'):
-        msg = random.randint(1, int(5))
+    if message.content.startswith('!randomnum'):
+        args = message.content.split(" ")
+        num1 = " ".join(args[1])
+        num2 = " ".join(args[2])
+        msg = random.randint(num1, int(num2))
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!randomnum'):
-        msg = random.randint(1, int(10))
+    if message.content.startswith('!5random'):
+        msg = random.randint(1, int(5))
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!10random'):
