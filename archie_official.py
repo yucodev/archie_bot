@@ -80,7 +80,7 @@ async def on_message(message):
     if message.content.startswith('!quiz'):
         msg = 'Can cats fly? (yes/no)'
         await client.send_message(message.channel, msg)
-        if message.content.startswith('no'):
+        if response == 'no'
             await client.send_message(message.channel, 'Noooooo')
             time.sleep(2)
             await client.send_message(message.channel, 'But they should... :heart_eyes_cat:')
@@ -295,11 +295,8 @@ async def on_message(message):
          msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
          await client.send_message(message.channel, msg)
 
-@client.event
-async def multiply(ctx, a: int, b: int):
     if message.content.startswith('!multiply'):
-        print('hello')
-    #await ctx.send(a*b)
+        
 
 
 @client.event
