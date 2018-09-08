@@ -85,7 +85,7 @@ async def on_message(message):
          #   await client.send_message(message.channel, 'Noooooo')
           #  time.sleep(2)
            # await client.send_message(message.channel, 'But they should... :heart_eyes_cat:')
-    elif message.content.startswith('yes'):
+    if message.content.startswith('yes'):
         await client.send_message(message.channel, 'Of course they can!')
         time.sleep(2)
         await client.send_message(message.channel, 'Well, no.')
