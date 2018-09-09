@@ -47,26 +47,26 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - ```!lol```
    - ```!lul```
    - ```!ping```
-   - ```!quiz (BETA)```
+   - ```!quiz``` (BETA)
    - ```!sendme [message]```
 
 #### Math
-   - !add [num1] [num2]
-   - !substract [num1] [num2]
-   - !multiply [num1] [num2]
-   - !divide [num1] [num2]
+   - ```!add [num1] [num2]```
+   - ```!substract [num1] [num2]```
+   - ```!multiply [num1] [num2]```
+   - ```!divide [num1] [num2]```
 
 #### Multimedia
-   - !music (BETA)
+   - ```!music``` (BETA)
 
 #### Random
-   - !flipcoin
-   - !lottery
-   - !randomcolor
-   - !randomnum [num1] [num2] (BETA)
-     - !5random
-     - !10random
-     - !100random
-     - !1000random
-   - !randommember
-   - !rolldice
+   - ```!flipcoin```
+   - ```!lottery```
+   - ```!randomcolor```
+   - ```!randomnum [num1] [num2]``` (BETA)
+     - ```!5random```
+     - ```!10random```
+     - ```!100random```
+     - ```!1000random```
+   - ```!randommember```
+   - ```!rolldice```
