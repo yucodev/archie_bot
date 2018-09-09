@@ -227,7 +227,17 @@ async def on_message(message):
     if message.content.startswith('haha'):
         msg = 'You laugh... :joy:'.format(message)
         await client.send_message(message.channel, msg)
-
+        
+    if message.content.startswith('!multiply'):
+        split = message.content.split(" ")
+        result = (" ".join(split[1:]))
+        msg = result.format(message)
+        await client.send_message(message.channel, msg)
+        
+    if message.content.startswith('!multiply1'):
+        msg = (8*4).format(message)
+        await client.send_message(message.channel, msg)
+        
   # do not remove '!update' !!
     if message.content.startswith('!update'):
         msg = 'Wait a few seconds...'.format(message)
