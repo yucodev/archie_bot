@@ -205,7 +205,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('are you real'):
-        a = 'I am completely real! I have electronic feelings and emotions like you, of course!'.format(message)
+        a = 'I am completely real! I have electronic feelings and emotions like you, of course!'
         b = 'What is real?'
         c = 'I don\'t know... But you can teach me!'
         msg = random.choice([a, b, c]).format(message)
@@ -216,7 +216,9 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('where are you'):
-        msg = 'I\'m wherever you are, ready to help you.'.format(message)
+        a = 'I\'m wherever you are, ready to help you.'
+        b = 'I\'m in an unknown galaxy, millions of light years away.' + time.sleep(2) + 'Well, no. I\'m just next to you!'
+        msg = random.choice([a, b]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!ping'):
