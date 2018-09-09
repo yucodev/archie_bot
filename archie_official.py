@@ -205,7 +205,10 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('are you real'):
-        msg = 'I am completely real! I have feelings and emotions like you, of course!'.format(message)
+        a = 'I am completely real! I have electronic feelings and emotions like you, of course!'.format(message)
+        b = 'What is real?'
+        c = 'I don\'t know... But you can teach me!'
+        msg = random.choice([a, b, c]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('how are you'):
