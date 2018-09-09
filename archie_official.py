@@ -86,11 +86,11 @@ async def on_message(message):
          #   await client.send_message(message.channel, 'Noooooo')
           #  time.sleep(2)
            # await client.send_message(message.channel, 'But they should... :heart_eyes_cat:')
-        #if split = response
-         #   print("lol")
-          #  await client.send_message(message.channel, 'Of course they can!')
-           # time.sleep(2)
-            # await client.send_message(message.channel, 'Well, no.')
+        if split == response:
+             print("lol")
+             await client.send_message(message.channel, 'Of course they can!')
+             time.sleep(2)
+             await client.send_message(message.channel, 'Well, no.')
 
     #if message.content.startswith('!join'):
         #channel = client.get_channel('485833536889290752')
@@ -235,10 +235,6 @@ async def on_message(message):
         num1int = int(num1)
         num2int = int(num2)
         msg = (num1int*num2int)
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('!multiply1'):
-        msg = str(8*4).format(message)
         await client.send_message(message.channel, msg)
 
   # do not remove '!update' !!
