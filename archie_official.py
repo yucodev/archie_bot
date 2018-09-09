@@ -233,10 +233,6 @@ async def on_message(message):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('haha'):
-        msg = 'You laugh... :joy:'.format(message)
-        await client.send_message(message.channel, msg)
-
     if message.content.startswith('!multiply'):
         split = message.content.split(" ")
         num1 = (" ".join(split[1]))
@@ -299,6 +295,10 @@ async def on_message(message):
         msg = 'How are you today?'.format(message)
         await client.send_message(message.channel, msg)
 
+    if ('haha') in message.content:
+        msg = 'You laugh... :joy:'.format(message)
+        await client.send_message(message.channel, msg)    
+        
     if ('hola') in message.content:
         msg = 'Pa ti mi cola {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
