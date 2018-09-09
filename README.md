@@ -19,36 +19,36 @@ If you have any doubt, info, any question or something you have to tell us, don'
 
 ## Commands
 #### Action (server)
-   - !update (to update any changes)
+   - ```!update``` (to update any changes)
 
 #### Conversation (without symbol)
   We are developing some conversation commands without symbol. Try to discover them yourself!
 
 #### Human help (without symbol)
-   - emergency
-     - police
-     - medical
-     - fire
+   - ```emergency```
+     - ```police```
+     - ```medical```
+     - ```fire```
 
 #### Info
-   - !botinfo
-   - !datetime
-   - !help
-   - !myid
-   - !myname
-   - !weather [city]
+   - ```!botinfo```
+   - ```!datetime```
+   - ```!help```
+   - ```!myid```
+   - ```!myname```
+   - ```!weather [city]```
 
 #### Interaction
-   - !echo [message]
-   - !joke
-   - !lal
-   - !lel
-   - !lil
-   - !lol
-   - !lul
-   - !ping
-   - !quiz (BETA)
-   - !sendme [message]
+   - ```!echo [message]```
+   - ```!joke```
+   - ```!lal```
+   - ```!lel```
+   - ```!lil```
+   - ```!lol```
+   - ```!lul```
+   - ```!ping```
+   - ```!quiz (BETA)```
+   - ```!sendme [message]```
 
 #### Math
    - !add [num1] [num2]
