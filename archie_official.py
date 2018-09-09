@@ -237,6 +237,33 @@ async def on_message(message):
         msg = (num1int*num2int)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!add'):
+        split = message.content.split(" ")
+        num1 = (" ".join(split[1]))
+        num2 = (" ".join(split[2]))
+        num1int = int(num1)
+        num2int = int(num2)
+        msg = (num1int+num2int)
+        await client.send_message(message.channel, msg)  
+        
+    if message.content.startswith('!subtract'):
+        split = message.content.split(" ")
+        num1 = (" ".join(split[1]))
+        num2 = (" ".join(split[2]))
+        num1int = int(num1)
+        num2int = int(num2)
+        msg = (num1int-num2int)
+        await client.send_message(message.channel, msg)
+        
+    if message.content.startswith('!divide'):
+        split = message.content.split(" ")
+        num1 = (" ".join(split[1]))
+        num2 = (" ".join(split[2]))
+        num1int = int(num1)
+        num2int = int(num2)
+        msg = (num1int/num2int)
+        await client.send_message(message.channel, msg)    
+        
   # do not remove '!update' !!
     if message.content.startswith('!update'):
         msg = 'Wait a few seconds...'.format(message)
