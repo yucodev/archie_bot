@@ -229,7 +229,8 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         
     if message.content.startswith('!multiply'):
-        result = (" ".join(city[1:]))
+        split = message.content.split(" ")
+        result = (" ".join(split[1:]))
         msg = result.format(message)
         await client.send_message(message.channel, msg)
         
