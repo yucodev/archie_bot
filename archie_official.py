@@ -29,7 +29,7 @@ async def on_message(message):
     if message.content.startswith('!weather'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")
-        CITYUP = str(city).upper()
+        CITYUP = str(" ".join(city)).upper()
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
         await client.send_message(message.author, '_**WEATHER FORECAST %s **_' % (" ".join(CITYUP[1:])))
@@ -244,8 +244,8 @@ async def on_message(message):
         num1int = int(num1)
         num2int = int(num2)
         msg = (num1int+num2int)
-        await client.send_message(message.channel, msg)  
-        
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!subtract'):
         split = message.content.split(" ")
         num1 = (" ".join(split[1]))
@@ -254,7 +254,7 @@ async def on_message(message):
         num2int = int(num2)
         msg = (num1int-num2int)
         await client.send_message(message.channel, msg)
-        
+
     if message.content.startswith('!divide'):
         split = message.content.split(" ")
         num1 = (" ".join(split[1]))
@@ -262,8 +262,8 @@ async def on_message(message):
         num1int = int(num1)
         num2int = int(num2)
         msg = (num1int/num2int)
-        await client.send_message(message.channel, msg)    
-        
+        await client.send_message(message.channel, msg)
+
   # do not remove '!update' !!
     if message.content.startswith('!update'):
         msg = 'Wait a few seconds...'.format(message)
