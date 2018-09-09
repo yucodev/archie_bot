@@ -47,6 +47,10 @@ async def on_message(message):
         echo = message.content.split(" ")
         await client.send_message(message.channel, '%s' % (" ".join(echo[1:])))
 
+    if message.content('!weather'):
+        msg = 'Chose a city and rewrite it including it: !weather city'
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!sendme'):
         sendme = message.content.split(" ")
         await client.send_message(message.author, '%s' % (" ".join(sendme[1:])))
