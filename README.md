@@ -70,5 +70,4 @@ If you have any doubt, info, any question or something you have to tell us, don'
      - ```!1000random```
    - ```!randommember```
    - ```!rolldice```
-   hecho por alvaro
    
