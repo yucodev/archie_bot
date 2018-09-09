@@ -29,10 +29,10 @@ async def on_message(message):
     if message.content.startswith('!weather'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")
-        CITYUP = str(" ".join(city)).upper()
+        CITYUP = str(" ".join(city[1:])).upper()
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        await client.send_message(message.author, '_**WEATHER FORECAST %s **_' % (" ".join(CITYUP[1:])))
+        await client.send_message(message.author, '_**WEATHER FORECAST %s **_' % (CITYUP)
         msg = 'Forecast sent per DM'
         await client.send_message(message.channel, msg)
         time.sleep(1)
