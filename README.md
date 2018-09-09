@@ -46,10 +46,15 @@ If you have any doubt, info, any question or something you have to tell us, don'
    - !lil
    - !lol
    - !lul
-   - !multiply (BETA)
    - !ping
    - !quiz (BETA)
    - !sendme [message]
+
+#### Math
+   - !add [num1] [num2]
+   - !substract [num1] [num2]
+   - !multiply [num1] [num2]
+   - !divide [num1] [num2]
 
 #### Multimedia
    - !music (BETA)
