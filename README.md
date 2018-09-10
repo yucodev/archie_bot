@@ -43,10 +43,10 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!sendme [message]```
 
 #### Math
-   - ```!add [num1] [num2]```
-   - ```!substract [num1] [num2]```
-   - ```!multiply [num1] [num2]```
-   - ```!divide [num1] [num2]```
+   - ```!add [num1] [num2]``` (BETA)
+   - ```!substract [num1] [num2]``` (BETA)
+   - ```!multiply [num1] [num2]``` (BETA)
+   - ```!divide [num1] [num2]``` (BETA)
 
 #### Multimedia
    - ```!music``` (BETA)
