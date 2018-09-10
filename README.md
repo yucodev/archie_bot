@@ -11,6 +11,8 @@ Well... it's currently in development, but in a future we hope Archie can help a
 You can see some info about us and the bot in our website https://cadevelopers.ml.
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail or website. Our e-mail is cibathleticsdev@gmail.com.
+### Our discord server
+Join the official **Cibernetic Athletics Developers** discord server! https://discord.gg/TS583KK
 
 ## Commands
 #### Conversation (without symbol)
