@@ -61,6 +61,7 @@ async def on_message(message):
         c = '<@367958242980003850>' # @manersat
         d = '<@340143776557170690>' # @TheAlx1Boy
         e = '<@443842331926331392>' # @turivm
+        f = '<@334994066372820994>' # @Varito2003
         # decide to add or not bots
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
@@ -297,8 +298,8 @@ async def on_message(message):
 
     if ('haha') in message.content:
         msg = 'You laugh... :joy:'.format(message)
-        await client.send_message(message.channel, msg)    
-        
+        await client.send_message(message.channel, msg)
+
     if ('hola') in message.content:
         msg = 'Pa ti mi cola {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
