@@ -170,7 +170,7 @@ async def on_message(message):
         c = 'levis'
         d = 'holister'
         e = 'abercrombie'
-        f = 'hunder armour
+        f = 'hunder armour'
         g = 'gucci'
         h = 'lacoste'
         i = 'vans'
