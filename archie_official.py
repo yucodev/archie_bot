@@ -164,6 +164,31 @@ async def on_message(message):
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s]).format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('randomclothe'):
+        a = 'nike'
+        b = 'adidas'
+        c = 'levis'
+        d = 'holister'
+        e = 'abercrombie'
+        f = 'hunder armour
+        g = 'gucci'
+        h = 'lacoste'
+        i = 'vans'
+        j = 'supreme'
+        k = 'asics'
+        l = 'pepe jeans'
+        m = 'kappa'
+        n = 'kelme'
+        o = 'calvin klein'
+        p = 'quicksilver'
+        q = 'diesel'
+        r = 'puma'
+        s = 'rip curl'
+        t = 'joma'
+        u = 'fila'
+        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u]).format(message)
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!botinfo'):
         msg = 'Archie Bot (version 1.1) ©2018 \nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
         await client.send_message(message.channel, msg)
