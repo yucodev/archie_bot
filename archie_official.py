@@ -139,9 +139,9 @@ async def on_message(message):
         h = 'badminton'
         i = 'ski'
         msg = random.choice([a, b, c, d, e, f, g, h, i]).format(message)
-        await client.send_message(message.channel,ms)
+        await client.send_message(message.channel, msg)
 
-    if message.content.startwith('!randomcarbrand')
+    if message.content.startwith('!randomcarbrand'):
         a = 'alfa romeo'
         b = 'audi'
         c = 'bmw'
