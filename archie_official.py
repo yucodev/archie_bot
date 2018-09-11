@@ -387,7 +387,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if ('not fine') in message.content:
-        msg = 'well, ok {0.author.mention}'.format(message)
+        msg = 'Well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
     if ('mia') in message.content:
