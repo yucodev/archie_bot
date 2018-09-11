@@ -186,7 +186,7 @@ async def on_message(message):
         s = 'rip curl'
         t = 'joma'
         u = 'fila'
-        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u]).format(message)
+        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u])
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
