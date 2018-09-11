@@ -394,7 +394,11 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if ('a bit of everything') in message.content:
+<<<<<<< HEAD
+        msg = 'that\'s very good'.format(message)
+=======
         msg = 'That\'s very good'.format(message)
+>>>>>>> 610d2ee868378b2f54f1af9215bc19d4ea9cbdb9
         await client.send_message(message.channel, msg)
 
     if ('not fine') in message.content:
