@@ -65,4 +65,5 @@ We are developing some conversation commands without symbol. Try to discover the
      - ```!100random```
      - ```!1000random```
    - ```!randomsport```
+   - ```!randomcarbrand```
    - ```!rolldice```
