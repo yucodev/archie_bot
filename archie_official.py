@@ -394,7 +394,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if ('a bit of everithing') in message.content:
-        msg = 'that\'s very good'.format(message)
+        msg = 'That\'s very good'.format(message)
         await client.send_message(message.channel, msg)
 
     if ('not fine') in message.content:
