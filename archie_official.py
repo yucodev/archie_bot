@@ -139,7 +139,7 @@ async def on_message(message):
         h = 'badminton'
         i = 'ski'
         msg = random.choice([a, b, c, d, e, f, g, h, i]).format(message)
-        await client.send_message(message.channel, msg)
+            await client.send_message(message.channel,ms)
 
     if message.content.startswith('!botinfo'):
         msg = 'Archie Bot (version 1.1) ©2018 \nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
