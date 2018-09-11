@@ -339,7 +339,7 @@ async def on_message(message):
         msg = (num1int/num2int)
         await client.send_message(message.channel, msg)
 
-  # do not remove '!update' !!
+  # (server command)
     if message.content.startswith('!update'):
         msg = 'Wait a few seconds...'.format(message)
         await client.send_message(message.channel, msg)
