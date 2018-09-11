@@ -361,10 +361,6 @@ async def on_message(message):
         msg = 'You laugh... :joy:'.format(message)
         await client.send_message(message.channel, msg)
 
-    if ('hola') in message.content:
-        msg = 'Pa ti mi cola {0.author.mention}'.format(message)
-        await client.send_message(message.channel, msg)
-
     if ('good night') in message.content:
         msg = 'Good night {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
