@@ -11,6 +11,10 @@ Well... it's currently in development, but in a future we hope Archie can help a
 You can see some info about us and the bot in our website https://cadevelopers.ml.
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail or website. Our e-mail is cibathleticsdev@gmail.com.
+### Our discord server
+Join the official **Cybernetic Athletics Developers** discord server! https://discord.gg/TS583KK
+### Add Archie to your server
+Here is the link to add Archie Bot to a discord server https://discordapp.com/oauth2/authorize?client_id=462272072236793856&scope=bot&permissions=8
 
 ## Commands
 #### Conversation (without symbol)
@@ -60,5 +64,5 @@ We are developing some conversation commands without symbol. Try to discover the
      - ```!10random```
      - ```!100random```
      - ```!1000random```
-   - ```!randommember```
+   - ```!randomsport```
    - ```!rolldice```

@@ -55,16 +55,16 @@ async def on_message(message):
         sendme = message.content.split(" ")
         await client.send_message(message.author, '%s' % (" ".join(sendme[1:])))
 
-    if message.content.startswith('!randommember'):
-        a = '<@427204692234469387>' # @pupspulver05
-        b = '<@334252448036159488>' # @viktaur
-        c = '<@367958242980003850>' # @manersat
-        d = '<@340143776557170690>' # @TheAlx1Boy
-        e = '<@443842331926331392>' # @turivm
-        f = '<@334994066372820994>' # @Varito2003
+    #if message.content.startswith('!randommember'):
+      #  a = '<@427204692234469387>' # @pupspulver05
+       # b = '<@334252448036159488>' # @viktaur
+      #  c = '<@367958242980003850>' # @manersat
+     #   d = '<@340143776557170690>' # @TheAlx1Boy
+    #    e = '<@443842331926331392>' # @turivm
+      #  f = '<@334994066372820994>' # @Varito2003
         # decide to add or not bots
-        msg = random.choice([a, b, c, d]).format(message)
-        await client.send_message(message.channel, msg)
+   #     msg = random.choice([a, b, c, d]).format(message)
+    #    await client.send_message(message.channel, msg)
 
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
@@ -146,7 +146,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
-        msg = 'PyJavaPulver (https://github.com/PyJavaPulver)\nviktaur (https://github.com/viktaur)\nTheAlx1Boy (https://github.com/TheAlx1Boy)\n\nCibernetic Athletics Developers ©2018 (http://cadevelopers.ml/, https://github.com/cibathleticsdev)\nAll rights reserved.'
+        msg = 'PyJavaPulver (https://github.com/PyJavaPulver)\nviktaur (https://github.com/viktaur)\nTheAlx1Boy (https://github.com/TheAlx1Boy)\nvaritogolf (https://github.com/varitogolf)\nCybernetic Athletics Developers ©2018 (http://cadevelopers.ml/, https://github.com/cibathleticsdev)\nAll rights reserved.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!flipcoin'):
