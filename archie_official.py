@@ -390,6 +390,13 @@ async def on_message(message):
         msg = 'Well, ok {0.author.mention}'.format(message)
         await client.send_message(message.channel, msg)
 
+    if ('going to sleep') in message.content:
+        msg = 'Ok!'.format(message)
+        await client.send_message(message.channel, msg)
+        time.sleep(2)
+        msg = 'Good night!'.format(message)
+        await client.send_message(message.channel, msg)
+
     if ('mia') in message.content:
         msg = 'Khalifa'.format(message)
         await client.send_message(message.channel, msg)
