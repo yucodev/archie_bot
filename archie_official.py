@@ -226,11 +226,11 @@ async def on_message(message):
         msg = random.randint(0, int(99999))
         await client.send_message(message.channel, msg)
 
-	if message.content.startswith('!wheretoplay'):
-		a = 'PlayStation'
-		b = 'Xbox'
-		c = 'Nintendo Switch'
-		d = 'PC'
+    if message.content.startswith('!wheretoplay'):
+        a = 'PlayStation'
+        b = 'Xbox'
+        c = 'Nintendo Switch'
+        d = 'PC'
         msg = random.choice([a, b, c, d]).format(message)
         await client.send_message(message.channel, msg)
 
