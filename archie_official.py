@@ -382,8 +382,8 @@ async def on_message(message):
         time.sleep(2)
         msg = 'I\'m fine too :yum:'.format(message)
         await client.send_message(message.channel, msg)
-        time.sleep(2)
-        msg = 'What are you going to do today, {0.author.mention}?'.format(message)
+        time.sleep(3)
+        msg = 'What are you going to do today?'.format(message)
         await client.send_message(message.channel, msg)
 
     if ('not fine') in message.content:
