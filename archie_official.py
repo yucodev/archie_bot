@@ -139,7 +139,28 @@ async def on_message(message):
         h = 'badminton'
         i = 'ski'
         msg = random.choice([a, b, c, d, e, f, g, h, i]).format(message)
-            await client.send_message(message.channel,ms)
+        await client.send_message(message.channel,ms)
+
+    if message.content.startwith('!randomcarbrand')
+        a = 'alfa romeo'
+        b = 'audi'
+        c = 'bmw'
+        d = 'aston martin'
+        e = 'bentley'
+        f = 'bugatti'
+        g = 'chevrolet'
+        h = 'seat'
+        i = 'ferrari'
+        j = 'lamboghini'
+        k = 'maserati'
+        l = 'jaguar'
+        m = 'mercedes'
+        n = 'mclaren'
+        o = 'porsche'
+        p = 'tesla'
+        q = 'volkswagen'
+        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q]).format(mesage)
+        await client.send_message(message.chanel, msg)
 
     if message.content.startswith('!botinfo'):
         msg = 'Archie Bot (version 1.1) ©2018 \nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
