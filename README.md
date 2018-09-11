@@ -12,7 +12,9 @@ You can see some info about us and the bot in our website https://cadevelopers.m
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail or website. Our e-mail is cibathleticsdev@gmail.com.
 ### Our discord server
-Join the official **Cibernetic Athletics Developers** discord server! https://discord.gg/TS583KK
+Join the official **Cybernetic Athletics Developers** discord server! https://discord.gg/TS583KK
+### Add Archie to your server
+Here is the link to add Archie Bot to a discord server https://discordapp.com/oauth2/authorize?client_id=462272072236793856&scope=bot&permissions=8
 
 ## Commands
 #### Conversation (without symbol)
