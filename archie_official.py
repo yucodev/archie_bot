@@ -159,7 +159,9 @@ async def on_message(message):
         o = 'porsche'
         p = 'tesla'
         q = 'volkswagen'
-        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q]).format(message)
+        r = 'opel'
+        s = 'mazda'
+        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
