@@ -164,7 +164,7 @@ async def on_message(message):
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s]).format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('randomclothe'):
+    if message.content.startswith('!randomclothe'):
         a = 'nike'
         b = 'adidas'
         c = 'levis'
@@ -186,7 +186,7 @@ async def on_message(message):
         s = 'rip curl'
         t = 'joma'
         u = 'fila'
-        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u])
+        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
