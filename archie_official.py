@@ -390,7 +390,7 @@ async def on_message(message):
         msg = 'Cool!'
         await client.send_message(message.channel, msg)
         time.sleep(2)
-        msg = 'What kind of sport?, {0.author.mention}'.format(message)
+        msg = 'What kind of sport, {0.author.mention}?'.format(message)
         await client.send_message(message.channel, msg)
 
     if ('a bit of everything') in message.content:
