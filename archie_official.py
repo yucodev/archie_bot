@@ -387,18 +387,21 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if ('sport') in message.content:
+<<<<<<< HEAD
         msg = 'Cool! that\'s nice'
 		await client.send_message(message.channel, msg)
 		time.sleep(2)
 		msg = 'What kind of sport?, {0.author.mention}'.format(message)
+=======
+        msg = 'Cool!'
+        await client.send_message(message.channel, msg)
+        time.sleep(2)
+        msg = 'What kind of sport, {0.author.mention}?'.format(message)
+>>>>>>> 70c860c45f7105134fc07bd901acb7fe0dfa4e00
         await client.send_message(message.channel, msg)
 
     if ('a bit of everything') in message.content:
-<<<<<<< HEAD
-        msg = 'that\'s very good'.format(message)
-=======
         msg = 'That\'s very good'.format(message)
->>>>>>> 610d2ee868378b2f54f1af9215bc19d4ea9cbdb9
         await client.send_message(message.channel, msg)
 
     if ('not fine') in message.content:
