@@ -21,8 +21,10 @@ client = discord.Client()
 
 @client.event
 async def on_member_join(member):
-    msg = 'Welcome to the Cibernetic Athletics Developers official discord server! Read our #rules and #about to be updated. Have fun and RESPECT!! :grinning: :desktop:'
-    await client.send_message(message.author, msg)
+    print("Recognised that a member called " + member.name + " joined")
+    await client.send_message(member, 'Welcome to the Cybernetic Athletics Developers official discord server! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Please, read our #rules and #about to be updated. Have fun and RESPECT!! :grinning: :desktop:')
+    print("Sent message to " + member.name)
+
 
 @client.event
 async def on_message(message):
