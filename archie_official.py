@@ -23,7 +23,8 @@ client = discord.Client()
 @client.event
 async def on_member_join(member):
     print("Recognised that a member called " + member.name + " joined")
-    await client.send_message(member, 'Welcome to this server! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Please, read our #rules and #about in our discord server https://discord.gg/TS583KK to be updated. Have fun and RESPECT!! :grinning: :desktop:')
+    await client.send_message(member, 'Welcome to this server, {0.author.mention}! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Please, read our #rules and #about in our discord server https://discord.gg/TS583KK to be updated. Have fun and RESPECT!! :grinning: :desktop:')
+    await client.send_message(message.channel, 'Welcome to this server, {0.author.mention}! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Please, read our #rules and #about in our discord server https://discord.gg/TS583KK to be updated. Have fun and RESPECT!! :grinning: :desktop:')
     print("Sent message to " + member.name)
 
 
@@ -56,7 +57,7 @@ async def on_message(message):
         CITYUP = str(" ".join(city[1:])).upper()
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        await client.send_message(message.channel, 'Forecast for' + CITYUP)
+        await client.send_message(message.channel, 'Forecast for {0.author.mention}' + CITYUP)
         time.sleep(1)
         for forecast in forecasts:
             await client.send_message(message.channel, '**On ' + forecast.date + '**')
