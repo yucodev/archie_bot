@@ -49,7 +49,7 @@ async def on_message(message):
             await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
             await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
-            await client.send_message(message.author, ' --------------------- ')  
+            await client.send_message(message.author, ' --------------------- ')
 
     if message.content.startswith('!weathertoday'):
         weather = Weather(unit=Unit.CELSIUS)
@@ -99,24 +99,24 @@ async def on_message(message):
         msg = 'What do you want?'.format(message)
         await client.send_message(message.channel, msg)
 
-    # if message.content.startswith('!joke'):
-        # a = 'Can a kangaroo jump higher than a house?\nOf course, a house doesn’t jump at all.'
-        # b = 'Anton, do you think I’m a bad mother?\nMy name is Paul.'
-        # c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
-        # d = 'My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.'
-        # e = 'What do Italian ghosts have for dinner? Spook-hetti!'
-        # msg = random.choice([a, b, c, d]).format(message)
-        # await client.send_message(message.channel, msg)
-
     if message.content.startswith('!joke'):
-        a = 'Can a kangaroo jump higher than a house?\n Of course, a house doesn’t jump at all.'
-        b = 'Anton, do you think I’m a bad mother?\nMy name is Paul'
+        a = 'Can a kangaroo jump higher than a house?\nOf course, a house doesn’t jump at all.'
+        b = 'Anton, do you think I’m a bad mother?\nMy name is Paul.'
         c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
-        d = 'My dog used to chase people on a bike a lot.\nIt got so bad, finally I had to take his bike away.'
+        d = 'My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.'
         e = 'What do Italian ghosts have for dinner?\nSpook-hetti!'
-        letter_choice = random.choice([a, b, c, d, e])
-        msgQ = letter_choice.format(message)
-        await client.send_message(message.channel, msgQ)
+        msg = random.choice([a, b, c, d]).format(message)
+        await client.send_message(message.channel, msg)
+
+    # if message.content.startswith('!joke'):
+        # a = 'Can a kangaroo jump higher than a house?\n Of course, a house doesn’t jump at all.'
+        # b = 'Anton, do you think I’m a bad mother?\nMy name is Paul'
+        # c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
+        # d = 'My dog used to chase people on a bike a lot.\nIt got so bad, finally I had to take his bike away.'
+        # e = 'What do Italian ghosts have for dinner?\nSpook-hetti!'
+        # letter_choice = random.choice([a, b, c, d, e])
+        # msgQ = letter_choice.format(message)
+        # await client.send_message(message.channel, msgQ)
 
     if message.content.startswith('!quiz'):
         split = message.content.split(" ")
@@ -152,51 +152,51 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!randomcolor'):
-        a = 'red'
-        b = 'blue'
-        c = 'green'
-        d = 'lime'
-        e = 'white'
-        f = 'black'
-        g = 'yellow'
-        h = 'gray'
-        i = 'orange'
+        a = 'Red'
+        b = 'Blue'
+        c = 'Green'
+        d = 'Lime'
+        e = 'White'
+        f = 'Black'
+        g = 'Yellow'
+        h = 'Gray'
+        i = 'Orange'
         msg = random.choice([a, b, c, d, e, f, g, h, i]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!randomsport'):
-        a = 'tennis'
-        b = 'basketball'
-        c = 'golf'
-        d = 'athletics'
-        e = 'rugby'
-        f = 'baseball'
-        g = 'canoeing'
-        h = 'badminton'
-        i = 'ski'
+        a = 'Tennis'
+        b = 'Basketball'
+        c = 'Golf'
+        d = 'Athletics'
+        e = 'Rugby'
+        f = 'Baseball'
+        g = 'Canoeing'
+        h = 'Badminton'
+        i = 'Ski'
         msg = random.choice([a, b, c, d, e, f, g, h, i]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!randomcarbrand'):
-        a = 'alfa romeo'
-        b = 'audi'
-        c = 'bmw'
-        d = 'aston martin'
-        e = 'bentley'
-        f = 'bugatti'
-        g = 'chevrolet'
-        h = 'seat'
-        i = 'ferrari'
-        j = 'lamboghini'
-        k = 'maserati'
-        l = 'jaguar'
-        m = 'mercedes'
-        n = 'mclaren'
-        o = 'porsche'
-        p = 'tesla'
-        q = 'volkswagen'
-        r = 'opel'
-        s = 'mazda'
+        a = 'Alfa Romeo'
+        b = 'Audi'
+        c = 'BMW'
+        d = 'Aston Martin'
+        e = 'Bentley'
+        f = 'Bugatti'
+        g = 'Chevrolet'
+        h = 'Seat'
+        i = 'Ferrari'
+        j = 'Lamboghini'
+        k = 'Maserati'
+        l = 'Jaguar'
+        m = 'Mercedes'
+        n = 'McLaren'
+        o = 'Porsche'
+        p = 'Tesla'
+        q = 'Volkswagen'
+        r = 'Opel'
+        s = 'M;azda'
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s]).format(message)
         await client.send_message(message.channel, msg)
 
@@ -475,7 +475,7 @@ async def on_ready():
     print('------')
     await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
     await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online! Type !help for more info. Enjoy!')
-    
+
 
 #GPIO.setmode(GPIO.BCM)
 
