@@ -4,6 +4,7 @@ import discord #pip install discord.py / pip3 install discord.py
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
+import requests
 import os
 from os import getenv
 import asyncio #pip install asyncio / pip3 install asyncio
@@ -31,6 +32,16 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
+    
+    if message.content.startswith('!weather1')
+       baseurl = "https://query.yahooapis.com/v1/public/yql"
+       #Query
+       query = "select * from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text='({}, {})') and u = 'c'"
+       params = {}
+       params['q'] = query.format(lat, lon)
+       params['format'] = 'json'
+       result = requests.get(baseurl, params=params)
+       await client.send_message(message.author, result)
 
     if message.content.startswith('!weather'):
         weather = Weather(unit=Unit.CELSIUS)
