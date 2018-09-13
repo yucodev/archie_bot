@@ -43,7 +43,6 @@ async def on_message(message):
         msg = 'Forecast sent per DM'
         await client.send_message(message.channel, msg)
         time.sleep(1)
-        print('today detectado brooooooo')
         for forecast in forecasts:
             await client.send_message(message.author, '**On ' + forecast.date + '**')
             await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
@@ -51,6 +50,7 @@ async def on_message(message):
             await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
             await client.send_message(message.author, ' --------------------- ')  
             if ('today') in message.content:
+                print('today detectado brooooooo')
                 break
 
     if message.content.startswith('!echo'):
