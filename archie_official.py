@@ -32,16 +32,6 @@ async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
         return
-    
-    if message.content.startswith('!weather1'):
-       baseurl = "https://query.yahooapis.com/v1/public/yql"
-       #Query
-       query = "select * from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text='({}, {})') and u = 'c'"
-       params = {}
-       params['q'] = query.format(lat, lon)
-       params['format'] = 'json'
-       result = requests.get(baseurl, params=params)
-       await client.send_message(message.author, result)
 
     if message.content.startswith('!weather'):
         weather = Weather(unit=Unit.CELSIUS)
@@ -59,6 +49,22 @@ async def on_message(message):
             await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
             await client.send_message(message.author, ' --------------------- ')
+            
+    if message.content.startswith('!weathertoday'):
+        weather = Weather(unit=Unit.CELSIUS)
+        city = message.content.split(" ")
+        CITYUP = str(" ".join(city[1:])).upper()
+        location = weather.lookup_by_location(" ".join(city[1:]))
+        forecasts = location.forecast
+        await client.send_message(message.author, '_**WEATHER FORECAST %s **_' % (CITYUP))
+        msg = 'Forecast sent per DM'
+        await client.send_message(message.channel, msg)
+        time.sleep(1)
+        await client.send_message(message.author, '**On ' + forecast.date + '**')
+        await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
+        await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
+        await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
+        await client.send_message(message.author, ' --------------------- ')
 
     if message.content.startswith('!echo'):
         echo = message.content.split(" ")
