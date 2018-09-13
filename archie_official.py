@@ -44,6 +44,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         if ('today') in message.content:
+            print('today detectado brooooooo')
             for forecast in forecasts:
                 await client.send_message(message.author, '**On ' + forecast.date + '**')
                 await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
