@@ -33,7 +33,7 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!weather'):
+    if message.content.startswith('!weatherforecast'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")
         CITYUP = str(" ".join(city[1:])).upper()
@@ -65,6 +65,9 @@ async def on_message(message):
             await client.send_message(message.channel, ' :low_brightness: ' + forecast.text)
             await client.send_message(message.channel, ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(message.channel, ' :small_blue_diamond: Min temp. ' + forecast.low)
+            if ('today') in message.content:
+                print('funciona break')
+                break
             await client.send_message(message.channel, ' --------------------- ')
 
     if message.content.startswith('!echo'):
