@@ -53,6 +53,7 @@ async def on_message(message):
                 await client.send_message(message.author, ' --------------------- ')
                 break
             else:
+                print('esto es el elseeeeeeeeeeeeeeeee')
                 for forecast in forecasts:
                     await client.send_message(message.author, '**On ' + forecast.date + '**')
                     await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
