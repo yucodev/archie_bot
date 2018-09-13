@@ -44,19 +44,20 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         if message.content.startswith('!weathertoday'):
-            todaysforecast = location.forecast
-            await client.send_message(message.author, '**On ' + todaysforecast.date + '**')
-            await client.send_message(message.author, ' :low_brightness: ' + todaysforecast.text)
-            await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + todaysforecast.high)
-            await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + todaysforecast.low)
-            await client.send_message(message.author, ' --------------------- ')
+            for forecast in forecasts:
+                await client.send_message(message.author, '**On ' + forecast.date + '**')
+                await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
+                await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
+                await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
+                await client.send_message(message.author, ' --------------------- ')
+                break
         else:
             for forecast in forecasts:
-               await client.send_message(message.author, '**On ' + forecast.date + '**')
-               await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
-               await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
-               await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
-               await client.send_message(message.author, ' --------------------- ')
+                await client.send_message(message.author, '**On ' + forecast.date + '**')
+                await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
+                await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
+                await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
+                await client.send_message(message.author, ' --------------------- ')
 
     if message.content.startswith('!echo'):
         echo = message.content.split(" ")
