@@ -56,9 +56,7 @@ async def on_message(message):
         CITYUP = str(" ".join(city[1:])).upper()
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        await client.send_message(message.author, '_**WEATHER FORECAST %s **_' % (CITYUP))
-        msg = 'Forecast sent per DM'
-        await client.send_message(message.channel, msg)
+        await client.send_message(message.channel, 'Forecast for' % (CITYUP))
         time.sleep(1)
         for forecast in forecasts:
             await client.send_message(message.channel, '**On ' + forecast.date + '**')
@@ -66,7 +64,6 @@ async def on_message(message):
             await client.send_message(message.channel, ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(message.channel, ' :small_blue_diamond: Min temp. ' + forecast.low)
             if ('today') in message.content:
-                print('funciona break')
                 break
             await client.send_message(message.channel, ' --------------------- ')
 
