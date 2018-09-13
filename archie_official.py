@@ -51,7 +51,7 @@ async def on_message(message):
             await client.send_message(message.author, ' --------------------- ')  
             if ('today') in message.content:
                 print('today detectado brooooooo')
-                break
+                return
 
     if message.content.startswith('!echo'):
         echo = message.content.split(" ")
