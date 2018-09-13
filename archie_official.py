@@ -57,7 +57,7 @@ async def on_message(message):
         CITYUP = str(" ".join(city[1:])).upper()
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        msg = 'Forecast for {0.author.mention}  ' + CITYUP
+        msg = 'Forecast for {0.author.mention}  ' + CITYUP.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
