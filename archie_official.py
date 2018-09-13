@@ -48,10 +48,12 @@ async def on_message(message):
             await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
             await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
-            await client.send_message(message.author, ' --------------------- ')  
             if ('today') in message.content:
                 print('today detectado brooooooo')
-                return
+                break
+            await client.send_message(message.author, ' --------------------- ')  
+
+                
 
     if message.content.startswith('!echo'):
         echo = message.content.split(" ")
