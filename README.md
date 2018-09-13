@@ -34,7 +34,7 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!help```
    - ```!myid```
    - ```!myname```
-   - ```!weather [city]```
+   - ```!weatherforecast [city]```
    - ```!weathertoday [city]```
 
 #### Interaction
