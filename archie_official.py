@@ -33,7 +33,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     
-    if message.content.startswith('!weather1')
+    if message.content.startswith('!weather1'):
        baseurl = "https://query.yahooapis.com/v1/public/yql"
        #Query
        query = "select * from weather.forecast where woeid in (SELECT woeid FROM geo.places WHERE text='({}, {})') and u = 'c'"
