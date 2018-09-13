@@ -43,7 +43,7 @@ async def on_message(message):
         msg = 'Forecast sent per DM'
         await client.send_message(message.channel, msg)
         time.sleep(1)
-        if message.content.startswith('!weathertoday'):
+        if ('today') in message.content:
             for forecast in forecasts:
                 await client.send_message(message.author, '**On ' + forecast.date + '**')
                 await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
@@ -63,9 +63,9 @@ async def on_message(message):
         echo = message.content.split(" ")
         await client.send_message(message.channel, '%s' % (" ".join(echo[1:])))
 
-    #if message.content('!weather'):
-    #    msg = 'Chose a city and rewrite it including it: !weather city'
-    #    await client.send_message(message.channel, msg)
+    if message.content('!weather'):
+        msg = 'Chose a city and rewrite it including it: !weather city'
+        await client.send_message(message.channel, msg)
 
     if message.content.startswith('!sendme'):
         sendme = message.content.split(" ")
