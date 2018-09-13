@@ -22,7 +22,7 @@ client = discord.Client()
 @client.event
 async def on_member_join(member):
     msg = 'Welcome to the Cibernetic Athletics Developers official discord server! Read our #rules and #about to be updated. Have fun and RESPECT!! :grinning: :desktop:'
-    client.send_message(message.author, msg)
+    await client.send_message(message.author, msg)
 
 @client.event
 async def on_message(message):
