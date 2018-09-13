@@ -51,7 +51,7 @@ async def on_message(message):
                 await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
                 await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
                 await client.send_message(message.author, ' --------------------- ')
-                break
+                continue
             else:
                 print('esto es el elseeeeeeeeeeeeeeeee')
                 for forecast in forecasts:
@@ -65,8 +65,8 @@ async def on_message(message):
         echo = message.content.split(" ")
         await client.send_message(message.channel, '%s' % (" ".join(echo[1:])))
 
-    if message.content('!weather'):
-        await client.send_message(message.channel, 'Chose a city and rewrite it including it: !weather city')
+    #if message.content('!weather'):
+     #   await client.send_message(message.channel, 'Chose a city and rewrite it including it: !weather city')
 
     if message.content.startswith('!sendme'):
         sendme = message.content.split(" ")
