@@ -44,10 +44,11 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
         time.sleep(1)
         if message.content.startswith('!weathertoday'):
-            await client.send_message(message.author, '**On ' + location.forecast.date + '**')
-            await client.send_message(message.author, ' :low_brightness: ' + location.forecast.text)
-            await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + location.forecast.high)
-            await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + location.forecast.low)
+            todaysforecast = location.forecast
+            await client.send_message(message.author, '**On ' + todaysforecast.date + '**')
+            await client.send_message(message.author, ' :low_brightness: ' + todaysforecast.text)
+            await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + todaysforecast.high)
+            await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + todaysforecast.low)
             await client.send_message(message.author, ' --------------------- ')
         else:
             for forecast in forecasts:
