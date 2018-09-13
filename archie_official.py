@@ -84,30 +84,27 @@ async def on_message(message):
         # b = 'Anton, do you think I’m a bad mother?\nMy name is Paul.'
         # c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
         # d = 'My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.'
-		# e = 'What do Italian ghosts have for dinner? Spook-hetti!'
+        # e = 'What do Italian ghosts have for dinner? Spook-hetti!'
         # msg = random.choice([a, b, c, d]).format(message)
         # await client.send_message(message.channel, msg)
 
-	if message.content.startswith('!joke'):
-	    a = 'Can a kangaroo jump higher than a house?'
-	    b = 'Anton, do you think I’m a bad mother?'
-	    c = 'Why can\'t cats work with a computer?'
-	    d = 'My dog used to chase people on a bike a lot.'
-	    e = 'What do Italian ghosts have for dinner?'
-	    letter_choice = random.choice([a, b, c, d, e])
-	    msgQ = letter_choice.format(message)
-	    await client.send_message(message.channel, msgQ)
-	    time.sleep(3)
-	    a = 'Of course, a house doesn’t jump at all.'
-	    b = 'My name is Paul'
-	    c = 'Because they get too distracted chasing the mouse around, haha!'
-	    d = 'It got so bad, finally I had to take his bike away.'
-	    e = 'Spook-hetti!'
-	    msgA = letter_choice.format(message)
-	    await client.send_message(message.channel, msgA)
-
-
-
+    if message.content.startswith('!joke'):
+        a = 'Can a kangaroo jump higher than a house?'
+        b = 'Anton, do you think I’m a bad mother?'
+        c = 'Why can\'t cats work with a computer?'
+        d = 'My dog used to chase people on a bike a lot.'
+        e = 'What do Italian ghosts have for dinner?'
+        letter_choice = random.choice([a, b, c, d, e])
+        msgQ = letter_choice.format(message)
+        await client.send_message(message.channel, msgQ)
+        time.sleep(3)
+        a = 'Of course, a house doesn’t jump at all.'
+        b = 'My name is Paul'
+        c = 'Because they get too distracted chasing the mouse around, haha!'
+        d = 'It got so bad, finally I had to take his bike away.'
+        e = 'Spook-hetti!'
+        msgA = letter_choice.format(message)
+        await client.send_message(message.channel, msgA)
 
     if message.content.startswith('!quiz'):
         split = message.content.split(" ")
