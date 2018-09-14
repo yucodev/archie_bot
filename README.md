@@ -16,7 +16,7 @@ Join the official **Cybernetic Athletics Developers** discord server! https://di
 ### Add Archie to your server
 Here is the link to add Archie Bot to a discord server https://discordapp.com/oauth2/authorize?client_id=462272072236793856&scope=bot&permissions=8
 ### Bot version
-This is the latest version: v1.0.2
+This is the latest version: v1.0.3
 
 ## Commands
 #### Conversation (without symbol)
@@ -34,8 +34,10 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!help```
    - ```!myid```
    - ```!myname```
-   - ```!weatherforecast [city]```
-   - ```!weathertoday [city]```
+   - ```!weathercel [city]```
+   - ```!weatherfar [city]```
+   - ```!todayweathercel [city]```
+   - ```!todayweatherfar [city]```
 
 #### Interaction
    - ```!echo [message]```
