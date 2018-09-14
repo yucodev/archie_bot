@@ -54,10 +54,9 @@ async def on_message(message):
     if message.content.startswith('!todayweathercel'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")
-        CITYUP = str(" ".join(city[1:])).upper()
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        msg1 = 'Forecast in Celsius for {0.author.mention} in ' + CITYUP
+        msg1 = 'Forecast in Celsius for {0.author.mention} in ' + city
         msg = msg1.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(1)
@@ -90,10 +89,9 @@ async def on_message(message):
 	    if message.content.startswith('!todayweatherfar'):
 	        weather = Weather(unit=Unit.FAHRENHEIT)
 	        city = message.content.split(" ")
-	        CITYUP = str(" ".join(city[1:])).upper()
 	        location = weather.lookup_by_location(" ".join(city[1:]))
 	        forecasts = location.forecast
-	        msg1 = 'Forecast in Fahrenheit for {0.author.mention} in ' + CITYUP
+	        msg1 = 'Forecast in Fahrenheit for {0.author.mention} in ' + city
 	        msg = msg1.format(message)
 	        await client.send_message(message.channel, msg)
 	        time.sleep(1)
