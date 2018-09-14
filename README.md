@@ -34,10 +34,10 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!help```
    - ```!myid```
    - ```!myname```
-   - ```!weathercel [city]```
-   - ```!weatherfar [city]```
-   - ```!todayweathercel [city]```
-   - ```!todayweatherfar [city]```
+   - ```!weathercel [city]``` (Weather of the week in Celsius)
+   - ```!weatherfar [city]``` (Weather of the week in Fahrenheit)
+   - ```!todayweathercel [city]``` (Today weather in Celsius)
+   - ```!todayweatherfar [city]``` (Today weather in Fahrenheit)
 
 #### Interaction
    - ```!echo [message]```
