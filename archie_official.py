@@ -456,7 +456,9 @@ async def on_message(message):
         msg = 'I\'m fine too :yum:'.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(3)
-        msg = 'What are you going to do today?'.format(message)
+        a = 'What are you going to do today?'
+        b = 'Where are you from?'
+        msg = random.choice([a, b]).format(message)
         await client.send_message(message.channel, msg)
 
     if ('sport') in message.content:
