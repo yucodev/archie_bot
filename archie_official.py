@@ -61,7 +61,7 @@ async def on_message(message):
         #await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
-            await client.send_message(message.channel, '**On ' + forecast.date + '**')
+            await client.send_message(message.channel, '**On ' + forecast.date + ' (ºC)**')
             await client.send_message(message.channel, ' :low_brightness: ' + forecast.text)
             await client.send_message(message.channel, ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(message.channel, ' :small_blue_diamond: Min temp. ' + forecast.low)
@@ -91,12 +91,12 @@ async def on_message(message):
          city = message.content.split(" ")
          location = weather.lookup_by_location(" ".join(city[1:]))
          forecasts = location.forecast
-         msg1 = 'Forecast in Fahrenheit for {0.author.mention} in ' + city
-         msg = msg1.format(message)
-         await client.send_message(message.channel, msg)
+         # msg1 = 'Forecast in Fahrenheit for {0.author.mention} in ' + city
+         # msg = msg1.format(message)
+         # await client.send_message(message.channel, msg)
          time.sleep(1)
          for forecast in forecasts:
-             await client.send_message(message.channel, '**On ' + forecast.date + '**')
+             await client.send_message(message.channel, '**On ' + forecast.date + ' (ºF)**')
              await client.send_message(message.channel, ' :low_brightness: ' + forecast.text)
              await client.send_message(message.channel, ' :small_orange_diamond: Max temp. ' + forecast.high)
              await client.send_message(message.channel, ' :small_blue_diamond: Min temp. ' + forecast.low)
@@ -261,7 +261,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
-        msg = 'Archie Bot (version 1.0.3) ©2018\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
+        msg = 'Archie Bot (version 1.0.4) ©2018\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
