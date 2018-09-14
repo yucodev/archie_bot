@@ -56,9 +56,9 @@ async def on_message(message):
         city = message.content.split(" ")
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        msg1 = 'Forecast in Celsius for {0.author.mention} in ' + city
-        msg = msg1.format(message)
-        await client.send_message(message.channel, msg)
+        #msg1 = 'Forecast in Celsius for {0.author.mention} in ' + city
+        #msg = msg1.format(message)
+        #await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
             await client.send_message(message.channel, '**On ' + forecast.date + '**')
