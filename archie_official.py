@@ -52,11 +52,46 @@ async def on_message(message):
             await client.send_message(message.author, ' --------------------- ')
 
     if message.content.startswith('!todayweathercel'):
-        weather = Weather(unit=Unit.CELSIUS)
+       weather = Weather(unit=Unit.CELSIUS)
+       city = message.content.split(" ")
+       location = weather.lookup_by_location(" ".join(city[1:]))
+       forecasts = location.forecast
+       msg1 = 'Forecast in Celsius for {0.author.mention} in ' + city
+       msg = msg1.format(message)
+       await client.send_message(message.channel, msg)
+       time.sleep(1)
+       for forecast in forecasts:
+           await client.send_message(message.channel, '**On ' + forecast.date + '**')
+           await client.send_message(message.channel, ' :low_brightness: ' + forecast.text)
+           await client.send_message(message.channel, ' :small_orange_diamond: Max temp. ' + forecast.high)
+           await client.send_message(message.channel, ' :small_blue_diamond: Min temp. ' + forecast.low)
+           if ('today') in message.content:
+               break
+           await client.send_message(message.channel, ' --------------------- ')
+
+    if message.content.startswith('!weatherfar'):
+	 weather = Weather(unit=Unit.FAHRENHEIT)
+	 city = message.content.split(" ")
+	 CITYUP = str(" ".join(city[1:])).upper()
+         location = weather.lookup_by_location(" ".join(city[1:]))
+         forecasts = location.forecast
+         await client.send_message(message.author, '_**WEATHER FORECAST FAHRENHEIT %s **_' % (CITYUP))
+         msg = 'Forecast sent per DM'
+         await client.send_message(message.channel, msg)
+         time.sleep(1)
+         for forecast in forecasts:
+             await client.send_message(message.author, '**On ' + forecast.date + '**')
+             await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
+             await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
+             await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
+             await client.send_message(message.author, ' --------------------- ')
+
+    if message.content.startswith('!todayweatherfar'):
+        weather = Weather(unit=Unit.FAHRENHEIT)
         city = message.content.split(" ")
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        msg1 = 'Forecast in Celsius for {0.author.mention} in ' + city
+        msg1 = 'Forecast in Fahrenheit for {0.author.mention} in ' + city
         msg = msg1.format(message)
         await client.send_message(message.channel, msg)
         time.sleep(1)
@@ -68,41 +103,6 @@ async def on_message(message):
             if ('today') in message.content:
                 break
             await client.send_message(message.channel, ' --------------------- ')
-
-		if message.content.startswith('!weatherfar'):
-	        weather = Weather(unit=Unit.FAHRENHEIT)
-	        city = message.content.split(" ")
-	        CITYUP = str(" ".join(city[1:])).upper()
-	        location = weather.lookup_by_location(" ".join(city[1:]))
-	        forecasts = location.forecast
-	        await client.send_message(message.author, '_**WEATHER FORECAST FAHRENHEIT %s **_' % (CITYUP))
-	        msg = 'Forecast sent per DM'
-	        await client.send_message(message.channel, msg)
-	        time.sleep(1)
-	        for forecast in forecasts:
-	            await client.send_message(message.author, '**On ' + forecast.date + '**')
-	            await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
-	            await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
-	            await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
-	            await client.send_message(message.author, ' --------------------- ')
-
-	    if message.content.startswith('!todayweatherfar'):
-	        weather = Weather(unit=Unit.FAHRENHEIT)
-	        city = message.content.split(" ")
-	        location = weather.lookup_by_location(" ".join(city[1:]))
-	        forecasts = location.forecast
-	        msg1 = 'Forecast in Fahrenheit for {0.author.mention} in ' + city
-	        msg = msg1.format(message)
-	        await client.send_message(message.channel, msg)
-	        time.sleep(1)
-	        for forecast in forecasts:
-	            await client.send_message(message.channel, '**On ' + forecast.date + '**')
-	            await client.send_message(message.channel, ' :low_brightness: ' + forecast.text)
-	            await client.send_message(message.channel, ' :small_orange_diamond: Max temp. ' + forecast.high)
-	            await client.send_message(message.channel, ' :small_blue_diamond: Min temp. ' + forecast.low)
-	            if ('today') in message.content:
-	                break
-	            await client.send_message(message.channel, ' --------------------- ')
 
     if message.content.startswith('!echo'):
         echo = message.content.split(" ")
