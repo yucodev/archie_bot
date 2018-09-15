@@ -16,7 +16,7 @@ Join the official **Cybernetic Athletics Developers** discord server! https://di
 ### Add Archie to your server
 Here is the link to add Archie Bot to a discord server https://discordapp.com/oauth2/authorize?client_id=462272072236793856&scope=bot&permissions=8
 ### Bot version
-This is the latest version: v1.0.4
+This is the latest version: v1.0.5
 
 ## Commands
 #### Conversation (without symbol)

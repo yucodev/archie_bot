@@ -236,32 +236,32 @@ async def on_message(message):
 
 # put brand names' first letter uppercase.
     if message.content.startswith('!randomclothe'):
-        a = 'nike'
-        b = 'adidas'
-        c = 'levis'
-        d = 'holister'
-        e = 'abercrombie'
-        f = 'hunder armour'
-        g = 'gucci'
-        h = 'lacoste'
-        i = 'vans'
-        j = 'supreme'
+        a = 'Nike'
+        b = 'Adidas'
+        c = 'Levis'
+        d = 'Holister'
+        e = 'Abercrombie'
+        f = 'Hunder Armour'
+        g = 'Gucci'
+        h = 'Lacoste'
+        i = 'Vans'
+        j = 'Supreme'
         k = 'asics'
-        l = 'pepe jeans'
-        m = 'kappa'
-        n = 'kelme'
-        o = 'calvin klein'
-        p = 'quicksilver'
-        q = 'diesel'
+        l = 'Pepe Jeans'
+        m = 'Kappa'
+        n = 'Kelme'
+        o = 'Calvin Klein'
+        p = 'Quicksilver'
+        q = 'Diesel'
         r = 'puma'
-        s = 'rip curl'
-        t = 'joma'
-        u = 'fila'
+        s = 'Rip Curl'
+        t = 'Joma'
+        u = 'Fila'
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
-        msg = 'Archie Bot (version 1.0.4) ©2018\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
+        msg = 'Archie Bot (version 1.0.5) ©2018\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
