@@ -12,6 +12,7 @@ import ctx
 from weather import Weather, Unit #pip install weather-api / pip3 install weather-api
 import time #pip install time / pip3 install time
 from datetime import datetime
+import pytz
 import random
 import site
 import sys #pip install sys / pip3 install sys
@@ -310,7 +311,8 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        now = datetime.now()
+        now = datetime.utcnow()
+        # now = datetime.now()
         msg = 'Current date and time: %04d-%02d-%02d %02d:%02d:%02d' % (now.year, now.month, now.day, now.hour, now.minute, now.second)
         await client.send_message(message.channel, msg)
 
