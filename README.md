@@ -30,7 +30,7 @@ We are developing some conversation commands without symbol. Try to discover the
 
 #### Info
    - ```!botinfo```
-   - ```!datetime```
+   - ```!datetime``` (UTC)
    - ```!help```
    - ```!myid```
    - ```!myname```
