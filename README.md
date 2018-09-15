@@ -36,8 +36,8 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!myname```
    - ```!weathercel [city]``` (Weather of the week in Celsius)
    - ```!weatherfar [city]``` (Weather of the week in Fahrenheit)
-   - ```!todayweathercel [city]``` (Today weather in Celsius)
-   - ```!todayweatherfar [city]``` (Today weather in Fahrenheit)
+   - ```!todayweathercel [city]``` (Weather today in Celsius)
+   - ```!todayweatherfar [city]``` (Weather today in Fahrenheit)
 
 #### Interaction
    - ```!echo [message]```
