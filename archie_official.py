@@ -235,7 +235,6 @@ async def on_message(message):
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s]).format(message)
         await client.send_message(message.channel, msg)
 
-# put brand names' first letter uppercase.
     if message.content.startswith('!randomclothe'):
         a = 'Nike'
         b = 'Adidas'
