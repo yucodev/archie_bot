@@ -135,12 +135,12 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!joke'):
-        a = 'Can a kangaroo jump higher than a house?\nOf course, a house doesn’t jump at all.'
-        b = 'Anton, do you think I’m a bad mother?\nMy name is Paul.'
-        c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
-        d = 'My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.'
-        e = 'What do Italian ghosts have for dinner?\nSpook-hetti!'
-        msg = random.choice([a, b, c, d]).format(message)
+        a = 'Can a kangaroo jump higher than a house?' + time.sleep(3) + 'Of course, a house doesn’t jump at all.'
+        b = 'Anton, do you think I’m a bad mother?' + time.sleep(3) + 'My name is Paul.'
+        c = 'Why can\'t cats work with a computer?' + time.sleep(3) + 'Because they get too distracted chasing the mouse around, haha!'
+        d = 'My dog used to chase people on a bike a lot.' + time.sleep(3) + 'It got so bad, finally I had to take his bike away.'
+        e = 'What do Italian ghosts have for dinner?' + time.sleep(3) + 'Spook-hetti!'
+        msg = random.choice([a, b, c, d, e]).format(message)
         await client.send_message(message.channel, msg)
 
     # if message.content.startswith('!joke'):
