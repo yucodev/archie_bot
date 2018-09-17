@@ -12,7 +12,7 @@ import ctx
 from weather import Weather, Unit #pip install weather-api / pip3 install weather-api
 import time #pip install time / pip3 install time
 from datetime import datetime
-import pytz
+import pytz #pip install pytz / pip3 install pytz
 import random
 import site
 import sys #pip install sys / pip3 install sys
@@ -511,7 +511,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
+    await client.change_presence(game=discord.Game(name="CADevelopers | !help"))
     await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online! Type !help for more info. Enjoy!')
 
 
