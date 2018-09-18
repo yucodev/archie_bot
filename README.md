@@ -41,7 +41,7 @@ We are developing some conversation commands without symbol. Try to discover the
 
 #### Interaction
    - ```!echo [message]```
-   - ```!joke```
+   - ```!joke``` (BETA)
    - ```!lal```
    - ```!lel```
    - ```!lil```
