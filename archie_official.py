@@ -12,6 +12,7 @@ import ctx
 from weather import Weather, Unit #pip install weather-api / pip3 install weather-api
 import time #pip install time / pip3 install time
 from datetime import datetime
+import pytz #pip install pytz / pip3 install pytz
 import random
 import site
 import sys #pip install sys / pip3 install sys
@@ -23,9 +24,9 @@ client = discord.Client()
 @client.event
 async def on_member_join(member):
     print("Recognised that a member called " + member.name + " joined")
-    await client.send_message(member, 'Welcome to this server, @' + member.name + '! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Please, read our #rules and #about in our discord server https://discord.gg/TS583KK to be updated. Have fun and RESPECT!! :grinning: :desktop:')
-    await client.send_message(member.channel, 'Welcome to this server, @' + member.name + '! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Please, read our #rules and #about in our discord server https://discord.gg/TS583KK to be updated. Have fun and RESPECT!! :grinning: :desktop:')
-    print("Sent message to " + member.name)
+    await client.send_message(member, 'Welcome to this server, ' + member.mention + '! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Join the developers server to be updated: https://discord.gg/TS583KK. To see the list of commands type !help. Have fun and RESPECT!! :grinning: :desktop:')
+    # await client.send_message(message.channel, 'Welcome to this server, @' + member.name + '! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Please, read our #rules and #about in our discord server https://discord.gg/TS583KK to be updated. To see the list of commands type !help. Have fun and RESPECT!! :grinning: :desktop:')
+    print("Message sent to " + member.name)
 
 
 @client.event
@@ -34,13 +35,13 @@ async def on_message(message):
     if message.author == client.user:
         return
 
-    if message.content.startswith('!weatherforecast'):
+    if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")
         CITYUP = str(" ".join(city[1:])).upper()
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        await client.send_message(message.author, '_**WEATHER FORECAST %s **_' % (CITYUP))
+        await client.send_message(message.author, '_**WEATHER FORECAST CELSIUS %s **_' % (CITYUP))
         msg = 'Forecast sent per DM'
         await client.send_message(message.channel, msg)
         time.sleep(1)
@@ -51,24 +52,58 @@ async def on_message(message):
             await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
             await client.send_message(message.author, ' --------------------- ')
 
-    if message.content.startswith('!weathertoday'):
+    if message.content.startswith('!todayweathercel'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")
-        CITYUP = str(" ".join(city[1:])).upper()
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
-        msg1 = 'Forecast for {0.author.mention} in ' + CITYUP
-        msg = msg1.format(message)
-        await client.send_message(message.channel, msg)
+        #msg1 = 'Forecast in Celsius for {0.author.mention} in ' + city
+        #msg = msg1.format(message)
+        #await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
-            await client.send_message(message.channel, '**On ' + forecast.date + '**')
+            await client.send_message(message.channel, '**On ' + forecast.date + ' (ºC)**')
             await client.send_message(message.channel, ' :low_brightness: ' + forecast.text)
             await client.send_message(message.channel, ' :small_orange_diamond: Max temp. ' + forecast.high)
             await client.send_message(message.channel, ' :small_blue_diamond: Min temp. ' + forecast.low)
             if ('today') in message.content:
                 break
             await client.send_message(message.channel, ' --------------------- ')
+
+    if message.content.startswith('!weatherfar'):
+        weather = Weather(unit=Unit.FAHRENHEIT)
+        city = message.content.split(" ")
+        CITYUP = str(" ".join(city[1:])).upper()
+        location = weather.lookup_by_location(" ".join(city[1:]))
+        forecasts = location.forecast
+        await client.send_message(message.author, '_**WEATHER FORECAST FAHRENHEIT %s **_' % (CITYUP))
+        msg = 'Forecast sent per DM'
+        await client.send_message(message.channel, msg)
+        time.sleep(1)
+        for forecast in forecasts:
+            await client.send_message(message.author, '**On ' + forecast.date + '**')
+            await client.send_message(message.author, ' :low_brightness: ' + forecast.text)
+            await client.send_message(message.author, ' :small_orange_diamond: Max temp. ' + forecast.high)
+            await client.send_message(message.author, ' :small_blue_diamond: Min temp. ' + forecast.low)
+            await client.send_message(message.author, ' --------------------- ')
+
+    if message.content.startswith('!todayweatherfar'):
+         weather = Weather(unit=Unit.FAHRENHEIT)
+         city = message.content.split(" ")
+         location = weather.lookup_by_location(" ".join(city[1:]))
+         forecasts = location.forecast
+         # msg1 = 'Forecast in Fahrenheit for {0.author.mention} in ' + city
+         # msg = msg1.format(message)
+         # await client.send_message(message.channel, msg)
+         time.sleep(1)
+         for forecast in forecasts:
+             await client.send_message(message.channel, '**On ' + forecast.date + ' (ºF)**')
+             await client.send_message(message.channel, ' :low_brightness: ' + forecast.text)
+             await client.send_message(message.channel, ' :small_orange_diamond: Max temp. ' + forecast.high)
+             await client.send_message(message.channel, ' :small_blue_diamond: Min temp. ' + forecast.low)
+             if ('today') in message.content:
+                 break
+             await client.send_message(message.channel, ' --------------------- ')
 
     if message.content.startswith('!echo'):
         echo = message.content.split(" ")
@@ -100,12 +135,12 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!joke'):
-        a = 'Can a kangaroo jump higher than a house?\nOf course, a house doesn’t jump at all.'
-        b = 'Anton, do you think I’m a bad mother?\nMy name is Paul.'
-        c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
-        d = 'My dog used to chase people on a bike a lot. It got so bad, finally I had to take his bike away.'
-        e = 'What do Italian ghosts have for dinner?\nSpook-hetti!'
-        msg = random.choice([a, b, c, d]).format(message)
+        a = 'Can a kangaroo jump higher than a house?' + time.sleep(int(3)) + 'Of course, a house doesn’t jump at all.'
+        b = 'Anton, do you think I’m a bad mother?' + time.sleep(int(3)) + 'My name is Paul.'
+        c = 'Why can\'t cats work with a computer?' + time.sleep(int(3)) + 'Because they get too distracted chasing the mouse around, haha!'
+        d = 'My dog used to chase people on a bike a lot.' + time.sleep(int(3)) + 'It got so bad, finally I had to take his bike away.'
+        e = 'What do Italian ghosts have for dinner?' + time.sleep(int(3)) + 'Spook-hetti!'
+        msg = random.choice([a, b, c, d, e]).format(message)
         await client.send_message(message.channel, msg)
 
     # if message.content.startswith('!joke'):
@@ -218,34 +253,33 @@ async def on_message(message):
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s]).format(message)
         await client.send_message(message.channel, msg)
 
-# put brand names' first letter uppercase.
     if message.content.startswith('!randomclothe'):
-        a = 'nike'
-        b = 'adidas'
-        c = 'levis'
-        d = 'holister'
-        e = 'abercrombie'
-        f = 'hunder armour'
-        g = 'gucci'
-        h = 'lacoste'
-        i = 'vans'
-        j = 'supreme'
+        a = 'Nike'
+        b = 'Adidas'
+        c = 'Levis'
+        d = 'Holister'
+        e = 'Abercrombie'
+        f = 'Hunder Armour'
+        g = 'Gucci'
+        h = 'Lacoste'
+        i = 'Vans'
+        j = 'Supreme'
         k = 'asics'
-        l = 'pepe jeans'
-        m = 'kappa'
-        n = 'kelme'
-        o = 'calvin klein'
-        p = 'quicksilver'
-        q = 'diesel'
+        l = 'Pepe Jeans'
+        m = 'Kappa'
+        n = 'Kelme'
+        o = 'Calvin Klein'
+        p = 'Quicksilver'
+        q = 'Diesel'
         r = 'puma'
-        s = 'rip curl'
-        t = 'joma'
-        u = 'fila'
+        s = 'Rip Curl'
+        t = 'Joma'
+        u = 'Fila'
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
-        msg = 'Archie Bot (version 1.0.2) ©2018\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
+        msg = 'Archie Bot (version 1.0.6) ©2018\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
@@ -294,8 +328,9 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!datetime'):
-        now = datetime.now()
-        msg = 'Current date and time: %04d-%02d-%02d %02d:%02d:%02d' % (now.year, now.month, now.day, now.hour, now.minute, now.second)
+        now = datetime.utcnow()
+        # now = datetime.now()
+        msg = 'Current date and time: %04d-%02d-%02d %02d:%02d:%02d (UTC)' % (now.year, now.month, now.day, now.hour, now.minute, now.second)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!music'):
@@ -494,7 +529,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence(game=discord.Game(name="CAD Developers | !help"))
+    await client.change_presence(game=discord.Game(name="CADevelopers | !help"))
     await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online! Type !help for more info. Enjoy!')
 
 
