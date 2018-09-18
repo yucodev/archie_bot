@@ -135,11 +135,11 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!joke'):
-        a = 'Can a kangaroo jump higher than a house?' + time.sleep(int(3)) + 'Of course, a house doesn’t jump at all.'
-        b = 'Anton, do you think I’m a bad mother?' + time.sleep(int(3)) + 'My name is Paul.'
-        c = 'Why can\'t cats work with a computer?' + time.sleep(int(3)) + 'Because they get too distracted chasing the mouse around, haha!'
-        d = 'My dog used to chase people on a bike a lot.' + time.sleep(int(3)) + 'It got so bad, finally I had to take his bike away.'
-        e = 'What do Italian ghosts have for dinner?' + time.sleep(int(3)) + 'Spook-hetti!'
+        a = 'Can a kangaroo jump higher than a house?' + time.sleep(3) + 'Of course, a house doesn’t jump at all.'
+        b = 'Anton, do you think I’m a bad mother?' + time.sleep(3) + 'My name is Paul.'
+        c = 'Why can\'t cats work with a computer?' + time.sleep(3) + 'Because they get too distracted chasing the mouse around, haha!'
+        d = 'My dog used to chase people on a bike a lot.' + time.sleep(3) + 'It got so bad, finally I had to take his bike away.'
+        e = 'What do Italian ghosts have for dinner?' + time.sleep(3) + 'Spook-hetti!'
         msg = random.choice([a, b, c, d, e]).format(message)
         await client.send_message(message.channel, msg)
 
@@ -258,6 +258,36 @@ async def on_message(message):
         t = 'Joma'
         u = 'Fila'
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u]).format(message)
+        await client.send_message(message.channel, msg)
+
+	if message.content.startswith('!randomseries'):
+        a = 'Money Heist'
+        b = 'Narcos'
+        c = 'The End of the F***ing World'
+        d = '13 Reasons Why'
+        e = 'Game of Thrones'
+        f = 'The Simpsons'
+        g = 'Dragonball'
+        h = 'Fawlty Towers'
+        i = 'Pokemon'
+        j = 'Bright'
+        k = 'The Big Bang Theory'
+        l = 'Breaking bad'
+        m = 'Stranger Things'
+        n = 'sense8'
+        o = 'House of Cards'
+        p = 'Lost in Space'
+        q = 'GLOW'
+        r = 'Queer Eye'
+        s = 'The Crown'
+        t = 'Lucifer'
+        u = 'American Horror History'
+		v = 'The Walking Dead'
+		w = 'Riverdale'
+		x = 'Disenchantment'
+		y = 'Teen Wolf'
+		z = 'Orange is the new Black'
+        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
