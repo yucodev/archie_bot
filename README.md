@@ -63,14 +63,16 @@ We are developing some conversation commands without symbol. Try to discover the
 #### Random
    - ```!flipcoin```
    - ```!lottery```
+   - ```!randomcarbrand```
+   - ```!randomclothe```
    - ```!randomcolor```
+   - ```!randommobilegame```
    - ```!randomnum [num1] [num2]``` (BETA)
      - ```!5random```
      - ```!10random```
      - ```!100random```
      - ```!1000random```
+   - ```!randomseries```
    - ```!randomsport```
-   - ```!randomcarbrand```
-   - ```!randomclothe```
    - ```!rolldice```
    - ```!wheretoplay```
