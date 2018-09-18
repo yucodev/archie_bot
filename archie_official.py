@@ -212,16 +212,16 @@ async def on_message(message):
         msg = random.choice([a, b, c, d, e, f, g, h, i]).format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('What mobile game do you recommend that I can download?'):
-        a = 'Clash of clans'
-        b = 'Clash royale'
+    if message.content.startswith('!randommobilegame'):
+        a = 'Clash of Clans'
+        b = 'Clash Royale'
         c = 'Pokemon Go'
         d = 'Helix Jump'
         e = 'Arena of Valor'
         f = 'Modern Combat 5'
         g = 'Angry Birds'
         h = 'Candy Crush'
-        i = 'SimCity Buildlt'
+        i = 'SimCity BuildIt'
         j = 'Subway Surfers'
         k = 'Tigerball'
         l = 'Plants vs Zombies'
