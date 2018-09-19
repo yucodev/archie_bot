@@ -33,9 +33,8 @@ client = discord.Client()
 async def on_message(message):
     # we do not want the bot to reply to itself
     if message.author == client.user:
-            return
-        if message.author.bot: return
-    
+        return
+    if message.author.bot: return
     
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
