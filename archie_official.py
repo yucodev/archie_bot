@@ -21,12 +21,12 @@ sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
-@client.event
-async def on_member_join(member):
-    print("Recognised that a member called " + member.name + " joined")
-    await client.send_message(member, 'Welcome to this server, ' + member.mention + '! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Join the developers server to be updated: https://discord.gg/TS583KK. To see the list of commands type !help. Have fun and RESPECT!! :grinning: :desktop:')
+#@client.event
+#async def on_member_join(member):
+ #   print("Recognised that a member called " + member.name + " joined")
+  #  await client.send_message(member, 'Welcome to this server, ' + member.mention + '! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Join the developers server to be updated: https://discord.gg/TS583KK. To see the list of commands type !help. Have fun and RESPECT!! :grinning: :desktop:')
     # await client.send_message(message.channel, 'Welcome to this server, @' + member.name + '! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Please, read our #rules and #about in our discord server https://discord.gg/TS583KK to be updated. To see the list of commands type !help. Have fun and RESPECT!! :grinning: :desktop:')
-    print("Message sent to " + member.name)
+   # print("Message sent to " + member.name)
 
 
 @client.event
