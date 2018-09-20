@@ -313,7 +313,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
-        msg = 'Archie Bot (version 1.2.1) ©2018\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
+        msg = 'Archie Bot (version 2.0.1) ©2018\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
