@@ -1,10 +1,10 @@
 # Say hello to Archie!
 ### Who is Archie?
-Archie is our official and main CAD discord bot. All content is published in GitHub.
+Archie is our official and main CAD discord bot. It can do a lot of things for you, like look for the weather, roll a dice or just talk with you! All content is published in GitHub.
 ### How it's programmed?
-Archie is programmed in Python because it's easier than C++ and more effective than javascript.
+Archie is programmed in Python because it's easier than C++ and more effective than javascript. We recommend you to run it in Python 3.6.6.
 ### Which file sould be used?
-archie_official.py
+All code is in one file: "archie_official.py"
 ### Is Archie public?
 Archie is now public. You can contact us per Discord or visit or website.
 ### About us
@@ -15,6 +15,8 @@ If you have any doubt, info, any question or something you have to tell us, don'
 Join the official **Cybernetic Athletics Developers** discord server! https://discord.gg/TS583KK
 ### Add Archie to your server
 Here is the link to add Archie Bot to a discord server https://discordapp.com/oauth2/authorize?client_id=462272072236793856&scope=bot&permissions=8
+### License
+This bot is licensed under the MIT License. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE)
 ### Bot version
 This is the latest version: v2.0.1
 
