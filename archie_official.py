@@ -509,7 +509,7 @@ async def on_message(message):
         time.sleep(3)
         a = 'What are you going to do today?'
         b = 'Where are you came from?'
-		c = 'Do you like animals?'
+	c = 'Do you like animals?'
         msg = random.choice([a, b]).format(message)
         await client.send_message(message.channel, msg)
 
