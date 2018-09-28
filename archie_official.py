@@ -44,14 +44,14 @@ async def on_message(message):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
         platform = ""
         name =  ""
-        q1 = raw_input("PC, Playstation, XBox?")
+        q1 = "PC"
         if q1 == "PC":
           platform = "pc"
         elif q1 == "Playstation":
           platform = "psn"
         elif q1 == "XBox":
           platform = "xbl"
-        name = raw_input("What Is The Username?")
+        name = 'Pupspulver05'
         url = "https://api.fortnitetracker.com/v1/profile/" + platform + "/" + name
         req = requests.get(url, headers=apiKey)
         data = req.json()
