@@ -58,7 +58,7 @@ async def on_message(message):
         req = requests.get(url, headers=apiKey)
         data = req.json()
         solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
-        msg = int('Solo Wins: ' + solo_wins)
+        msg = 'Solo Wins: ' + solo_wins.format(message)
         await client.send_message(message.channel, msg)
         print("Solo Wins:", solo_wins)
     
