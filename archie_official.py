@@ -46,7 +46,7 @@ async def on_message(message):
         platform = ""
         name =  ""
         s1 = (" ".join(string[1]))
-        q1 = int(s1)
+        q1 = s1
         if q1 == "PC":
           platform = "pc"
         elif q1 == "Playstation":
@@ -54,7 +54,7 @@ async def on_message(message):
         elif q1 == "XBox":
           platform = "xbl"
         s2 = (" ".join(string[2]))
-        name = int(s2)
+        name = s2
         url = "https://api.fortnitetracker.com/v1/profile/" + platform + "/" + name
         req = requests.get(url, headers=apiKey)
         data = req.json()
