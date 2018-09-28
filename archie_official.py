@@ -59,7 +59,7 @@ async def on_message(message):
         data = req.json()
         solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
         msg = 'Solo Wins: ' + solo_wins.format(message)
-        await client.send_message(message.channel, msg)
+        await client.send_message(message.channel, 'Solo Wins: ' + solo_wins)
         print("Solo Wins:", solo_wins)
     
     if message.content.startswith('!weathercel'):
