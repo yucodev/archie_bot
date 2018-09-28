@@ -40,7 +40,7 @@ async def on_message(message):
         stats = player.getStats(Mode.DUO)
         await client.send_message(message.channel, stats.wins)
         URL = 'https://api.fortnitetracker.com/v1/profile/pc/Pupspulver05'
-        url = requests.get(self.URL)
+        url = self.client.request(URL)
 
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
