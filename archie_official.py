@@ -6,6 +6,7 @@ from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 import requests
 from fortnite_python import Fortnite
+import os
 from os import getenv
 import asyncio #pip install asyncio / pip3 install asyncio
 import ctx
