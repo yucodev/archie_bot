@@ -45,20 +45,20 @@ async def on_message(message):
         string = message.content.split(" ")
         platform = ""
         name =  ""
-        q1 = str(" ".join(string[1:])).upper()
+        q1 = (" ".join(string[1]))
         if q1 == "PC":
           platform = "pc"
         elif q1 == "Playstation":
           platform = "psn"
         elif q1 == "XBox":
           platform = "xbl"
-        name = str(" ".join(string[2:])).upper()
+        name = (" ".join(string[2]))
         url = "https://api.fortnitetracker.com/v1/profile/" + platform + "/" + name
         req = requests.get(url, headers=apiKey)
         data = req.json()
         solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
         msg = 'Solo Wins: '
-        pawait client.send_message(message.channel, msg + solo_wins) 
+        await client.send_message(message.channel, msg + solo_wins) 
     
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
