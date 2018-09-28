@@ -39,6 +39,9 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!todayweathercel [city]``` (Weather today in Celsius)
    - ```!todayweatherfar [city]``` (Weather today in Fahrenheit)
 
+#### Fortnite
+   - ```!fortnite``` [platform] (PC, Playstation, XBox) [username]
+
 #### Interaction
    - ```!echo [message]```
    - ```!joke``` (BETA)
