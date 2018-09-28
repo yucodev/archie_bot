@@ -35,7 +35,7 @@ async def on_message(message):
    
     if message.content.startswith('!fortnite'):
         player = fortnite.player('Pupspulver05')
-          player
+        player
 
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
