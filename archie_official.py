@@ -51,7 +51,7 @@ async def on_message(message):
           platform = "psn"
         elif q1 == "XBox":
           platform = "xbl"
-        name = 'robotidigo'
+        name = 'ninja'
         url = "https://api.fortnitetracker.com/v1/profile/" + platform + "/" + name
         req = requests.get(url, headers=apiKey)
         data = req.json()
