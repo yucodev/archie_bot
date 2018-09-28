@@ -38,6 +38,8 @@ async def on_message(message):
         fortniteplayer = str(" ".join(fplayer[1:])).upper()
         player = fortnite.player(fortniteplayer)
         await client.send_message(message.channel, player)
+        stats = player.getStats(Mode.DUO)
+        await client.send_message(message.channel, stats.wins)
 
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
