@@ -45,14 +45,14 @@ async def on_message(message):
         string = message.content.split(" ")
         platform = ""
         name =  ""
-        q1 = (" ".join(string[1]))
+        q1 = ''\' + (" ".join(string[1])) + ''\'
         if q1 == "PC":
           platform = "pc"
         elif q1 == "Playstation":
           platform = "psn"
         elif q1 == "XBox":
           platform = "xbl"
-        name = (" ".join(string[2]))
+        name = ''\' + (" ".join(string[2])) + ''\'
         url = "https://api.fortnitetracker.com/v1/profile/" + platform + "/" + name
         req = requests.get(url, headers=apiKey)
         data = req.json()
