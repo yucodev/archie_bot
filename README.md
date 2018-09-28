@@ -40,7 +40,7 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!todayweatherfar [city]``` (Weather today in Fahrenheit)
 
 #### Fortnite
-   - ```!fortnite``` [platform] (PC, Playstation, XBox) [username]
+   - ```!fortnite [platform] ```(PC, Playstation, XBox) ```[username]```
 
 #### Interaction
    - ```!echo [message]```
