@@ -37,11 +37,9 @@ async def on_message(message):
         fortniteplayer = str(" ".join(fplayer[1:])).upper()
         player = fortnite.player(fortniteplayer)
         await client.send_message(message.channel, player)
-        stats = player.getStats(Mode.DUO)
-        await client.send_message(message.channel, stats.wins)
-        URL = 'https://api.fortnitetracker.com/v1/profile/pc/Pupspulver05'
-        url = self.client.request(URL)
-
+        stats = player.timePlayed(fortniteplayer)
+        await client.send_message(message.channel, stats)
+    
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")
