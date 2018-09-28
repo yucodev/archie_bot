@@ -5,6 +5,7 @@ from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 import requests
+from fortnite_python import Fortnite
 import os
 from os import getenv
 import asyncio #pip install asyncio / pip3 install asyncio
@@ -21,13 +22,9 @@ sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
 
-# do not remove, this is for other servers without welcome-bot.
-@client.event
-async def on_member_join(member):
-   print("Recognised that a member called " + member.name + " joined")
-   await client.send_message(member, 'Welcome to this server, ' + member.mention + '! I\'m Archie, the official CADevelopers discord bot, nice to meet you! Join the developers server to be updated: https://discord.gg/TS583KK. To see the list of commands type !help. Have fun and RESPECT!! :grinning: :desktop:')
-   print("Message sent to " + member.name)
+fortnite = Fortnite('34a3d375-b089-4409-a2ce-e34472ff4ebe')
 
+# do not remove, this is for other servers without welcome-bot.
 
 @client.event
 async def on_message(message):
@@ -35,6 +32,10 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.author.bot: return
+   
+    if message.content.startswith('!fortnite'):
+        player = fortnite.player('Pupspulver05')
+          player
 
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
