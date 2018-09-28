@@ -32,31 +32,33 @@ async def on_message(message):
         return
     if message.author.bot: return
    
-    if message.content.startswith('!fortnite'):
-        fplayer = message.content.split(" ")
-        fortniteplayer = str(" ".join(fplayer[1:])).upper()
-        player = fortnite.player(fortniteplayer)
-        await client.send_message(message.channel, player)
-        stats = player.id('Pupspulver05')
-        await client.send_message(message.channel, stats)
+    #if message.content.startswith('!fortnite'):
+     #   fplayer = message.content.split(" ")
+     #   fortniteplayer = str(" ".join(fplayer[1:])).upper()
+     #   player = fortnite.player(fortniteplayer)
+     #   await client.send_message(message.channel, player)
+     #   stats = player.id('Pupspulver05')
+     #   await client.send_message(message.channel, stats)
         
     if message.content.startswith('!test1'):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
+        string = message.content.split(" ")
         platform = ""
         name =  ""
-        q1 = "PC"
+        q1 = str(" ".join(string[1:])).upper()
         if q1 == "PC":
           platform = "pc"
         elif q1 == "Playstation":
           platform = "psn"
         elif q1 == "XBox":
           platform = "xbl"
-        name = 'ninja'
+        name = str(" ".join(string[2:])).upper()
         url = "https://api.fortnitetracker.com/v1/profile/" + platform + "/" + name
         req = requests.get(url, headers=apiKey)
         data = req.json()
         solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
-        print ("Solo Wins:", solo_wins) 
+        msg = 'Solo Wins: '
+        pawait client.send_message(message.channel, msg + solo_wins) 
     
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
