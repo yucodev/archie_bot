@@ -40,7 +40,7 @@ async def on_message(message):
         stats = player.id('Pupspulver05')
         await client.send_message(message.channel, stats)
         
-    if message.content.startswith('!fortnite1'):
+    if message.content.startswith('!test1'):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
         platform = ""
         name =  ""
