@@ -34,7 +34,9 @@ async def on_message(message):
     if message.author.bot: return
    
     if message.content.startswith('!fortnite'):
-        player = fortnite.player('Pupspulver05')
+        fplayer = message.content.split(" ")
+        fortniteplayer = str(" ".join(fplayer[1:])).upper()
+        player = fortnite.player(fortniteplayer)
         await client.send_message(message.channel, player)
 
     if message.content.startswith('!weathercel'):
