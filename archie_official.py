@@ -6,6 +6,7 @@ from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
 import requests
 from fortnite_python import Fortnite
+from src.fortnite import get_squad_stats, build_string_for_squad_stats
 import os
 from os import getenv
 import asyncio #pip install asyncio / pip3 install asyncio
@@ -40,7 +41,10 @@ async def on_message(message):
         await client.send_message(message.channel, player)
         stats = player.getStats(Mode.DUO)
         await client.send_message(message.channel, stats.wins)
-        GET https://api.fortnitetracker.com/v1/profile/pc/Pupspulver05
+        username = 'Pupspulver05' # Here your username.
+        platform = 'pc' # Here your platform: psn, xbox, pc.
+        squad_data = get_squad_stats(username, platform)[0]
+        print(build_string_for_squad_stats(squad_data))
 
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
