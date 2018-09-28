@@ -37,7 +37,7 @@ async def on_message(message):
         fortniteplayer = str(" ".join(fplayer[1:])).upper()
         player = fortnite.player(fortniteplayer)
         await client.send_message(message.channel, player)
-        stats = player.id(fortniteplayer)
+        stats = player.id(Pupspulver05)
         await client.send_message(message.channel, stats)
     
     if message.content.startswith('!weathercel'):
