@@ -32,7 +32,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.author.bot: return
-   
+
     #if message.content.startswith('!fortnite'):
      #   fplayer = message.content.split(" ")
      #   fortniteplayer = str(" ".join(fplayer[1:])).upper()
@@ -40,7 +40,7 @@ async def on_message(message):
      #   await client.send_message(message.channel, player)
      #   stats = player.id('Pupspulver05')
      #   await client.send_message(message.channel, stats)
-        
+
     if message.content.startswith('!fortnite'):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
         string = message.content.split(" ")
@@ -61,10 +61,10 @@ async def on_message(message):
         solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
         await client.send_message(message.channel, 'Solo Wins: ' + str(solo_wins))
         print("Solo Wins:", solo_wins)
-    
-    if message.content.startswith('!fnews'):
+
+    if message.content.startswith('!fortnitenews'):
         await client.send_message(message.channel, 'Last Fortnite news: https://www.epicgames.com/fortnite/en/news')
-    
+
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")

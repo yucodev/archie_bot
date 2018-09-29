@@ -41,6 +41,7 @@ We are developing some conversation commands without symbol. Try to discover the
 
 #### Fortnite
    - ```!fortnite [platform] ```(PC, Playstation, XBox) ```[username]```
+   - ```!fortnitenews``` Last fortnite news
 
 #### Interaction
    - ```!echo [message]```
