@@ -59,8 +59,11 @@ async def on_message(message):
         req = requests.get(url, headers=apiKey)
         data = req.json()
         solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
-        await client.send_message(message.channel, 'Solo Wins: ' + str(solo_wins))   
+        await client.send_message(message.channel, 'Solo Wins: ' + str(solo_wins))
         print("Solo Wins:", solo_wins)
+    
+    if message.content.startswith('!fnews'):
+        await client.send_message(message.channel, 'Last Fortnite news: https://www.epicgames.com/fortnite/en/news')
     
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
