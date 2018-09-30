@@ -16,7 +16,7 @@ Join the official **Cybernetic Athletics Developers** discord server! https://di
 ### License
 This bot is licensed under the MIT License. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE)
 ### Bot version
-This is the latest version: v2.0.1
+This is the latest version: v2.0.1 (stable)
 
 ## Commands
 #### Conversation (without symbol)
@@ -40,7 +40,7 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!todayweatherfar [city]``` (Weather today in Fahrenheit)
 
 #### Fortnite
-   - ```!fortnite [platform] ```(PC, Playstation, XBox) ```[username]```
+   - ```!fortniteplayer [platform] ```(PC, Playstation, XBox) ```[username]```
    - ```!fortnitenews``` Last fortnite news
 
 #### Interaction
