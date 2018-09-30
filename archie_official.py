@@ -63,7 +63,8 @@ async def on_message(message):
         print("Solo Wins:", solo_wins)
 
     if message.content.startswith('!fortnitenews'):
-        await client.send_message(message.channel, 'Last Fortnite news: https://www.epicgames.com/fortnite/en/news')
+        msg = 'Last Fortnite news: 
+        await client.send_message(message.channel, 'Last Fortnite news: https://www.epicgames.com/fortnihte/en/news')
 
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
