@@ -66,6 +66,10 @@ async def on_message(message):
         msg = 'Last Fortnite news: https://www.epicgames.com/fortnihte/en/news'
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!think'):
+        msg = 'thought'
+        await client.send_message(message.channel, msg)
+
     if message.content.startswith('!weathercel'):
         weather = Weather(unit=Unit.CELSIUS)
         city = message.content.split(" ")
