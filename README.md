@@ -16,7 +16,7 @@ Join the official **Cybernetic Athletics Developers** discord server! https://di
 ### License
 This bot is licensed under the MIT License. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE)
 ### Bot version
-This is the latest version: v2.0.1 (stable)
+This is the latest version: v2.0.2
 
 ## Commands
 #### Conversation (without symbol)
