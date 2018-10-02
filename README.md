@@ -14,7 +14,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
 ### Our discord server
 Join the official **Cybernetic Athletics Developers** discord server! https://discord.gg/TS583KK
 ### License
-This bot is licensed under the MIT License. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE)
+This bot is licensed under the BSD 3-Clause License. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE)
 ### Bot version
 This is the latest version: v2.0.2
 
