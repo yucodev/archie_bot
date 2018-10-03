@@ -598,21 +598,6 @@ async def on_ready():
     await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online! Type !help for more info. Enjoy!')
 
 
-#GPIO.setmode(GPIO.BCM)
-
-#GPIO.setup(18, GPIO.IN, pull_up_down=GPIO.PUD_UP)
-
-#while True:
- #  input_state = GPIO.input(18)
-  # if input_state == False:
-    #msg = 'Archie is now rebooting'.format(message)
-    #await client.send_message(message.channel, msg)
-    #msg = 'Status: disconected'.format(message)
-    #await client.send_message(message.channel, msg)
-   # time.sleep(1)
-   # os.system("sudo reboot")
-   # time.sleep(0.2)
-
 if __name__ == '__main__':
     import config
     client.run(config.token)
