@@ -8,7 +8,7 @@ All code is in one file: "archie_official.py"
 ### Is Archie public?
 Archie is now public. You can add it to a discord server with this link: https://discordapp.com/oauth2/authorize?client_id=462272072236793856&scope=bot&permissions=8. Also, you can create your own bot with this code (read the BSD 3-Clause License).
 ### About us
-You can see some info about us and the bot in our website http://cadevelopers.ml.
+You can see some info about us and the bot in our website https://cadevelopers.ml.
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail (cibathleticsdev@gmail.com) or website.
 ### Our discord server
