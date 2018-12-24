@@ -32,7 +32,8 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.author.bot: return
-
+    
+    await client.send_message(message.channel, 'Merry Xmas! enjoy your day!')
     #if message.content.startswith('!fortnite'):
      #   fplayer = message.content.split(" ")
      #   fortniteplayer = str(" ".join(fplayer[1:])).upper()
