@@ -339,7 +339,8 @@ async def on_message(message):
         x = 'Disenchantment'
         y = 'Teen Wolf'
         z = 'Orange is the new Black'
-        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z]).format(message)
+		aa = 'Sex Education'
+        msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa]).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
