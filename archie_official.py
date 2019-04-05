@@ -50,7 +50,7 @@ async def on_message(message):
         q1 = 'PC'
         if q1 == "PC":
           platform = "pc"
-	  elif q1 == "Playstation", "PS4":
+	  elif q1 == "Playstation":
           platform = "psn"
         elif q1 == "XBox":
           platform = "xbl"
