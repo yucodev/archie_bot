@@ -32,8 +32,8 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.author.bot: return
-    
-     
+
+
     #if message.content.startswith('!fortnite'):
      #   fplayer = message.content.split(" ")
      #   fortniteplayer = str(" ".join(fplayer[1:])).upper()
@@ -340,7 +340,7 @@ async def on_message(message):
         x = 'Disenchantment'
         y = 'Teen Wolf'
         z = 'Orange is the new Black'
-		aa = 'Sex Education'
+        aa = 'Sex Education'
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa]).format(message)
         await client.send_message(message.channel, msg)
 
