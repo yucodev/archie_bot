@@ -12,7 +12,7 @@ You can see some info about us and the bot in our website https://cadevelopers.m
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail (cibathleticsdev@gmail.com) or website.
 ### Our discord server
-Join the official **Cybernetic Athletics Developers** discord server! https://discord.gg/TS583KK
+Join the official **Cybernetic Athletics Developers** discord server an chat with Archie! https://discord.gg/TS583KK
 ### License
 This bot is licensed under the BSD 3-Clause License. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE)
 ### Bot version
@@ -40,7 +40,7 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!todayweatherfar [city]``` (Weather today in Fahrenheit)
 
 #### Fortnite
-   - ```!fortniteplayer [platform] ```(PC, Playstation, XBox) ```[username]``` (you can't use the command 'switch' as platform) (BETA)
+   - ```!fortniteplayer [platform] ```(PC, Playstation, XBox) ```[username]``` (Nintendo Switch, Android and iOS platforms cannot be used) (BETA)
    - ```!fortnitenews``` Last fortnite news
 
 #### Interaction
