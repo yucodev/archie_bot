@@ -46,7 +46,6 @@ async def on_message(message):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
         string = message.content.split(" ")
         platform = str(" ".join(string[1:]))
-        name =  ""
         q1 = 'PC'
         if q1 == "PC":
           platform = "pc"
