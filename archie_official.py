@@ -50,7 +50,7 @@ async def on_message(message):
         q1 = 'PC'
         if q1 == "PC":
           platform = "pc"
-	  elif q1 == "Playstation", "PS4":
+	  elif q1 == "Playstation" or "PS4" or "psn":
           platform = "psn"
         elif q1 == "XBox":
           platform = "xbl"
@@ -74,7 +74,7 @@ async def on_message(message):
         location = weather.lookup_by_location(" ".join(city[1:]))
         forecasts = location.forecast
         await client.send_message(message.author, '_**WEATHER FORECAST CELSIUS %s **_' % (CITYUP))
-        msg = 'Forecast sent per DM'
+        msg = 'Forecast sent via DM'
         await client.send_message(message.channel, msg)
         time.sleep(1)
         for forecast in forecasts:
