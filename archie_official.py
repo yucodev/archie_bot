@@ -41,26 +41,26 @@ async def on_message(message):
      #   await client.send_message(message.channel, player)
      #   stats = player.id('Pupspulver05')
      #   await client.send_message(message.channel, stats)
-
-    if message.content.startswith('!fortniteplayer'):
-        apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
-        string = message.content.split(" ")
-        platform = str(" ".join(string[1:]))
-        q1 = 'PC'
-        if q1 == "PC":
-          platform = "pc"
-	    elif q1 == "Playstation" or "PS4" or "psn":
-          platform = "psn"
-        elif q1 == "XBox":
-          platform = "xbl"
-        s2 = str(" ".join(string[2:]))
-        name = s2
-        url = "https://api.fortnitetracker.com/v1/profile/" + platform + "/" + name
-        req = requests.get(url, headers=apiKey)
-        data = req.json()
-        solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
-        await client.send_message(message.channel, 'Solo Wins: ' + str(solo_wins))
-        print("Solo Wins:", solo_wins)
+    #
+    # if message.content.startswith('!fortniteplayer'):
+    #     apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
+    #     string = message.content.split(" ")
+    #     platform = str(" ".join(string[1:]))
+    #     q1 = 'PC'
+    #     if q1 == "PC":
+    #       platform = "pc"
+	#     elif q1 == "Playstation" or "PS4" or "psn":
+    #       platform = "psn"
+    #     elif q1 == "XBox":
+    #       platform = "xbl"
+    #     s2 = str(" ".join(string[2:]))
+    #     name = s2
+    #     url = "https://api.fortnitetracker.com/v1/profile/" + platform + "/" + name
+    #     req = requests.get(url, headers=apiKey)
+    #     data = req.json()
+    #     solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
+    #     await client.send_message(message.channel, 'Solo Wins: ' + str(solo_wins))
+    #     print("Solo Wins:", solo_wins)
 
     if message.content.startswith('!fortnitenews'):
         msg = 'Last Fortnite news: https://www.epicgames.com/fortnite/en/news'
