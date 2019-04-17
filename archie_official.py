@@ -194,7 +194,7 @@ async def on_message(message):
         response = ("yes".join(split[1:]))
         msg = 'Can cats fly? (yes/no)'
         await client.send_message(message.channel, msg)
-        if response == 'no'
+        if response == 'no':
             await client.send_message(message.channel, 'Noooooo')
             time.sleep(2)
             await client.send_message(message.channel, 'But I wish they did... :heart_eyes_cat:')
@@ -342,7 +342,7 @@ async def on_message(message):
         y = 'Teen Wolf'
         z = 'Orange is the new Black'
         aa = 'Sex Education'
-		ab = 'Prison Break'
+        ab = 'Prison Break'
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z, aa, ab]).format(message)
         await client.send_message(message.channel, msg)
 
@@ -409,8 +409,8 @@ async def on_message(message):
         e = 'https://youtu.be/InLvy_CFKUQ' # Karol G, J. Balvin - Mi Cama (Remix) ft. Nicky Jam
         f = 'https://youtu.be/lBwpobZL2aQ' # LA SALAMANDRA - Trueno & Underdann (Official Video)
         g = 'https://youtu.be/v2AC41dglnM' # AC/DC - Thunderstruck (Official Video)
-		h = 'https://youtu.be/PX5QgITQAwk' # Bitch Lasagna v1.2
-		i = 'https://youtu.be/6Dh-RL__uN4' # bitch lasagna
+        h = 'https://youtu.be/PX5QgITQAwk' # Bitch Lasagna v1.2
+        i = 'https://youtu.be/6Dh-RL__uN4' # bitch lasagna
         msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d, e, f, g, h, i])
         await client.send_message(message.channel, msg)
 
