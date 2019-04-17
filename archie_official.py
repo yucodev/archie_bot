@@ -42,7 +42,6 @@ async def on_message(message):
      #   stats = player.id('Pupspulver05')
      #   await client.send_message(message.channel, stats)
 
-# BETA BEGINNING
     if message.content.startswith('!fortniteplayer'):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
         string = message.content.split(" ")
@@ -62,7 +61,6 @@ async def on_message(message):
         solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
         await client.send_message(message.channel, 'Solo Wins: ' + str(solo_wins))
         print("Solo Wins:", solo_wins)
-# BETA ENDING
 
     if message.content.startswith('!fortnitenews'):
         msg = 'Last Fortnite news: https://www.epicgames.com/fortnite/en/news'

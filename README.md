@@ -40,7 +40,7 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!todayweatherfar [city]``` (Weather today in Fahrenheit)
 
 #### Fortnite
-   - ```!fortniteplayer [platform] ```(PC, Playstation, XBox) ```[username]``` (Nintendo Switch, Android and iOS platforms cannot be used) (BETA)
+   - ```!fortniteplayer [platform] ```(PC, Playstation, XBox) ```[username]``` (Nintendo Switch, Android and iOS platforms cannot be used)
    - ```!fortnitenews``` Last fortnite news
 
 #### Interaction
