@@ -192,12 +192,12 @@ async def on_message(message):
         #response = (" ".join(split[1:]))
         msg = 'Can cats fly? (yes/no)'
         await client.send_message(message.channel, msg)
-        if ('no') in message.content:
+        if message.content.startswith('no'):
         #if response == "no":
             await client.send_message(message.channel, 'Noooooo')
             time.sleep(2)
             await client.send_message(message.channel, 'But I wish they did... :heart_eyes_cat:')
-        if ('yes') in message.content:
+        if message.content.startswith('yes'):
         #if response == "yes":
              print("lol")
              await client.send_message(message.channel, 'Of course they can!')
