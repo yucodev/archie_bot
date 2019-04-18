@@ -40,15 +40,7 @@ async def on_message(message):
         return
     if message.author.bot: return
 
-
-    #if message.content.startswith('!fortnite'):
-     #   fplayer = message.content.split(" ")
-     #   fortniteplayer = str(" ".join(fplayer[1:])).upper()
-     #   player = fortnite.player(fortniteplayer)
-     #   await client.send_message(message.channel, player)
-     #   stats = player.id('Pupspulver05')
-     #   await client.send_message(message.channel, stats)
-
+    
     if message.content.startswith('!fortniteplayer'):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
         string = message.content.split(" ")
@@ -151,9 +143,6 @@ async def on_message(message):
         echo = message.content.split(" ")
         await client.send_message(message.channel, '%s' % (" ".join(echo[1:])))
 
-    #if message.content('!weather'):
-     #   await client.send_message(message.channel, 'Chose a city and rewrite it including it: !weather city')
-
     if message.content.startswith('!sendme'):
         sendme = message.content.split(" ")
         await client.send_message(message.author, '%s' % (" ".join(sendme[1:])))
@@ -203,7 +192,7 @@ async def on_message(message):
         response = ("yes".join(split[1:]))
         msg = 'Can cats fly? (yes/no)'
         await client.send_message(message.channel, msg)
-        if response == 'no':
+        if response == "no":
             await client.send_message(message.channel, 'Noooooo')
             time.sleep(2)
             await client.send_message(message.channel, 'But I wish they did... :heart_eyes_cat:')
