@@ -39,6 +39,26 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.author.bot: return
+    
+    if message.content.startswith('!apexplayer'):
+        apiKey = {"TRN-Api-Key": "6457b3cd-44b1-4c2f-ba37-12254dec68b2"}
+        string = message.content.split(" ")
+        platform = str(" ".join(string[1:]))
+        q1 = 'PC'
+        if q1 == "PC":
+          platform = "5"
+        elif q1 == "Playstation" or "PS4" or "psn":
+          platform = "2"
+        elif q1 == "XBox":
+          platform = "1"
+        s2 = str(" ".join(string[2:]))
+        name = s2
+        url = "https://public-api.tracker.gg/apex/v1/standard/profile/" + platform + "/" + name
+        req = requests.get(url, headers=apiKey)
+        data = req.json()
+        solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
+        await client.send_message(message.channel, 'Solo Wins: ' + str(solo_wins))
+        print("Solo Wins:", solo_wins)
 
     
     if message.content.startswith('!fortniteplayer'):
