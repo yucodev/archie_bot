@@ -45,12 +45,12 @@ async def on_message(message):
     
     if message.content.startswith('!apexplayer'):
        player = apex.player('pupspulver05')
-       await client.send_message(message.channel, player)
-       for legend in player.legends:
-           await client.send_message(message.channel, legend.legend_name)
-           await client.send_message(message.channel, legend.icon)
-           #await client.send_message(message.channel, legend.damage)
-           break
+       #await client.send_message(message.channel, player)
+       #for legend in player.legends:
+       await client.send_message(message.channel, legend.legend_name)
+       await client.send_message(message.channel, legend.icon)
+       #await client.send_message(message.channel, legend.damage)
+           #break
     
     if message.content.startswith('!fortniteplayer'):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
