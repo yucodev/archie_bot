@@ -24,7 +24,6 @@ import pytz #pip install pytz / pip3 install pytz
 import random
 import site
 from apex_legends import ApexLegends
-from apex_legends import legends
 import sys #pip install sys / pip3 install sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
