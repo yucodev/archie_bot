@@ -49,7 +49,7 @@ async def on_message(message):
        for legend in player.legends:
            await client.send_message(message.channel, legend.legend_name)
            await client.send_message(message.channel, legend.icon)
-           await client.send_message(message.channel, legend.damage)
+           #await client.send_message(message.channel, legend.damage)
            break
     
     if message.content.startswith('!fortniteplayer'):
