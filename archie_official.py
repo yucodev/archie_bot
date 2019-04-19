@@ -46,7 +46,7 @@ async def on_message(message):
     
     if message.content.startswith('!apexplayer'):
        player = apex.player('pupspulver05')
-       await client.send_message(message.channel, player
+       await client.send_message(message.channel, player)
        for legend in player.legends:
            await client.send_message(message.channel, legend.legend_name)
            await client.send_message(message.channel, legend.icon)
