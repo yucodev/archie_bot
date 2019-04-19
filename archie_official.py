@@ -23,6 +23,7 @@ from datetime import datetime
 import pytz #pip install pytz / pip3 install pytz
 import random
 import site
+from apex_legends import ApexLegends
 import sys #pip install sys / pip3 install sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
@@ -30,6 +31,8 @@ sys.path.insert(0, '/home/dietpi/discord')
 client = discord.Client()
 
 fortnite = Fortnite('34a3d375-b089-4409-a2ce-e34472ff4ebe')
+
+apex = ApexLegends("6457b3cd-44b1-4c2f-ba37-12254dec68b2")
 
 # do not remove, this is for other servers without welcome-bot.
 
@@ -41,25 +44,13 @@ async def on_message(message):
     if message.author.bot: return
     
     if message.content.startswith('!apexplayer'):
-        apiKey = {"TRN-Api-Key": "6457b3cd-44b1-4c2f-ba37-12254dec68b2"}
-        string = message.content.split(" ")
-        platform = str(" ".join(string[1:]))
-        q1 = 'PC'
-        if q1 == "PC":
-          platform = "5"
-        elif q1 == "Playstation" or "PS4" or "psn":
-          platform = "2"
-        elif q1 == "XBox":
-          platform = "1"
-        s2 = str(" ".join(string[2:]))
-        name = s2
-        url = "https://public-api.tracker.gg/apex/v1/standard/profile/" + platform + "/" + name
-        req = requests.get(url, headers=apiKey)
-        data = req.json()
-        solo_wins = data["stats"]["p2"]["top1"]["valueInt"]
-        await client.send_message(message.channel, 'Solo Wins: ' + str(solo_wins))
-        print("Solo Wins:", solo_wins)
-
+       player = apex.player('pupspulver05')
+       await client.send_message(message.channel, player
+       for legend in player.legends:
+           await client.send_message(message.channel, legend.legend_name
+           await client.send_message(message.channel, legend.icon
+           await client.send_message(message.channel, legend.damage)
+           break
     
     if message.content.startswith('!fortniteplayer'):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
