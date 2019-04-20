@@ -5,7 +5,9 @@
 #  Copyright 2018-2019 ©  V. 2.0.3   #
 ######################################
 
-#please run this script only with Python3
+# please run this script only with Python3
+if __name__ == '__main__':
+    import botversion
 
 import discord #pip install discord.py / pip3 install discord.py
 from discord.ext import commands
@@ -15,18 +17,18 @@ import requests
 from fortnite_python import Fortnite
 import os
 from os import getenv
-import asyncio #pip install asyncio / pip3 install asyncio
+import asyncio # pip install asyncio / pip3 install asyncio
 import ctx
-from weather import Weather, Unit #pip install weather-api / pip3 install weather-api
-import time #pip install time / pip3 install time
+from weather import Weather, Unit # pip install weather-api / pip3 install weather-api
+import time # pip install time / pip3 install time
 from datetime import datetime
-import pytz #pip install pytz / pip3 install pytz
+import pytz # pip install pytz / pip3 install pytz
 import random
 import site
 from apex_PC import ApexLegends
 from apex_XBOX import ApexLegendsXBOX
 from apex_PSN import ApexLegendsPSN
-import sys #pip install sys / pip3 install sys
+import sys # pip install sys / pip3 install sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
@@ -46,7 +48,7 @@ async def on_message(message):
     if message.author == client.user:
         return
     if message.author.bot: return
-    
+
     if message.content.startswith('!apexplayerpc'):
        string = message.content.split(" ")
        player_name = str(" ".join(string[1:]))
@@ -56,7 +58,7 @@ async def on_message(message):
            await client.send_message(message.channel, player)
            await client.send_message(message.channel, legend.icon)
            break
-            
+
     if message.content.startswith('!apexplayerpsn'):
        string = message.content.split(" ")
        player_name = str(" ".join(string[1:]))
@@ -66,7 +68,7 @@ async def on_message(message):
            await client.send_message(message.channel, player)
            await client.send_message(message.channel, legend.icon)
            break
-            
+
     if message.content.startswith('!apexplayerxbox'):
        string = message.content.split(" ")
        player_name = str(" ".join(string[1:]))
@@ -76,7 +78,7 @@ async def on_message(message):
            await client.send_message(message.channel, player)
            await client.send_message(message.channel, legend.icon)
            break
-    
+
     if message.content.startswith('!fortniteplayer'):
         apiKey = {"TRN-Api-Key": "34a3d375-b089-4409-a2ce-e34472ff4ebe"}
         string = message.content.split(" ")
@@ -101,8 +103,8 @@ async def on_message(message):
         msg = 'Last Fortnite news: https://www.epicgames.com/fortnite/en/news'
         await client.send_message(message.channel, msg)
 
-    #### Weather yahoo api is now longer available ####
-    
+    #### Weather yahoo API is now longer available ####
+
     #if message.content.startswith('!weathercel'):
     #    weather = Weather(unit=Unit.CELSIUS)
     #    city = message.content.split(" ")
@@ -172,7 +174,7 @@ async def on_message(message):
     #         if ('today') in message.content:
     #             break
     #         await client.send_message(message.channel, ' --------------------- ')
-    
+
     #### END WEATHER SCRIPT ####
 
     if message.content.startswith('!echo'):
@@ -383,7 +385,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
-        msg = 'Archie Bot (version 2.0.3) ©2019\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
+        msg = 'Archie Bot (version ' + botversion.version + ') ©2019\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
