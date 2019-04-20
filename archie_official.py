@@ -6,6 +6,7 @@
 ######################################
 
 # please run this script only with Python3
+
 if __name__ == '__main__':
     import botversion
 
@@ -207,7 +208,7 @@ async def on_message(message):
         jokes = [
             ('Can a kangaroo jump higher than a house?', 'Of course, a house doesn’t jump at all.'),
             ('Anton, do you think I’m a bad mother?', 'My name is Paul.'),
-            ('Why can\'t cats work with a computer?', 'Because they get too distracted chasing the mouse around, haha!'),
+            ('Why can\'t cats work with a computer?', 'Because they get too distracted chasing the mouse around!'),
             ('My dog used to chase people on a bike a lot.', 'It got so bad, finally I had to take his bike away.'),
             ('What do Italian ghosts have for dinner?', 'Spook-hetti!')]
         setup, punchline = random.choice(jokes)
@@ -385,11 +386,11 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!botinfo'):
-        msg = 'Archie Bot (version ' + botversion.version + ') ©2019\nA funny Discord Bot with a lot of features! For more info visit our website http://cadevelopers.ml/ or type !help to see the commands you can use with me so far.'
+        msg = 'Archie Bot (version ' + botversion.version + ') ©2019\nA funny Discord Bot with a lot of features! For more info visit our GitHub repository https://github.com/cibathleticsdev/archie-bot or type !help to see the commands you can use with me so far.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
-        msg = 'PyJavaPulver (https://github.com/PyJavaPulver)\nviktaur (https://github.com/viktaur)\nTheAlx1Boy (https://github.com/TheAlx1Boy)\nvaritogolf (https://github.com/varitogolf)\nCybernetic Athletics Developers ©2018 (http://cadevelopers.ml/, https://github.com/cibathleticsdev)\nAll rights reserved.'
+        msg = 'PyJavaPulver (https://github.com/PyJavaPulver)\nviktaur (https://github.com/viktaur)\nWith the collaboration of:\nTheAlx1Boy (https://github.com/TheAlx1Boy)\nvaritogolf (https://github.com/varitogolf)\nCybernetic Athletics Developers ©2018-2019 (https://github.com/cibathleticsdev)\nAll rights reserved.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!flipcoin'):
