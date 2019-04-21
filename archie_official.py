@@ -2,7 +2,7 @@
 #  Cibernetic Athletics Developers   #
 #  Code by PyJavaPulver and Viktaur  #
 #  Based on: 'discord.py' library    #
-#  Copyright 2018-2019 ©  V. 2.0.3   #
+#  Copyright  ©2018-2019  V. 2.0.3   #
 ######################################
 
 # please run this script only with Python3
@@ -389,7 +389,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
-        msg = 'PyJavaPulver (https://github.com/PyJavaPulver)\nviktaur (https://github.com/viktaur)\nTheAlx1Boy (https://github.com/TheAlx1Boy)\nvaritogolf (https://github.com/varitogolf)\nCybernetic Athletics Developers ©2018 (http://cadevelopers.ml/, https://github.com/cibathleticsdev)\nAll rights reserved.'
+        msg = 'PyJavaPulver (https://github.com/PyJavaPulver)\nviktaur (https://github.com/viktaur)\nWith the collaboration of:\nTheAlx1Boy (https://github.com/TheAlx1Boy)\nvaritogolf (https://github.com/varitogolf)\nCybernetic Athletics Developers ©2018 (http://cadevelopers.ml/, https://github.com/cibathleticsdev)\nAll rights reserved.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!flipcoin'):
