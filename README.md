@@ -1,6 +1,5 @@
-.. image:: https://img.shields.io/pypi/v/discord.py.svg
-   :target: https://pypi.python.org/pypi/discord.py
-   :alt: PyPI version info
+- [![Ruby coverage](https://gitlab.com/gitlab-org/gitlab-ce/badges/master/coverage.svg?job=coverage)](https://gitlab-org.gitlab.io/gitlab-ce/coverage-ruby) Ruby
+
 # Say hello to Archie!
 ### Who is Archie?
 Archie is our official and main CAD discord bot. It can do a lot of things for you, like look for the weather, roll a dice or just talk with you! All content is published in GitHub.
