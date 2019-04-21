@@ -389,7 +389,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!credits'):
-        msg = 'PyJavaPulver (https://github.com/PyJavaPulver)\nviktaur (https://github.com/viktaur)\nWith the collaboration of:\nTheAlx1Boy (https://github.com/TheAlx1Boy)\nvaritogolf (https://github.com/varitogolf)\nCybernetic Athletics Developers ©2018 (http://cadevelopers.ml/, https://github.com/cibathleticsdev)\nAll rights reserved.'
+        msg = '- PyJavaPulver (https://github.com/PyJavaPulver)\n- viktaur (https://github.com/viktaur)\n***With the collaboration of***:\n- TheAlx1Boy (https://github.com/TheAlx1Boy)\n- varitogolf (https://github.com/varitogolf)\nCybernetic Athletics Developers ©2018 (http://cadevelopers.ml/, https://github.com/cibathleticsdev)\nAll rights reserved.'
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!flipcoin'):
