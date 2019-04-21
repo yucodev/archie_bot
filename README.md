@@ -34,10 +34,10 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!help```
    - ```!myid```
    - ```!myname```
-   - This command is currently unavailable ```!weathercel [city]``` (Weather of the week in Celsius)
-   - This command is currently unavailable ```!weatherfar [city]``` (Weather of the week in Fahrenheit)
-   - This command is currently unavailable ```!todayweathercel [city]``` (Weather today in Celsius)
-   - This command is currently unavailable ```!todayweatherfar [city]``` (Weather today in Fahrenheit)
+   - *This command is currently unavailable* ```!weathercel [city]``` (Weather of the week in Celsius)
+   - *This command is currently unavailable* ```!weatherfar [city]``` (Weather of the week in Fahrenheit)
+   - *This command is currently unavailable* ```!todayweathercel [city]``` (Weather today in Celsius)
+   - *This command is currently unavailable* ```!todayweatherfar [city]``` (Weather today in Fahrenheit)
 
 #### Fortnite
    - ```!fortniteplayer [platform] ```(PC, Playstation, XBox) ```[username]``` (Nintendo Switch, Android and iOS platforms cannot be used)
