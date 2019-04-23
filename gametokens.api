@@ -1,5 +1,0 @@
-fortnite = Fortnite('34a3d375-b089-4409-a2ce-e34472ff4ebe')
-
-apex = ApexLegends("6457b3cd-44b1-4c2f-ba37-12254dec68b2")
-apexXBOX = ApexLegendsXBOX("6457b3cd-44b1-4c2f-ba37-12254dec68b2")
-apexPSN = ApexLegendsPSN("6457b3cd-44b1-4c2f-ba37-12254dec68b2")
