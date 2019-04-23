@@ -29,17 +29,12 @@ import site
 from apex_PC import ApexLegends
 from apex_XBOX import ApexLegendsXBOX
 from apex_PSN import ApexLegendsPSN
+from gametokens import *
 import sys # pip install sys / pip3 install sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
 client = discord.Client()
-
-fortnite = Fortnite('34a3d375-b089-4409-a2ce-e34472ff4ebe')
-
-apex = ApexLegends("6457b3cd-44b1-4c2f-ba37-12254dec68b2")
-apexXBOX = ApexLegendsXBOX("6457b3cd-44b1-4c2f-ba37-12254dec68b2")
-apexPSN = ApexLegendsPSN("6457b3cd-44b1-4c2f-ba37-12254dec68b2")
 
 # do not remove, this is for other servers without welcome-bot.
 
