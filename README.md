@@ -1,3 +1,30 @@
+<p align="center">
+  <a href="https://discord.gg/TS583KK">
+    <img src="https://discordapp.com/api/guilds/133049272517001216/widget.png?style=shield" alt="Discord Server">
+  </a>
+  <a href="https://www.python.org/downloads/">
+    <img src="https://img.shields.io/badge/Made%20With-Python%203.6.6-blue.svg?style=for-the-badge" alt="Made with Python 3.6.6">
+  </a>
+  <a href="https://crowdin.com/project/red-discordbot">
+    <img src="https://d322cqt584bo4o.cloudfront.net/red-discordbot/localized.svg" alt="Localized with Crowdin">
+  </a>
+  <a href="https://github.com/Rapptz/discord.py/tree/rewrite">
+      <img src="https://img.shields.io/badge/discord-py-blue.svg" alt="discord.py">
+  </a>
+</p>
+<p align="center">
+ 
+  <a href="http://red-discordbot.readthedocs.io/en/v3-develop/?badge=v3-develop">
+    <img src="https://readthedocs.org/projects/red-discordbot/badge/?version=v3-develop" alt="Red on readthedocs.org">
+  </a>
+  <a href="https://github.com/cibathleticsdev">
+    <img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code Style: Black">
+  </a>
+  <a href="http://makeapullrequest.com">
+    <img src="https://img.shields.io/badge/PRs-welcome-brightgreen.svg">
+  </a>
+</p>
+
 # Say hello to Archie!
 ### Who is Archie?
 Archie is our official and main CAD discord bot. It can do a lot of things for you, like look for the weather, roll a dice or just talk with you! All content is published in GitHub.
