@@ -637,19 +637,19 @@ async def calculator():
 
 @calculator.command(pass_context=True)
 async def add(ctx, a: int, b:int):
-    await bot.say(a+b)
+    await client.send_message(a+b)
 
 @calculator.command(pass_context=True)
 async def subtract(ctx, a: int, b:int):
-    await bot.say(a-b)
+    await client.send_message(a-b)
 
 @calculator.command(pass_context=True)
 async def multiply(ctx, a: int, b:int):
-    await bot.say(a*b)
+    await client.send_message(a*b)
 
 @calculator.command(pass_context=True)
 async def divide(ctx, a: int, b:int):
-    await bot.say(a/b)
+    await client.send_message(a/b)
 
 # End of calculator commands
 
