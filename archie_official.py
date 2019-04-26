@@ -10,7 +10,7 @@
 if __name__ == '__main__':
     import botversion
 
-import discord #pip install discord.py / pip3 install discord.py
+import discord
 from discord.ext import commands
 from discord.ext.commands import Bot
 from discord.voice_client import VoiceClient
@@ -18,19 +18,19 @@ import requests
 from fortnite_python import Fortnite
 import os
 from os import getenv
-import asyncio # pip install asyncio / pip3 install asyncio
+import asyncio
 import ctx
-from weather import Weather, Unit # pip install weather-api / pip3 install weather-api
-import time # pip install time / pip3 install time
+from weather import Weather, Unit
+import time
 from datetime import datetime
-import pytz # pip install pytz / pip3 install pytz
+import pytz
 import random
 import site
 from apex_PC import ApexLegends
 from apex_XBOX import ApexLegendsXBOX
 from apex_PSN import ApexLegendsPSN
 from gametokens import *
-import sys # pip install sys / pip3 install sys
+import sys
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
@@ -497,41 +497,41 @@ async def on_message(message):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!multiply'):
-        split = message.content.split(" ")
-        num1 = (" ".join(split[1]))
-        num2 = (" ".join(split[2]))
-        num1int = int(num1)
-        num2int = int(num2)
-        msg = (num1int*num2int)
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('!add'):
-        split = message.content.split(" ")
-        num1 = (" ".join(split[1]))
-        num2 = (" ".join(split[2]))
-        num1int = int(num1)
-        num2int = int(num2)
-        msg = (num1int+num2int)
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('!subtract'):
-        split = message.content.split(" ")
-        num1 = (" ".join(split[1]))
-        num2 = (" ".join(split[2]))
-        num1int = int(num1)
-        num2int = int(num2)
-        msg = (num1int-num2int)
-        await client.send_message(message.channel, msg)
-
-    if message.content.startswith('!divide'):
-        split = message.content.split(" ")
-        num1 = (" ".join(split[1]))
-        num2 = (" ".join(split[2]))
-        num1int = int(num1)
-        num2int = int(num2)
-        msg = (num1int/num2int)
-        await client.send_message(message.channel, msg)
+    # if message.content.startswith('!multiply'):
+    #     split = message.content.split(" ")
+    #     num1 = (" ".join(split[1]))
+    #     num2 = (" ".join(split[2]))
+    #     num1int = int(num1)
+    #     num2int = int(num2)
+    #     msg = (num1int*num2int)
+    #     await client.send_message(message.channel, msg)
+	#
+    # if message.content.startswith('!add'):
+    #     split = message.content.split(" ")
+    #     num1 = (" ".join(split[1]))
+    #     num2 = (" ".join(split[2]))
+    #     num1int = int(num1)
+    #     num2int = int(num2)
+    #     msg = (num1int+num2int)
+    #     await client.send_message(message.channel, msg)
+	#
+    # if message.content.startswith('!subtract'):
+    #     split = message.content.split(" ")
+    #     num1 = (" ".join(split[1]))
+    #     num2 = (" ".join(split[2]))
+    #     num1int = int(num1)
+    #     num2int = int(num2)
+    #     msg = (num1int-num2int)
+    #     await client.send_message(message.channel, msg)
+	#
+    # if message.content.startswith('!divide'):
+    #     split = message.content.split(" ")
+    #     num1 = (" ".join(split[1]))
+    #     num2 = (" ".join(split[2]))
+    #     num1int = int(num1)
+    #     num2int = int(num2)
+    #     msg = (num1int/num2int)
+    #     await client.send_message(message.channel, msg)
 
   # (server command)
     if message.content.startswith('!update'):
@@ -626,6 +626,32 @@ async def on_message(message):
     if message.content.startswith('police'):
          msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
          await client.send_message(message.channel, msg)
+
+
+
+#This is the group of commands for the calculator:
+
+@bot.group()
+async def calculator():
+    pass
+
+@calculator.command(pass_context=True)
+async def add(ctx, a: int, b:int):
+    await bot.say(a+b)
+
+@calculator.command(pass_context=True)
+async def subtract(ctx, a: int, b:int):
+    await bot.say(a-b)
+
+@calculator.command(pass_context=True)
+async def multiply(ctx, a: int, b:int):
+    await bot.say(a*b)
+
+@calculator.command(pass_context=True)
+async def divide(ctx, a: int, b:int):
+    await bot.say(a/b)
+
+# End of calculator commands
 
 
 @client.event
