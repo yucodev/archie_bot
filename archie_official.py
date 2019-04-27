@@ -501,7 +501,7 @@ async def on_message(message):
 		split = message.content.split(" ")
 		operation = (" ".join(split[1:]))
 		operationint = int(operation)
-		msg = (operation).format(message)
+		msg = (operationint).format(message)
 		await client.send_message(message.channel, msg)
 
     if message.content.startswith('!multiply'):
