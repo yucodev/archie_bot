@@ -497,6 +497,13 @@ async def on_message(message):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
+    if message.content.startswith('!math'): # BETA
+		split = message.content.split(" ")
+		operation = (" ".join(split[1:]))
+		operationint = int(operation)
+		msg = (operation)
+		await client.send_message(message.channel, msg)
+
     if message.content.startswith('!multiply'):
         split = message.content.split(" ")
         num1 = (" ".join(split[1]))
@@ -626,32 +633,6 @@ async def on_message(message):
     if message.content.startswith('police'):
          msg = ':oncoming_police_car: 091 to call Policía Nacional in Spain (092 to Policía Local). \nYou can also call 062 for Guardia Civil. \n:telephone_receiver: 112 for general emergencies.'
          await client.send_message(message.channel, msg)
-
-
-
-#This is the group of commands for the calculator:
-
-# @bot.group()
-# async def calculator():
-#     pass
-#
-# @calculator.command(pass_context=True)
-# async def add(ctx, a: int, b:int):
-#     await client.send_message(a+b)
-#
-# @calculator.command(pass_context=True)
-# async def subtract(ctx, a: int, b:int):
-#     await client.send_message(a-b)
-#
-# @calculator.command(pass_context=True)
-# async def multiply(ctx, a: int, b:int):
-#     await client.send_message(a*b)
-#
-# @calculator.command(pass_context=True)
-# async def divide(ctx, a: int, b:int):
-#     await client.send_message(a/b)
-
-# End of calculator commands
 
 
 @client.event
