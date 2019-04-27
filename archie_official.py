@@ -498,7 +498,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!math'): # BETA
-	    split = message.content.split(" ")
+        split = message.content.split(" ")
         operation = (" ".join(split[1:]))
         operationint = int(operation)
         msg = (operationint).format(message)
@@ -542,7 +542,7 @@ async def on_message(message):
 
   # (server command)
     if message.content.startswith('!update'):
-		msg = 'Wait a few seconds...'.format(message)
+        msg = 'Wait a few seconds...'.format(message)
         await client.send_message(message.channel, msg)
         msg = 'Updating Archie'.format(message)
         await client.send_message(message.channel, msg)
