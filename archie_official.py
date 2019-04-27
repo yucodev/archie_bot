@@ -541,7 +541,7 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
   # (server command)
-    if message.content.startswith(config.secretcommand):
+    if message.content.startswith('!update'):
         msg = 'Wait a few seconds...'.format(message)
         await client.send_message(message.channel, msg)
         msg = 'Updating Archie'.format(message)
