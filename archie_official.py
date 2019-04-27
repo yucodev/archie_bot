@@ -501,7 +501,7 @@ async def on_message(message):
 		split = message.content.split(" ")
 		operation = (" ".join(split[1:]))
 		operationint = int(operation)
-		msg = (operation)
+		msg = (operation).format(message)
 		await client.send_message(message.channel, msg)
 
     if message.content.startswith('!multiply'):
@@ -510,7 +510,7 @@ async def on_message(message):
         num2 = (" ".join(split[2]))
         num1int = int(num1)
         num2int = int(num2)
-        msg = (num1int*num2int)
+        msg = (num1int*num2int).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!add'):
@@ -519,7 +519,7 @@ async def on_message(message):
         num2 = (" ".join(split[2]))
         num1int = int(num1)
         num2int = int(num2)
-        msg = (num1int+num2int)
+        msg = (num1int+num2int).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!subtract'):
@@ -528,7 +528,7 @@ async def on_message(message):
         num2 = (" ".join(split[2]))
         num1int = int(num1)
         num2int = int(num2)
-        msg = (num1int-num2int)
+        msg = (num1int-num2int).format(message)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!divide'):
@@ -537,7 +537,7 @@ async def on_message(message):
         num2 = (" ".join(split[2]))
         num1int = int(num1)
         num2int = int(num2)
-        msg = (num1int/num2int)
+        msg = (num1int/num2int).format(message)
         await client.send_message(message.channel, msg)
 
   # (server command)
