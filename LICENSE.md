@@ -120,4 +120,8 @@ No term or condition of this Public License will be waived and no failure to com
 Nothing in this Public License constitutes or may be interpreted as a limitation upon, or waiver of, any privileges and immunities that apply to the Licensor or You, including from the legal processes of any jurisdiction or authority.
 
 
-Copyright ©2019 Cybernetic Athletics Developers.
+
+
+
+
+Copyright ©2019 Cybernetic Athletics Developers. All rights reserved.
