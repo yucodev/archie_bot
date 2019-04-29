@@ -498,9 +498,9 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
 	if message.content.startswith('!math'): # BETA
-        operation = message.content.split( )
-        # operationint = int(operation)
-        await client.send_message(message.channel, '%s' % (" ".join(operation[1:])))
+        operation = message.content.split(" ")
+        operationeval = eval(operation)
+        await client.send_message(message.channel, '%s' % (" ".join(operationeval[1:])))
 
     if message.content.startswith('!multiply'):
         split = message.content.split(" ")
