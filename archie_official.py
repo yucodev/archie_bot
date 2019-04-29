@@ -497,7 +497,7 @@ async def on_message(message):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
-	if message.content.startswith('!math'): # BETA
+    if message.content.startswith('!math'): # BETA
         operation = message.content.split(" ")
         operationeval = eval(operation)
         await client.send_message(message.channel, '%s' % (" ".join(operationeval[1:])))
