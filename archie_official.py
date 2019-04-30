@@ -392,7 +392,7 @@ async def on_message(message):
         a = 'Heads :fire:'
         b = 'Tails :snowflake:'
         msg = random.choice([a, b]).format(message)
-        await client.send_message(message.channel, msg
+        await client.send_message(message.channel, msg)
 
     if message.content.startswith('!randomnum'):
         args = message.content.split(" ")
