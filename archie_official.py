@@ -396,10 +396,10 @@ async def on_message(message):
 
     if message.content.startswith('!randomnum'):
         args = message.content.split(" ")
-        num1 = str(" ".join(args[1:]))
-        num2 = str(" ".join(args[2:]))
+        num1 = (" ".join(args[1:]))
+        num2 = (" ".join(args[2:]))
         await client.send_message(message.channel, num1)
-        await client.send_message(message.channel, num1)
+        await client.send_message(message.channel, num2)
         #msg = random.randint(num1, int(num2))
         #await client.send_message(message.channel, msg)
 
