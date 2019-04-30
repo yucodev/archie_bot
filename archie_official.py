@@ -396,7 +396,8 @@ async def on_message(message):
 
     if message.content.startswith("!randomnum"):
         await client.send_message(message.channel, "Enter the first number: ")
-        num1 = await client.wait_for_message(int)
+        await client.wait_for_message(int)
+        await client.send_message(message.channel, "done!")
         #numm1 = int(num1)
         await client.send_message(message.channel, "Enter the second number: ")
         num2 = await client.wait_for_message(int)
