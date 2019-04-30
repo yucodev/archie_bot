@@ -70,7 +70,7 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!sendme [message]```
 
 #### Math
-   - ```!math``` [num1] [+, -, /, *] [num2]
+   - ```!math``` math-operation-here
 
 #### Multimedia
    - ```!music``` (BETA)
