@@ -392,27 +392,16 @@ async def on_message(message):
         a = 'Heads :fire:'
         b = 'Tails :snowflake:'
         msg = random.choice([a, b]).format(message)
+        await client.send_message(message.channel, msg
+
+    if message.content.startswith('!randomnum'):
+        args = message.content.split(" ")
+        num1 = str(" ".join(args[1:]))
+        num2 = str(" ".join(args[2:]))
+        await client.send_message(message.channel, num1)
+        await client.send_message(message.channel, num1)
+        msg = random.randint(num1, int(num2))
         await client.send_message(message.channel, msg)
-
-    if message.content.startswith("!randomnum"):
-        await client.send_message(message.channel, "Enter the first number: ")
-        await client.wait_for_message(int)
-        await client.send_message(message.channel, "done!")
-        #numm1 = int(num1)
-        await client.send_message(message.channel, "Enter the second number: ")
-        num2 = await client.wait_for_message(int)
-        numm2 = int(num2)
-        randomnum = random.randint(num1, numm2)
-        await client.send_message(message.channel, randomnum)
-
-    #if message.content.startswith('!randomnum'):
-     #   args = message.content.split(" ")
-     #   num1 = " ".join(args[1:])
-     #   num2 = " ".join(args[2:])
-     #   await client.send_message(message.channel, num1)
-     #   await client.send_message(message.channel, num1)
-     #   msg = random.randint(num1, int(num2))
-     #   await client.send_message(message.channel, msg)
 
     if message.content.startswith('!5random'):
         msg = random.randint(1, int(5))
