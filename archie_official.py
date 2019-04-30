@@ -396,9 +396,9 @@ async def on_message(message):
 
     if message.content.startswith('!randomnum'):
         args = message.content.split(" ")
-        num1 = (" ".join(args[1]))
-        num2 = (" ".join(args[2]))
-        msg = random.randint(eval(num1), eval(num2))
+        num1 = int(" ".join(args[1]))
+        num2 = int(" ".join(args[2]))
+        msg = random.randint(num1, num2)
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!5random'):
@@ -496,7 +496,7 @@ async def on_message(message):
         msg = 'Did not introduced myself yet? My apologies, I\'m Archie, the official CAD assistant created by us. Nice to meet you {0.author.mention}! You can see the list of commands that you can use by typing !help'.format(message)
         await client.send_message(message.channel, msg)
 
-    if message.content.startswith('!math'): # BETA
+    if message.content.startswith('!math'):
         split = message.content.split(" ")
         operation = (" ".join(split[1:]))
         operationeval = eval(operation)
