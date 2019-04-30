@@ -441,11 +441,10 @@ async def on_message(message):
         c = 'https://youtu.be/FTQbiNvZqaY' # Toto - Africa
         d = 'https://youtu.be/tK601BjwRbk' # Million Dollar Weekends - Addicted To Your Love
         e = 'https://youtu.be/InLvy_CFKUQ' # Karol G, J. Balvin - Mi Cama (Remix) ft. Nicky Jam
-        f = 'https://youtu.be/lBwpobZL2aQ' # LA SALAMANDRA - Trueno & Underdann (Official Video)
         g = 'https://youtu.be/v2AC41dglnM' # AC/DC - Thunderstruck (Official Video)
         h = 'https://youtu.be/PX5QgITQAwk' # Bitch Lasagna v1.2
         i = 'https://youtu.be/6Dh-RL__uN4' # bitch lasagna
-        msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d, e, f, g, h, i])
+        msg = 'My recommendation for {0.author.mention}: '.format(message) + random.choice([a, b, c, d, e, g, h, i])
         await client.send_message(message.channel, msg)
 
     if message.content.startswith('!lal'):
