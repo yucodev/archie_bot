@@ -500,6 +500,7 @@ async def on_message(message):
         split = message.content.split(" ")
         operation = (" ".join(split[1]))
         operationeval = eval(operation)
+        await client.send_message(message.channel, operation)
         await client.send_message(message.channel, operationeval)
 #'%s' % (" ".join(operationeval[1:])))
 
