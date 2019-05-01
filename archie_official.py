@@ -394,14 +394,14 @@ async def on_message(message):
         msg = random.choice([a, b]).format(message)
         await client.send_message(message.channel, msg)
 
-    # if message.content.startswith('!randomnum'):
-    #     args = message.content.split(" ")
-    #     num1 = int(" ".join(args[1]))
-    #     num2 = int(" ".join(args[2]))
-    #     # msg1 = num1, num2
-    #     # await client.send_message(message.channel, msg1)
-    #     msg = random.randint(num1, num2)
-    #     await client.send_message(message.channel, msg)
+    if message.content.startswith('!randomnum'):
+        args = message.content.split(" ")
+        num1 = int(" ".join(args[1]))
+        num2 = int(" ".join(args[2]))
+        # msg1 = num1, num2
+        # await client.send_message(message.channel, msg1)
+        msg = random.randint(num1, num2)
+        await client.send_message(message.channel, msg)
 
     # elif message.content.startswith("!random"):
     #     await client.send_message(message.channel, "Enter a number: ")
