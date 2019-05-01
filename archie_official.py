@@ -403,12 +403,12 @@ async def on_message(message):
     #     msg = random.randint(num1, num2)
     #     await client.send_message(message.channel, msg)
 
-    elif message.content.startswith("!random"):
-        await client.send_message(message.channel, "Enter a number: ")
-        num = await client.wait_for_message(int)
-        numm = int(num)
-        randomnum = random.randint(0, numm)
-        await client.send_message(message.channel, randomnum)
+    # elif message.content.startswith("!random"):
+    #     await client.send_message(message.channel, "Enter a number: ")
+    #     num = await client.wait_for_message(int)
+    #     numm = int(num)
+    #     randomnum = random.randint(0, numm)
+    #     await client.send_message(message.channel, randomnum)
 
     if message.content.startswith('!5random'):
         msg = random.randint(1, int(5))
