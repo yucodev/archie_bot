@@ -2,7 +2,7 @@
 #  Cibernetic Athletics Developers   #
 #  Code by PyJavaPulver and Viktaur  #
 #  Based on: 'discord.py' library    #
-#  Copyright  ©2018-2019  V. 2.0.3   #
+#  Copyright  ©2018-2019  V. 2.1.1   #
 ######################################
 
 # please run this script only with Python3

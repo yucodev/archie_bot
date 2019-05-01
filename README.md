@@ -30,7 +30,7 @@ Join the official **Cybernetic Athletics Developers** discord server an chat wit
 ### License
 This bot is licensed under the BSD 3-Clause License. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE)
 ### Bot version
-This is the latest version: v2.0.3 (since April 18, 2019)
+This is the latest version: v2.1.1 (since May 1, 2019)
 
 ## Commands
 #### Conversation (without symbol)
