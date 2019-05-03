@@ -549,19 +549,7 @@ async def on_message(message):
         num2int = int(num2)
         msg = (num1int/num2int)
         await client.send_message(message.channel, msg)
-
-  # (server command)
-    if message.content.startswith('!update'):
-        msg = 'Wait a few seconds...'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Updating Archie'.format(message)
-        await client.send_message(message.channel, msg)
-        msg = 'Archie is now offline!'.format(message)
-        await client.send_message(message.channel, msg)
-        os.system("python3 ~/discord/update.py")
-        time.sleep(5)
-        exit()
-
+  
   #  Leave !help always the last one. Please update in GitHub any changes.
     if message.content.startswith('!help'):
         msg = 'Hi there! Here are the commands you can use with me so far: https://github.com/cibathleticsdev/archie-bot/blob/master/README.md#commands. My prefix is "!"'.format(message)
