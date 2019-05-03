@@ -31,6 +31,7 @@ from apex_XBOX import ApexLegendsXBOX
 from apex_PSN import ApexLegendsPSN
 from gametokens import *
 import sys
+import config
 # hide config.py
 sys.path.insert(0, '/home/dietpi/discord')
 
