@@ -5,7 +5,7 @@
 #  Copyright  ©2018-2019  V. 2.1.1   #
 ######################################
 
-# please run this script only with Python3
+### please run this script only with Python3
 
 if __name__ == '__main__':
     import botversion
