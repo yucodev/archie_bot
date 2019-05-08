@@ -102,7 +102,7 @@ async def on_message(message):
 
     if message.content.startswith('!royalbaby'):
         msg = 'Hi @everyone! The Dukes of Sussex have officially anounce the Royal Baby name. Guess what! He\'s called Archie, like me! :smiley::blush:'
-        await client.send_message(discord.Object(id=488783225913868321, msg))
+        await client.send_message(discord.Object(id=488783225913868321), msg)
 
     #### Weather yahoo API is no longer available ####
 
