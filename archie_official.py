@@ -100,7 +100,7 @@ async def on_message(message):
         msg = 'Last Fortnite news: https://www.epicgames.com/fortnite/en/news'
         await client.send_message(message.channel, msg)
 
-	if message.content.startswith('!royalbaby'):
+    if message.content.startswith('!royalbaby'):
         msg = 'Hi @everyone! The Dukes of Sussex have officially anounce the Royal Baby name. Guess what! He\'s called Archie, like me! :smiley::blush:'
         await client.send_message(discord.Object(id=488783225913868321, msg))
 
@@ -526,7 +526,7 @@ async def on_message(message):
     #     num2int = int(num2)
     #     msg = (num1int*num2int)
     #     await client.send_message(message.channel, msg)
-	#
+    #
     # if message.content.startswith('!add'):
     #     split = message.content.split(" ")
     #     num1 = (" ".join(split[1]))
@@ -535,7 +535,7 @@ async def on_message(message):
     #     num2int = int(num2)
     #     msg = (num1int+num2int)
     #     await client.send_message(message.channel, msg)
-	#
+    #
     # if message.content.startswith('!subtract'):
     #     split = message.content.split(" ")
     #     num1 = (" ".join(split[1]))
@@ -544,7 +544,7 @@ async def on_message(message):
     #     num2int = int(num2)
     #     msg = (num1int-num2int)
     #     await client.send_message(message.channel, msg)
-	#
+    #
     # if message.content.startswith('!divide'):
     #     split = message.content.split(" ")
     #     num1 = (" ".join(split[1]))
