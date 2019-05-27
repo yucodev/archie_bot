@@ -643,7 +643,7 @@ async def on_ready():
     print(client.user.name)
     print(client.user.id)
     print('------')
-    await client.change_presence(game=discord.Game(name="CADevelopers | connected to " + str(len(bot.servers)) + " servers | !help"))
+    await client.change_presence(game=discord.Game(name="CADevelopers | !help"))
     await client.send_message(discord.Object(id='481951758722138113'), 'Archie is now online! Type !help for more info. Enjoy!')
 
 
