@@ -475,7 +475,7 @@ async def on_message(message):
 
     if message.content.startswith('!lol'):
         msg = 'Are you joking?'.format(message)
-        await channel.send(message.channel, msg)
+        await client.send_message(message.channel, msg)
 
     if message.content.startswith('!lul'):
         msg = 'Are you juking?'.format(message)
