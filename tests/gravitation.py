@@ -3,6 +3,9 @@ import discord
 import asyncio
 import random
 
+
+
+
 # DATA #
 G = 6.67 * 10**-11
 earth_mass = 5.97 * 10**24
@@ -16,6 +19,9 @@ earth_moon_distance = 384400000
 print('* * * * * * * * * * * * * * * * * * * * * * * *')
 print('* G R A V I T A T I O N   C A L C U L A T O R *')
 print('* * * * * * * * * * * * * * * * * * * * * * * *')
+print(' ')
+print('Type --help after the execution command (in a new line) to read the instructions and how to use the variables.')
+input('Press any key to continue...')
 print('Enter the bigger mass (kg): ')
 M = eval(input())
 print('Enter the smaller mass (kg): ')
