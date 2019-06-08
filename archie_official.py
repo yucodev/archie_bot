@@ -320,7 +320,7 @@ async def on_message(message):
         p = 'Tesla'
         q = 'Volkswagen'
         r = 'Opel'
-        s = 'M;azda'
+        s = 'Mazda'
         msg = random.choice([a, b, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s]).format(message)
         await client.send_message(message.channel, msg)
 
