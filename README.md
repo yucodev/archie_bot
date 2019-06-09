@@ -28,7 +28,7 @@ If you have any doubt, info, any question or something you have to tell us, don'
 ### Our discord server
 Join the official **Cybernetic Athletics Developers** discord server an chat with Archie! https://discord.gg/TS583KK
 ### License
-This bot is licensed under the BSD 3-Clause License. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE.md)
+This bot is licensed under the CC BY-NC-SA 4.0 license. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE.md)
 ### Bot version
 This is the latest version: v2.1.1 (since May 1, 2019)
 
