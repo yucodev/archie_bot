@@ -2,18 +2,20 @@ import math
 import discord
 import asyncio
 import random
+import data
 # import sys
 
 
 
 # DATA #
-G = 6.67e-11
-earth_mass = 5.97e+24
-moon_mass = 7.34e+22
-earth_radius = 6371000
-earth_moon_distance = 3.844e+8
-earth_sun_distance = 1.496e+11
-average_person_mass = 70
+G = data.G #6.67e-11
+earth_mass = data.earth_mass #5.97e+24
+moon_mass = data.moon_mass #7.34e+22
+earth_radius = data.earth_radius #6371000
+earth_moon_distance = data.earth_moon_distance #3.844e+8
+earth_sun_distance = data.earth_sun_distance #1.496e+11
+average_person_mass = data.average_person_mass #70
+earth_gravity = data.earth_gravity #9.80665
 
 
 

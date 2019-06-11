@@ -6,7 +6,8 @@ import random
 
 
 # DATA #
-earth_gravity = 9.80665
+earth_gravity = data.earth_gravity #9.80665
+
 
 
 # INPUT SCRIPT #
