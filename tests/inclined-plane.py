@@ -2,7 +2,7 @@ import math
 import discord
 import asyncio
 import random
-
+import data
 
 
 # DATA #
