@@ -65,7 +65,7 @@ time.sleep(0.1)
 print(' ')
 time.sleep(1)
 
-print('Type "S" to start calculator or "H" for help or information. Then press enter')
+print('Type "S" to start calculator or "H" for help or information. Then press enter.')
 varinput = input()
 
 if varinput == 'S' or 's':
@@ -103,12 +103,10 @@ if varinput == 'S' or 's':
     print('Fƒ = ' + str(Fƒ) + ' N')
     print('Fres = ' + str(Fres) + ' N')
     print('a (Fres) = ' + str(a) + ' m/s²')
-
-if varinput == 'H' or 'h':
+elif varinput == 'H' or 'h':
     print('hello')
-
-
-
+else:
+    print('ERROR')
 # # CALCULATIONS AND FORMULES #
 # P = m * g
 # Px = m * g * math.sin(math.radians(Â))
