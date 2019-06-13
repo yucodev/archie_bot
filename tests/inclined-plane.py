@@ -53,9 +53,13 @@ time.sleep(0.1)
 print('     **************************************************')
 time.sleep(0.1)
 print('  *****************************************************')
+time.sleep(0.1)
 print(' ')
+time.sleep(0.1)
 print(' ')
+time.sleep(0.1)
 print(' ')
+time.sleep(0.1)
 print(' ')
 time.sleep(1)
 print('Type --help after the execution command (in a new line) to read the instructions and how to use the variables.')
@@ -79,7 +83,7 @@ Px = m * g * math.sin(math.radians(Â))
 Py = m * g * math.cos(math.radians(Â))
 N = -Py
 Fƒ = µ * N
-Fres = Px - Fƒ
+Fres = Px + Fƒ
 a = Fres / m
 
 
