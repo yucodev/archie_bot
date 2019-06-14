@@ -8,15 +8,15 @@ import time
 # CONSOLE COLORS #
 
 # Regular colors
-Black="\033[0;30m"        # Black
-Red="\033[0;31m"          # Red
-Green="\033[0;32m"        # Green
-Yellow="\033[0;33m"       # Yellow
-Blue="\033[0;34m"         # Blue
-Purple="\033[0;35m"       # Purple
-Cyan="\033[0;36m"         # Cyan
-White="\033[0;37m"        # White
-Color_Off="\033[0m"       # Text Reset
+Black="\033[0;30;40m"        # Black
+Red="\033[0;31;40m"          # Red
+Green="\033[0;32;40m"        # Green
+Yellow="\033[0;33;40m"       # Yellow
+Blue="\033[0;34;40m"         # Blue
+Purple="\033[0;35;40m"       # Purple
+Cyan="\033[0;36;40m"         # Cyan
+White="\033[0;37;40m"        # White
+Color_Off="\033[0;40m"       # Text Reset
 
 # Bold
 BBlack="\033[1;30m"       # Black
@@ -91,7 +91,7 @@ time.sleep(1)
 print('Type "S" to start calculator or "H" for help or information. Then press enter.' + Color_Off)
 varinput = input()
 
-if varinput == 'S' or 's':
+if varinput in ['S', 's']:
     print(Cyan + 'Insert object mass (kg): ' + Color_Off)
     m = eval(input())
     print(Cyan + 'Insert gravity (m/s²): ' + Color_Off)
@@ -126,8 +126,8 @@ if varinput == 'S' or 's':
     print('Fƒ = ' + str(Fƒ) + ' N')
     print('Fres = ' + str(Fres) + ' N')
     print('a (Fres) = ' + str(a) + ' m/s²')
-elif varinput == 'H' or 'h':
-    print('hello')
+elif varinput in ['H', 'h']:
+    print('HERE WILL BE HELP DOCS AND SOME INFO')
 else:
     print('ERROR')
 # # CALCULATIONS AND FORMULES #
