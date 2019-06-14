@@ -136,4 +136,4 @@ if varinput in ['S', 's']:
 elif varinput in ['H', 'h']:
     print('HERE WILL BE HELP DOCS AND SOME INFO')
 else:
-    print('ERROR')
+    print('ERROR, ABORTING')
