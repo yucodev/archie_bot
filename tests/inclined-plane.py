@@ -88,7 +88,7 @@ time.sleep(0.1)
 print(' ')
 time.sleep(1)
 
-print('Type "S" to start calculator or "H" for help or information. Then press enter.' + Color_Off)
+print('Press "S" to start calculator or "H" for help or information. Then press enter.' + Color_Off)
 varinput = input()
 
 if varinput in ['S', 's']:
