@@ -28,6 +28,16 @@ BPurple="\033[1;35m"      # Purple
 BCyan="\033[1;36m"        # Cyan
 BWhite="\033[1;37m"       # White
 
+# Underline
+UBlack="\033[4;30m"       # Black
+URed="\033[4;31m"         # Red
+UGreen="\033[4;32m"       # Green
+UYellow="\033[4;33m"      # Yellow
+UBlue="\033[4;34m"        # Blue
+UPurple="\033[4;35m"      # Purple
+UCyan="\033[4;36m"        # Cyan
+UWhite="\033[4;37m"       # White
+
 
 # DATA #
 G = data.G #6.67e-11
@@ -134,6 +144,7 @@ if varinput in ['S', 's']:
     print('Fres = ' + str(Fres) + ' N')
     print('a (Fres) = ' + str(a) + ' m/s²')
 elif varinput in ['H', 'h']:
-    print('HERE WILL BE HELP DOCS AND SOME INFO')
+    print(UCyan + 'What is inclined-plane calculator?')
+    print(Cyan + 'This software can calculate almost all forces and some accelerations acting in the inclined plane. You just have to introduce the mass, gravity, inclination angle and coefficient of friction.' + Color_Off)
 else:
     print('ERROR, ABORTING')
