@@ -105,11 +105,10 @@ time.sleep(0.1)
 print(' ')
 time.sleep(1)
 
-def home():
-    print('Press "S" to start calculator or "H" for help or information. Then press enter.' + Color_Off)
-    varinput = input()
+print('Press "S" to start calculator or "H" for help or information. Then press enter.' + Color_Off)
+varinput = input()
 
-if home.varinput in ['S', 's']:
+if varinput in ['S', 's']:
     print(Cyan + 'Insert object mass (kg): ' + Color_Off)
     m = eval(input())
     print(Cyan + 'Insert gravity (m/s²): ' + Color_Off)
@@ -147,6 +146,5 @@ if home.varinput in ['S', 's']:
 elif varinput in ['H', 'h']:
     print(UCyan + 'What is inclined-plane calculator?')
     print(Cyan + 'This software can calculate almost all forces and some accelerations acting in the inclined plane. You just have to introduce the mass, gravity, inclination angle and coefficient of friction.' + Color_Off)
-
 else:
     print('ERROR, ABORTING')
