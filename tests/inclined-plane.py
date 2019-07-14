@@ -5,8 +5,9 @@ import asyncio
 import random
 import time
 
-
-print(Cyan + '* * * * * * * * * * * * * * * * * * * * * * * * * * *')
+# INITIAL SCRIPT #
+print(Cyan + ' ')
+print('* * * * * * * * * * * * * * * * * * * * * * * * * * *')
 print('* I N C L I N E D   P L A N E   C A L C U L A T O R *')
 print('* * * * * * * * * * * * * * * * * * * * * * * * * * *')
 time.sleep(1)
@@ -64,6 +65,7 @@ def home():
     home.varinput = input()
 
     if home.varinput in ['S', 's', 'START', 'start']:
+        # INPUT SCRIPT #
         print(Cyan + 'Insert object mass (kg): ' + Color_Off)
         m = eval(input())
         print(Cyan + 'Insert gravity (m/s²): ' + Color_Off)
@@ -114,7 +116,8 @@ def home():
         print('exit')
 
     else:
-        print('ERROR, ABORTING')
+        print(Red + 'Error, type a valid input' + Color_Off)
+        home()
 
     return
 
