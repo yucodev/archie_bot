@@ -1,5 +1,4 @@
 from data import *
-# import physics
 import math
 import discord
 import asyncio
@@ -62,7 +61,7 @@ print(' ' + Color_Off)
 time.sleep(1)
 
 def home():
-    print(Cyan + 'Press "S" to start calculator, "H" for help or information or "E" to exit the program. Then press enter.' + Color_Off)
+    print(Cyan + 'Press "S" to start calculator, "H" for help or information, "M" to return to the main menu or "E" to exit the program. Then press enter.' + Color_Off)
     home.varinput = input()
 
     if home.varinput in ['S', 's', 'START', 'start']:
@@ -115,6 +114,9 @@ def home():
 
     elif home.varinput in ['E', 'e', 'EXIT', 'exit']:
         print('exit')
+
+    elif home.varinput in ['M', 'm', 'MENU', 'menu']:
+        import physics
 
     else:
         print(Red + 'Error, type a valid input' + Color_Off)
