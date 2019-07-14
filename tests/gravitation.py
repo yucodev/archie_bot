@@ -1,3 +1,4 @@
+from data import *
 import math
 import discord
 import asyncio
