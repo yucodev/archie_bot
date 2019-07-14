@@ -6,7 +6,6 @@ import random
 import time
 
 
-# INPUT SCRIPT #
 print(Cyan + '* * * * * * * * * * * * * * * * * * * * * * * * * * *')
 print('* I N C L I N E D   P L A N E   C A L C U L A T O R *')
 print('* * * * * * * * * * * * * * * * * * * * * * * * * * *')

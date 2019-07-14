@@ -3,20 +3,7 @@ import math
 import discord
 import asyncio
 import random
-import data
-# import sys
-
-
-
-# DATA #
-G = data.G #6.67e-11
-earth_mass = data.earth_mass #5.97e+24
-moon_mass = data.moon_mass #7.34e+22
-earth_radius = data.earth_radius #6371000
-earth_moon_distance = data.earth_moon_distance #3.844e+8
-earth_sun_distance = data.earth_sun_distance #1.496e+11
-average_person_mass = data.average_person_mass #70
-earth_gravity = data.earth_gravity #9.80665
+import time
 
 
 
@@ -24,8 +11,42 @@ earth_gravity = data.earth_gravity #9.80665
 print('* * * * * * * * * * * * * * * * * * * * * * * *')
 print('* G R A V I T A T I O N   C A L C U L A T O R *')
 print('* * * * * * * * * * * * * * * * * * * * * * * *')
+time.sleep(1)
+print(' ')
+time.sleep(0.1)
+print(' ')
+time.sleep(0.1)
+print('                 *            *       *        ')
+time.sleep(0.1)
+print('           *         *    *       *            ')
+time.sleep(0.1)
+print('       *          * *                   *      ')
+time.sleep(0.1)
+print('             *         *     *       *      *  ')
+time.sleep(0.1)
+print('           *         *   *              *      ')
+time.sleep(0.1)
+print('                                               ')
+time.sleep(0.1)
+print('                                               ')
+time.sleep(0.1)
+print('                     ****                      ')
+time.sleep(0.1)
+print('                   ********                    ')
+time.sleep(0.1)
+print('                  **********                   ')
+time.sleep(0.1)
+print('      (________  ************  _________)      ')
+time.sleep(0.1)
+print('      (________  ************  _________)      ')
+time.sleep(0.1)
+print('                  **********                   ')
+time.sleep(0.1)
+print('                   ********                    ')
+time.sleep(0.1)
+print('                     ****                      ')
+time.sleep(0.1)
 
-# planet drawing here
 
 
 print('Press "S" to start calculator or "H" for help or information. Then press enter.')
