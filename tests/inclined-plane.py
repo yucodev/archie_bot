@@ -1,55 +1,9 @@
-from goto import with_goto
+from data import *
 import math
 import discord
 import asyncio
 import random
-import data
 import time
-
-# CONSOLE COLORS #
-
-# Regular colors
-Black="\033[0;30m"        # Black
-Red="\033[0;31m"          # Red
-Green="\033[0;32m"        # Green
-Yellow="\033[0;33m"       # Yellow
-Blue="\033[0;34m"         # Blue
-Purple="\033[0;35m"       # Purple
-Cyan="\033[0;36m"         # Cyan
-White="\033[0;37m"        # White
-Color_Off="\033[0m"       # Text Reset
-
-# Bold
-BBlack="\033[1;30m"       # Black
-BRed="\033[1;31m"         # Red
-BGreen="\033[1;32m"       # Green
-BYellow="\033[1;33m"      # Yellow
-BBlue="\033[1;34m"        # Blue
-BPurple="\033[1;35m"      # Purple
-BCyan="\033[1;36m"        # Cyan
-BWhite="\033[1;37m"       # White
-
-# Underline
-UBlack="\033[4;30m"       # Black
-URed="\033[4;31m"         # Red
-UGreen="\033[4;32m"       # Green
-UYellow="\033[4;33m"      # Yellow
-UBlue="\033[4;34m"        # Blue
-UPurple="\033[4;35m"      # Purple
-UCyan="\033[4;36m"        # Cyan
-UWhite="\033[4;37m"       # White
-
-
-# DATA #
-G = data.G #6.67e-11
-earth_mass = data.earth_mass #5.97e+24
-moon_mass = data.moon_mass #7.34e+22
-earth_radius = data.earth_radius #6371000
-earth_moon_distance = data.earth_moon_distance #3.844e+8
-earth_sun_distance = data.earth_sun_distance #1.496e+11
-average_person_mass = data.average_person_mass #70
-earth_gravity = data.earth_gravity #9.80665
-
 
 
 # INPUT SCRIPT #
