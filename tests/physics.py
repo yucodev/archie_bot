@@ -6,7 +6,7 @@ import random
 import time
 
 
-def start():
+def input_loop():
     ProgramNumber = input()
 
     if ProgramNumber == str(1):
@@ -18,7 +18,8 @@ def start():
     else:
         print('Unexpected input! Please try again')
         time.sleep(1.5)
-        start()
+        input_loop()
+
 
 time.sleep(1)
 print(Yellow + 'Which program would you like to start?')
@@ -26,4 +27,4 @@ time.sleep(2)
 print(' ')
 print('[1] Inclined plane')
 print('[2] Gravitation' + Color_Off)
-start()
+input_loop()
