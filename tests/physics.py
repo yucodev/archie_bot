@@ -22,6 +22,8 @@ def input_loop():
 
 
 time.sleep(1)
+print(Yellow + 'Welcome to Cibathleticsdev Physics Calculator!')
+time.sleep(1)
 print(Yellow + 'Which program would you like to start?')
 time.sleep(2)
 print(' ')
