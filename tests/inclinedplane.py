@@ -108,11 +108,11 @@ def home():
         home()
 
 
-    elif home.varinput in ['H', 'h', 'HELP', 'help', 'INFO', 'info']:
-        physics.info()
+    elif home.varinput in ['H', 'h', 'HELP', 'help', 'INFO', 'info', 'i']:
+        from physics import info
 
     elif home.varinput in ['E', 'e', 'EXIT', 'exit']:
-        print('exit')
+        print('Leaving program')
 
     elif home.varinput in ['M', 'm', 'MENU', 'menu']:
         import physics

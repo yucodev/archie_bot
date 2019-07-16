@@ -16,7 +16,7 @@ def info():
     print('- earth_moon_distance')
     print('- earth_radius')
 
-    input("Press any key to continue...")
+    input(Green + "Press any key to continue..." + Color_Off)
     program_start()
 
 
@@ -41,17 +41,18 @@ def input_loop():
 
 
 def program_start():
+    print(' ')
     print(Yellow + 'Which program would you like to start? You should read the INFO before starting the program for the first time.')
     print(' ' + Color_Off)
     print(Red + '[E] EXIT' + Color_Off)
-    print(' ')
-    print(Yellow + '[0] INFO')
-    print('[1] Inclined plane')
-    print('[2] Gravitation' + Color_Off)
+    print(Green + '[0] INFO' + Color_Off)
+    print(Yellow + '[1] Inclined plane' + Color_Off)
+    print(Yellow + '[2] Gravitation' + Color_Off)
     print(' ')
     input_loop()
 
 time.sleep(1)
 print(Yellow + 'WELCOME TO CIBATHLETICSDEV PHYSICS CALCULATOR!')
 time.sleep(1)
+
 program_start()
