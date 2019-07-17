@@ -24,41 +24,41 @@ def initial():
     time.sleep(0.1)
     print(' ')
     time.sleep(0.1)
-    print('                                                    ***')
+    print('                                                    *')
     time.sleep(0.1)
-    print('                                                 ******')
+    print('                                                 ****')
     time.sleep(0.1)
-    print('                                              *********')
+    print('                                              *******')
     time.sleep(0.1)
-    print('                                           ************')
+    print('                                           **********')
     time.sleep(0.1)
-    print('                                         **************')
+    print('                                         ************')
     time.sleep(0.1)
-    print('                                      *****************')
+    print('                                      ***************')
     time.sleep(0.1)
-    print('                                   ********************')
+    print('                                   ******************')
     time.sleep(0.1)
-    print('                                ***********************')
+    print('                                *********************')
     time.sleep(0.1)
-    print('                             **************************')
+    print('                             ************************')
     time.sleep(0.1)
-    print('                          *****************************')
+    print('                          ***************************')
     time.sleep(0.1)
-    print('                       ********************************')
+    print('                       ******************************')
     time.sleep(0.1)
-    print('                    ***********************************')
+    print('                    *********************************')
     time.sleep(0.1)
-    print('                 **************************************')
+    print('                 ************************************')
     time.sleep(0.1)
-    print('              *****************************************')
+    print('              ***************************************')
     time.sleep(0.1)
-    print('           ********************************************')
+    print('           ******************************************')
     time.sleep(0.1)
-    print('        ***********************************************')
+    print('        *********************************************')
     time.sleep(0.1)
-    print('     **************************************************')
+    print('     ************************************************')
     time.sleep(0.1)
-    print('  *****************************************************')
+    print('  ***************************************************')
     time.sleep(0.1)
     print(' ')
     time.sleep(0.1)
@@ -68,22 +68,72 @@ def initial():
     time.sleep(0.1)
     print(' ' + Color_Off)
     time.sleep(1)
+    print(Cyan + 'Press "S" to start calculator, "H" for help or information, "M" to return to the main menu or "E" to exit the program. Then press enter.' + Color_Off)
+
     return
 
 def home():
-    print(Cyan + 'Press "S" to start calculator, "H" for help or information, "M" to return to the main menu or "E" to exit the program. Then press enter.' + Color_Off)
+    # print(Cyan + 'Press "S" to start calculator, "H" for help or information, "M" to return to the main menu or "E" to exit the program. Then press enter.' + Color_Off)
     home.varinput = input()
 
     if home.varinput in ['S', 's', 'START', 'start']:
         # INPUT SCRIPT #
-        print(Cyan + 'Insert object mass (kg): ' + Color_Off)
-        m = eval(input())
-        print(Cyan + 'Insert gravity (m/s²): ' + Color_Off)
-        g = eval(input())
-        print(Cyan + 'Insert plane\'s inclination angel (DEG): ' + Color_Off)
-        Â = eval(input())
-        print(Cyan + 'Insert coefficient of friction: ' + Color_Off)
-        µ = eval(input())
+
+        def ObjectMass():
+            print(Cyan + 'Insert object mass (kg): ' + Color_Off)
+            mNoEval = input().lower()
+            try:
+                m = eval(mNoEval)
+            except NameError:
+                print(Red + 'ERROR: Unexpected input! Please try again:' + Color_Off)
+                time.sleep(0.01)
+                ObjectMass()
+
+        ObjectMass()
+
+
+
+        def ObjectGravity():
+            print(Cyan + 'Insert gravity (m/s²): ' + Color_Off)
+            gNoEval = input().lower()
+            try:
+                g = eval(gNoEval)
+            except NameError:
+                print(Red + 'ERROR: Unexpected input! Please try again:' + Color_Off)
+                time.sleep(0.01)
+                ObjectGravity()
+
+        ObjectGravity()
+
+
+
+        def ObjectInclination():
+            print(Cyan + 'Insert plane\'s inclination angel (DEG): ' + Color_Off)
+            ÂNoEval = input().lower()
+            try:
+                Â = eval(ÂNoEval)
+            except NameError:
+                print(Red + 'ERROR: Unexpected input! Please try again:' + Color_Off)
+                time.sleep(0.01)
+                ObjectInclination()
+
+        ObjectInclination()
+
+
+
+        def ObjectFrictionCoef():
+            print(Cyan + 'Insert coefficient of friction: ' + Color_Off)
+            µNoEval = input().lower()
+            try:
+                µ = eval(µNoEval)
+            except NameError:
+                print(Red + 'ERROR: Unexpected input! Please try again:' + Color_Off)
+                time.sleep(0.01)
+                ObjectFrictionCoef()
+
+        ObjectFrictionCoef()
+
+
 
         # CALCULATIONS AND FORMULES #
         P = m * g
@@ -113,6 +163,7 @@ def home():
         time.sleep(3)
         print(' ')
         print(' ')
+        print(Cyan + 'Press "S" to start calculator, "H" for help or information, "M" to return to the main menu or "E" to exit the program. Then press enter.' + Color_Off)
         home()
         return
 
@@ -127,10 +178,11 @@ def home():
         import physics
 
     else:
-        print(Red + 'Error, type a valid input' + Color_Off)
+        print(Red + 'ERROR: Unexpected input! Please try again:' + Color_Off)
         home()
 
     return
+
 
 initial()
 home()

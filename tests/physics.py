@@ -66,6 +66,7 @@ def program_start():
 
 # time.sleep(1)
 clear()
+time.sleep(0.01)
 print(Yellow + 'WELCOME TO CIBATHLETICSDEV PHYSICS CALCULATOR!')
 time.sleep(1)
 
