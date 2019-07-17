@@ -4,8 +4,15 @@ import discord
 import asyncio
 import random
 import time
+import subprocess
+import platform
+
+def clear():
+    subprocess.Popen("cls" if platform.system() == "Windows" else "clear", shell=True)
 
 def info():
+    clear()
+    time.sleep(0.01)
     print(UCyan + 'What is Cibathleticsdev Physics Calculator?' + Color_Off)
     print('This project contains some physics calculators like inclined-plane or gravitation. In them, some input (like a mass) is introduced and some output (weight, friction force, orbital velocity...) is expected.' + Color_Off)
     print(UCyan + 'Data variables' + Color_Off)
@@ -17,14 +24,17 @@ def info():
     print('- earth_radius')
 
     input(Green + "Press any key to continue..." + Color_Off)
+    clear()
+    time.sleep(0.01)
     program_start()
+    return
 
 
 def input_loop():
     ProgramNumber = input()
 
     if ProgramNumber in ['E', 'e', 'EXIT', 'exit']:
-        print('Leaving program')
+        print(Red + 'Leaving program' + Color_Off)
 
     elif ProgramNumber == str(0):
         info()
@@ -39,6 +49,8 @@ def input_loop():
         print(Red + 'ERROR: Unexpected input! Please try again:' + Color_Off)
         input_loop()
 
+    return
+
 
 def program_start():
     print(' ')
@@ -50,8 +62,10 @@ def program_start():
     print(Yellow + '[2] Gravitation' + Color_Off)
     print(' ')
     input_loop()
+    return
 
-time.sleep(1)
+# time.sleep(1)
+clear()
 print(Yellow + 'WELCOME TO CIBATHLETICSDEV PHYSICS CALCULATOR!')
 time.sleep(1)
 

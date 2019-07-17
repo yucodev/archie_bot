@@ -4,10 +4,17 @@ import discord
 import asyncio
 import random
 import time
+import subprocess
+import platform
+
+def clear():
+    subprocess.Popen("cls" if platform.system() == "Windows" else "clear", shell=True)
 
 
 # INITIAL SCRIPT #
 def initial():
+    clear()
+    time.sleep(0.01)
     print(Cyan + ' ')
     print('* * * * * * * * * * * * * * * * * * * * * * * * * * *')
     print('* I N C L I N E D   P L A N E   C A L C U L A T O R *')
@@ -61,6 +68,7 @@ def initial():
     time.sleep(0.1)
     print(' ' + Color_Off)
     time.sleep(1)
+    return
 
 def home():
     print(Cyan + 'Press "S" to start calculator, "H" for help or information, "M" to return to the main menu or "E" to exit the program. Then press enter.' + Color_Off)
@@ -106,9 +114,10 @@ def home():
         print(' ')
         print(' ')
         home()
+        return
 
 
-    elif home.varinput in ['H', 'h', 'HELP', 'help', 'INFO', 'info', 'i']:
+    elif home.varinput in ['H', 'h', 'HELP', 'help', 'INFO', 'info', 'I', 'i']:
         from physics import info
 
     elif home.varinput in ['E', 'e', 'EXIT', 'exit']:

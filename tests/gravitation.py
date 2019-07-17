@@ -4,52 +4,59 @@ import discord
 import asyncio
 import random
 import time
+import subprocess
+import platform
+
+def clear():
+    subprocess.Popen("cls" if platform.system() == "Windows" else "clear", shell=True)
 
 
 # INITIAL SCRIPT #
-print(Cyan + ' ')
-print('* * * * * * * * * * * * * * * * * * * * * * * *')
-print('* G R A V I T A T I O N   C A L C U L A T O R *')
-print('* * * * * * * * * * * * * * * * * * * * * * * *')
-time.sleep(1)
-print(' ')
-time.sleep(0.1)
-print(' ')
-time.sleep(0.1)
-print('                 *            *       *        ')
-time.sleep(0.1)
-print('           *         *    *       *            ')
-time.sleep(0.1)
-print('       *          * *                   *      ')
-time.sleep(0.1)
-print('             *         *     *       *      *  ')
-time.sleep(0.1)
-print('           *         *   *              *      ')
-time.sleep(0.1)
-print('                                               ')
-time.sleep(0.1)
-print('                                               ')
-time.sleep(0.1)
-print('                     ****                      ')
-time.sleep(0.1)
-print('                   ********                    ')
-time.sleep(0.1)
-print('                  **********                   ')
-time.sleep(0.1)
-print('      (________  ************  _________)      ')
-time.sleep(0.1)
-print('      (________  ************  _________)      ')
-time.sleep(0.1)
-print('                  **********                   ')
-time.sleep(0.1)
-print('                   ********                    ')
-time.sleep(0.1)
-print('                     ****                      ')
-time.sleep(0.1)
-print(' ')
-time.sleep(0.1)
-print(' ' + Color_Off)
-time.sleep(1)
+def initial():
+    clear()
+    print(Cyan + ' ')
+    print('* * * * * * * * * * * * * * * * * * * * * * * *')
+    print('* G R A V I T A T I O N   C A L C U L A T O R *')
+    print('* * * * * * * * * * * * * * * * * * * * * * * *')
+    time.sleep(1)
+    print(' ')
+    time.sleep(0.1)
+    print(' ')
+    time.sleep(0.1)
+    print('                 *            *       *        ')
+    time.sleep(0.1)
+    print('           *         *    *       *            ')
+    time.sleep(0.1)
+    print('       *          * *                   *      ')
+    time.sleep(0.1)
+    print('             *         *     *       *      *  ')
+    time.sleep(0.1)
+    print('           *         *   *              *      ')
+    time.sleep(0.1)
+    print('                                               ')
+    time.sleep(0.1)
+    print('                                               ')
+    time.sleep(0.1)
+    print('                     ****                      ')
+    time.sleep(0.1)
+    print('                   ********                    ')
+    time.sleep(0.1)
+    print('                  **********                   ')
+    time.sleep(0.1)
+    print('      (________  ************  _________)      ')
+    time.sleep(0.1)
+    print('      (________  ************  _________)      ')
+    time.sleep(0.1)
+    print('                  **********                   ')
+    time.sleep(0.1)
+    print('                   ********                    ')
+    time.sleep(0.1)
+    print('                     ****                      ')
+    time.sleep(0.1)
+    print(' ')
+    time.sleep(0.1)
+    print(' ' + Color_Off)
+    time.sleep(1)
 
 
 def home():
@@ -95,13 +102,11 @@ def home():
         print(' ')
         home()
 
-    elif home.varinput in ['H', 'h', 'HELP', 'help', 'INFO', 'info']:
-        print('HERE WILL BE HELP DOCS AND SOME INFO')
-        input("Press any key to continue...")
-        home()
+    elif home.varinput in ['H', 'h', 'HELP', 'help', 'INFO', 'info', 'I', 'i']:
+        from physics import info
 
     elif home.varinput in ['E', 'e', 'EXIT', 'exit']:
-        print('exit')
+        print('Leaving program')
 
     elif home.varinput in ['M', 'm', 'MENU', 'menu']:
         import physics
@@ -112,5 +117,5 @@ def home():
 
     return
 
-
+initial()
 home()
