@@ -17,11 +17,8 @@ def info():
     print('This project contains some physics calculators like inclined-plane or gravitation. In them, some input (like a mass) is introduced and some output (weight, friction force, orbital velocity...) is expected.' + Color_Off)
     print(UCyan + 'Data variables' + Color_Off)
     print('Some data like Earth\'s mass or the radius of Mass\' orbit is stored in this program. Here are the available variables so far:')
-    print('- average_person_mass')
-    print('- earth_gravity')
-    print('- earth_mass')
-    print('- earth_moon_distance')
-    print('- earth_radius')
+    for i in dir(data.p1):
+        print(i)
 
     input(Green + "Press any key to continue..." + Color_Off)
     clear()
