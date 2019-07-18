@@ -39,21 +39,24 @@ UWhite="\033[4;37m"       # White
 
 
 # DATA #
-average_person_mass = 70
-earth_gravity = 9.80665
-earth_mass = 5.97e+24
-earth_moon_distance = 3.844e+8
-earth_radius = 6371000
-earth_sun_distance = 1.496e+11
-G = 6.67e-11
-jupiter_mass = 1.898e+27
-mars_mass = 6.39e+23
-mars_sun_distance = 227.9e+6
-mercury_mass = 3.285e+23
-mercury_sun_distance = 57.91e+6
-moon_mass = 7.34e+22
-neptune_mass = 1.024e+26
-saturn_mass = 5.683e+26
-uranus_mass = 8.681e+25
-venus_mass = 4.867e+24
-venus_sun_distance = 108.2e+6
+class DataClass:
+    average_person_mass = 70
+    earth_gravity = 9.80665
+    earth_mass = 5.97e+24
+    earth_moon_distance = 3.844e+8
+    earth_radius = 6371000
+    earth_sun_distance = 1.496e+11
+    G = 6.67e-11
+    jupiter_mass = 1.898e+27
+    mars_mass = 6.39e+23
+    mars_sun_distance = 227.9e+6
+    mercury_mass = 3.285e+23
+    mercury_sun_distance = 57.91e+6
+    moon_mass = 7.34e+22
+    neptune_mass = 1.024e+26
+    saturn_mass = 5.683e+26
+    uranus_mass = 8.681e+25
+    venus_mass = 4.867e+24
+    venus_sun_distance = 108.2e+6
+
+p1 = DataClass()

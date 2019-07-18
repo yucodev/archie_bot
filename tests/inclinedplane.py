@@ -80,7 +80,6 @@ def home():
         # INPUT SCRIPT #
 
         def ObjectMass():
-            print(Cyan + 'Insert object mass (kg): ' + Color_Off)
             mNoEval = input().lower()
             try:
                 m = eval(mNoEval)
@@ -89,12 +88,12 @@ def home():
                 time.sleep(0.01)
                 ObjectMass()
 
+        print(Cyan + 'Insert object mass (kg): ' + Color_Off)
         ObjectMass()
 
 
 
         def ObjectGravity():
-            print(Cyan + 'Insert gravity (m/s²): ' + Color_Off)
             gNoEval = input().lower()
             try:
                 g = eval(gNoEval)
@@ -103,12 +102,12 @@ def home():
                 time.sleep(0.01)
                 ObjectGravity()
 
+        print(Cyan + 'Insert gravity (m/s²): ' + Color_Off)
         ObjectGravity()
 
 
 
         def ObjectInclination():
-            print(Cyan + 'Insert plane\'s inclination angel (DEG): ' + Color_Off)
             ÂNoEval = input().lower()
             try:
                 Â = eval(ÂNoEval)
@@ -117,12 +116,12 @@ def home():
                 time.sleep(0.01)
                 ObjectInclination()
 
+        print(Cyan + 'Insert plane\'s inclination angel (DEG): ' + Color_Off)
         ObjectInclination()
 
 
 
         def ObjectFrictionCoef():
-            print(Cyan + 'Insert coefficient of friction: ' + Color_Off)
             µNoEval = input().lower()
             try:
                 µ = eval(µNoEval)
@@ -131,6 +130,7 @@ def home():
                 time.sleep(0.01)
                 ObjectFrictionCoef()
 
+        print(Cyan + 'Insert coefficient of friction: ' + Color_Off)
         ObjectFrictionCoef()
 
 
@@ -183,6 +183,9 @@ def home():
 
     return
 
+# while True:
+#     initial()
+#     home()
 
 initial()
 home()
