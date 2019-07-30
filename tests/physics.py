@@ -13,7 +13,7 @@ def clear():
 def info():
     clear()
     time.sleep(0.01)
-    print(UCyan + 'What is Cibathleticsdev Physics Calculator?' + Color_Off)
+    print(UCyan + 'What is YuCode Dev Physics Calculator?' + Color_Off)
     print('This project contains some physics calculators like inclined-plane or gravitation. In them, some input (like a mass) is introduced and some output (weight, friction force, orbital velocity...) is expected.' + Color_Off)
     print(UCyan + 'Data variables' + Color_Off)
     print('Some data like Earth\'s mass or the radius of Mass\' orbit is stored in this program. Here are the available variables so far:')
@@ -81,7 +81,7 @@ def program_start():
 # time.sleep(1)
 clear()
 time.sleep(0.01)
-print(Yellow + 'WELCOME TO CIBATHLETICSDEV PHYSICS CALCULATOR!')
+print(Yellow + 'WELCOME TO YUCODE DEV PHYSICS CALCULATOR!')
 time.sleep(1)
 
 program_start()
