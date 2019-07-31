@@ -1,7 +1,5 @@
 from data import *
 import math
-import discord
-import asyncio
 import random
 import time
 import subprocess
