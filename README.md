@@ -14,7 +14,7 @@
 
 # Say hello to Archie!
 ### Who is Archie?
-Archie is our official and main CAD discord bot. It can do a lot of things for you, like look for the weather, roll a dice or just talk with you! All content is published in GitHub.
+Archie is our official and main YuCode discord bot. It can do a lot of things for you, like look for the weather, roll a dice or just talk with you! All content is published in GitHub.
 ### How it's programmed?
 Archie is programmed in Python because we consider that it's easier than C++ and more effective than javascript. Most of discord bots are in this programming language. We recommend you to run it in Python 3.6.6.
 ### Which file should be used?
@@ -26,7 +26,7 @@ You can see some info about us and the bot in our website https://cadevelopers.m
 ### Contact us
 If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail (cibathleticsdev@gmail.com) or website.
 ### Our discord server
-Join the official **Cybernetic Athletics Developers** discord server an chat with Archie! https://discord.gg/TS583KK
+Join the official **YuCode** discord server an chat with Archie! https://discord.gg/TS583KK
 ### License
 This bot is licensed under the CC BY-NC-SA 4.0 license. Please, read the conditions in LICENSE file (https://github.com/cibathleticsdev/archie_bot/blob/master/LICENSE.md)
 ### Bot version
