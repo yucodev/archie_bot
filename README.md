@@ -24,7 +24,7 @@ Archie is now public. You can talk to it via DM, on our discord server or you ca
 ### About us
 You can see some info about us and the bot in our website https://cadevelopers.ml.
 ### Contact us
-If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail (cibathleticsdev@gmail.com) or website.
+If you have any doubt, info, any question or something you have to tell us, don't hesitate in contact us. You can do it via e-mail (yucodevelopers@gmail.com) or website.
 ### Our discord server
 Join the official **YuCode** discord server an chat with Archie! https://discord.gg/TS583KK
 ### License
