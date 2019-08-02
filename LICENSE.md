@@ -122,4 +122,6 @@ Nothing in this Public License constitutes or may be interpreted as a limitation
 <br/>
 <br/>
 
-Copyright ©2019 Cybernetic Athletics Developers. All rights reserved.
+Copyright ©2018 Cybernetic Athletics Developers.
+Copyright ©2019 YuCode Inc.
+ALL RIGHTS RESERVED
