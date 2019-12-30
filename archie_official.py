@@ -182,16 +182,6 @@ async def on_message(message):
         sendme = message.content.split(" ")
         await client.send_message(message.author, '%s' % (" ".join(sendme[1:])))
 
-    #if message.content.startswith('!randommember'):
-      #  a = '<@427204692234469387>' # @pupspulver05
-       # b = '<@334252448036159488>' # @viktaur
-      #  c = '<@367958242980003850>' # @manersat
-     #   d = '<@340143776557170690>' # @TheAlx1Boy
-    #    e = '<@443842331926331392>' # @turivm
-      #  f = '<@334994066372820994>' # @Varito2003
-   #     msg = random.choice([a, b, c, d]).format(message)
-    #    await client.send_message(message.channel, msg)
-
     if message.content.startswith('!myid'):
         msg = 'Your user ID is: {0.author.id}'.format(message)
         await client.send_message(message.channel, msg)
@@ -212,16 +202,6 @@ async def on_message(message):
         await asyncio.sleep(3)
         await client.send_message(message.channel, punchline)
 
-    # if message.content.startswith('!joke'):
-        # a = 'Can a kangaroo jump higher than a house?\n Of course, a house doesn’t jump at all.'
-        # b = 'Anton, do you think I’m a bad mother?\nMy name is Paul'
-        # c = 'Why can\'t cats work with a computer?\nBecause they get too distracted chasing the mouse around, haha!'
-        # d = 'My dog used to chase people on a bike a lot.\nIt got so bad, finally I had to take his bike away.'
-        # e = 'What do Italian ghosts have for dinner?\nSpook-hetti!'
-        # letter_choice = random.choice([a, b, c, d, e])
-        # msgQ = letter_choice.format(message)
-        # await client.send_message(message.channel, msgQ)
-
     if message.content.startswith('!quiz'):
         #split = message.content.split(" ")
         #response = (" ".join(split[1:]))
@@ -238,14 +218,6 @@ async def on_message(message):
              await client.send_message(message.channel, 'Of course they can!')
              time.sleep(2)
              await client.send_message(message.channel, 'Well, no.')
-
-    #if message.content.startswith('!join'):
-        #channel = client.get_channel('485833536889290752')
-        #await client.join_voice_channel(channel)
-
-    #elif message.content.startswith('!play'):
-        #player = vlc.MediaPlayer("/home/dietpi/bigcalm.mp3")
-        #player.play()
 
     if message.content.startswith('!rolldice'):
         a = ':one:'
@@ -403,13 +375,6 @@ async def on_message(message):
         # await client.send_message(message.channel, msg1)
         msg = random.randint(num1, num2)
         await client.send_message(message.channel, msg)
-
-    # elif message.content.startswith("!random"):
-    #     await client.send_message(message.channel, "Enter a number: ")
-    #     num = await client.wait_for_message(int)
-    #     numm = int(num)
-    #     randomnum = random.randint(0, numm)
-    #     await client.send_message(message.channel, randomnum)
 
     if message.content.startswith('!5random'):
         msg = random.randint(1, int(5))
