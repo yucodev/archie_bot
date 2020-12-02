@@ -20,16 +20,16 @@ import os
 from os import getenv
 import asyncio
 import ctx
-from weather import Weather, Unit
+# from weather import Weather, Unit
 import time
 from datetime import datetime
 import pytz
 import random
 import site
-from apex_PC import ApexLegends
-from apex_XBOX import ApexLegendsXBOX
-from apex_PSN import ApexLegendsPSN
-from gametokens import *
+# from apex_PC import ApexLegends
+# from apex_XBOX import ApexLegendsXBOX
+# from apex_PSN import ApexLegendsPSN
+# from gametokens import *
 import sys
 import config
 # hide config.py
