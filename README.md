@@ -91,3 +91,7 @@ We are developing some conversation commands without symbol. Try to discover the
    - ```!randomsport```
    - ```!rolldice```
    - ```!wheretoplay```
+   
+### Support this project
+* qrswcg38p2mlkuqnh3dh2qn9flgnd2k4tsthp58a0a (BCH)
+* 1CYQRJdvijJoa2x53HmWv6FywLQzPCYnVk (BTC)
